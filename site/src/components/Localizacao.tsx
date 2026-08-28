@@ -7,7 +7,7 @@ export function Localizacao() {
   const [mapaVisivel, setMapaVisivel] = useState(false)
 
   return (
-    <Section labelledBy="local-titulo" className="bg-cream-50">
+    <Section id="local" labelledBy="local-titulo" className="bg-cream-50">
       <div className="container-page grid gap-10 lg:grid-cols-2 lg:gap-16">
         <div>
           <SectionTitle id="local-titulo">Onde fica o consultório</SectionTitle>
@@ -39,7 +39,7 @@ export function Localizacao() {
             href={mapsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 inline-flex min-h-[3.5rem] items-center rounded-full border-2 border-ink-700 px-7 text-lg font-semibold text-ink-900 transition-colors hover:bg-ink-900 hover:text-cream-50"
+            className="mt-8 inline-flex min-h-[3.5rem] items-center rounded-full border-2 border-navy-900 px-7 text-lg font-semibold text-navy-900 transition-colors hover:bg-navy-900 hover:text-white"
           >
             Ver rota no Google Maps
           </a>
@@ -60,7 +60,7 @@ export function Localizacao() {
               onClick={() => setMapaVisivel(true)}
               className="flex h-full min-h-[22rem] w-full flex-col items-center justify-center gap-3 p-8 text-center"
             >
-              <svg viewBox="0 0 24 24" className="h-10 w-10 fill-accent-600" aria-hidden="true">
+              <svg viewBox="0 0 24 24" className="h-10 w-10 fill-navy-900" aria-hidden="true">
                 <path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z" />
               </svg>
               <span className="text-lg font-semibold text-ink-900">Carregar o mapa</span>

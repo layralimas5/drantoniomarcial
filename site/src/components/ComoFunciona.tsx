@@ -23,7 +23,7 @@ const etapas = [
 
 export function ComoFunciona() {
   return (
-    <Section labelledBy="passos-titulo" className="bg-cream-50">
+    <Section id="passos" labelledBy="passos-titulo" className="bg-cream-50">
       <div className="container-page">
         <SectionTitle id="passos-titulo" className="max-w-2xl">
           Como funciona, do primeiro contato ao acompanhamento

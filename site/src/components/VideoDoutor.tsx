@@ -49,7 +49,7 @@ export function VideoDoutor() {
                 className="h-full w-full object-cover"
               />
               <span className="absolute inset-0 flex items-center justify-center bg-ink-900/35">
-                <span className="flex h-20 w-20 items-center justify-center rounded-full bg-accent-600 transition-transform duration-200 group-hover:scale-105">
+                <span className="flex h-20 w-20 items-center justify-center rounded-full bg-navy-900 transition-transform duration-200 group-hover:scale-105">
                   <svg viewBox="0 0 24 24" className="ml-1 h-9 w-9 fill-white" aria-hidden="true">
                     <path d="M8 5v14l11-7z" />
                   </svg>

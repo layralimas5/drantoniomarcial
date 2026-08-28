@@ -93,7 +93,7 @@ export function FormularioAgendamento() {
             type="text"
             required
             autoComplete="name"
-            className="mt-2 min-h-[3.5rem] w-full rounded-xl border-2 border-cream-300 bg-cream-50 px-4 text-lg text-ink-900 placeholder:text-ink-400 focus:border-ink-700"
+            className="mt-2 min-h-[3.5rem] w-full rounded-xl border-2 border-cream-300 bg-cream-50 px-4 text-lg text-ink-900 placeholder:text-ink-400 focus:border-navy-900"
             placeholder="Como podemos te chamar"
           />
         </div>
@@ -111,7 +111,7 @@ export function FormularioAgendamento() {
             autoComplete="tel"
             value={telefone}
             onChange={(event) => setTelefone(formatarTelefone(event.target.value))}
-            className="mt-2 min-h-[3.5rem] w-full rounded-xl border-2 border-cream-300 bg-cream-50 px-4 text-lg text-ink-900 placeholder:text-ink-400 focus:border-ink-700"
+            className="mt-2 min-h-[3.5rem] w-full rounded-xl border-2 border-cream-300 bg-cream-50 px-4 text-lg text-ink-900 placeholder:text-ink-400 focus:border-navy-900"
             placeholder="(27) 90000-0000"
           />
         </div>
@@ -124,7 +124,7 @@ export function FormularioAgendamento() {
             id="mensagem"
             name="mensagem"
             rows={3}
-            className="mt-2 w-full rounded-xl border-2 border-cream-300 bg-cream-50 px-4 py-3 text-lg text-ink-900 placeholder:text-ink-400 focus:border-ink-700"
+            className="mt-2 w-full rounded-xl border-2 border-cream-300 bg-cream-50 px-4 py-3 text-lg text-ink-900 placeholder:text-ink-400 focus:border-navy-900"
             placeholder="Pode escrever com suas palavras"
           />
         </div>
@@ -135,7 +135,7 @@ export function FormularioAgendamento() {
             name="consentimento"
             type="checkbox"
             required
-            className="mt-1 h-6 w-6 shrink-0 accent-[#9a4b14]"
+            className="mt-1 h-6 w-6 shrink-0 accent-[#0c2033]"
           />
           <label htmlFor="consentimento" className="text-base leading-relaxed text-ink-700">
             Autorizo o contato pelos dados informados e li a{' '}
@@ -148,7 +148,7 @@ export function FormularioAgendamento() {
       </div>
 
       {status === 'error' ? (
-        <p role="alert" className="mt-5 rounded-xl bg-accent-100 p-4 text-base text-accent-700">
+        <p role="alert" className="mt-5 rounded-xl bg-red-50 p-4 text-base text-red-800">
           Não conseguimos enviar agora. Tente novamente em instantes ou chame direto no WhatsApp.
         </p>
       ) : null}
@@ -156,7 +156,7 @@ export function FormularioAgendamento() {
       <button
         type="submit"
         disabled={enviando}
-        className="mt-6 flex min-h-[3.5rem] w-full items-center justify-center rounded-full bg-accent-600 px-7 text-lg font-semibold text-white transition-colors hover:bg-accent-700 disabled:cursor-not-allowed disabled:opacity-70"
+        className="mt-6 flex min-h-[3.5rem] w-full items-center justify-center rounded-full bg-navy-900 px-7 text-lg font-semibold text-white transition-colors hover:bg-navy-800 disabled:cursor-not-allowed disabled:opacity-70"
       >
         {enviando ? 'Enviando...' : 'Quero agendar minha avaliação'}
       </button>

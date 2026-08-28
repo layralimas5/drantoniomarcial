@@ -7,7 +7,7 @@ export function Hero() {
   const fade = reduceMotion ? {} : { initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 } }
 
   return (
-    <header className="relative overflow-hidden bg-cream-50">
+    <header id="topo" className="relative -mt-[4.5rem] overflow-hidden bg-cream-50 pt-[4.5rem]">
       {/* No celular o banner abre a página; no desktop ele ocupa a metade direita
           e o gradiente garante contraste do texto sobre a parte clara da foto. */}
       <div className="relative lg:absolute lg:inset-y-0 lg:right-0 lg:w-[58%]">
@@ -32,10 +32,6 @@ export function Hero() {
           transition={{ duration: 0.6, ease: 'easeOut' }}
           className="max-w-2xl lg:max-w-[34rem]"
         >
-          <p className="mb-6 inline-block rounded-full bg-cream-100 px-4 py-2 text-base font-medium text-ink-700 ring-1 ring-cream-200">
-            Protocolo e prótese fixa sobre implantes · {clinic.address.city} (ES)
-          </p>
-
           <h1 className="font-display text-hero font-semibold leading-[1.08] text-ink-900">
             Volte a comer, falar e sorrir sem se preocupar com a dentadura
           </h1>

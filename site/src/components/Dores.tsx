@@ -43,7 +43,7 @@ export function Dores() {
               <div className="flex gap-4">
                 <span
                   aria-hidden="true"
-                  className="mt-2.5 h-2.5 w-2.5 shrink-0 rounded-full bg-accent-600"
+                  className="mt-2.5 h-2.5 w-2.5 shrink-0 rounded-full bg-navy-900"
                 />
                 <div>
                   <h3 className="text-xl font-semibold text-ink-900">{situacao.titulo}</h3>

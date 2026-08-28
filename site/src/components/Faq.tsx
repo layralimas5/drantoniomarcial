@@ -61,7 +61,9 @@ export function Faq() {
             Sua dúvida não está aqui? Pergunte direto para a equipe do {dentist.shortName}, sem
             compromisso de agendar nada.
           </p>
-          <WhatsAppButton className="mt-5 w-full sm:w-auto">Tirar minha dúvida agora</WhatsAppButton>
+          <WhatsAppButton variant="light" className="mt-5 w-full sm:w-auto">
+            Tirar minha dúvida agora
+          </WhatsAppButton>
         </div>
       </div>
     </Section>

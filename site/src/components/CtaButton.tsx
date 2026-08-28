@@ -5,10 +5,17 @@ import { trackConversion } from '../lib/tracking'
 const baseClasses =
   'inline-flex min-h-[3.5rem] items-center justify-center gap-3 rounded-full px-7 py-3 text-center text-lg leading-snug font-semibold transition-colors duration-200'
 
+/** `light` existe para os blocos de fundo azul escuro, onde o sólido sumiria. */
+const VARIANTES = {
+  solid: 'bg-navy-900 text-white hover:bg-navy-800',
+  light: 'bg-white text-navy-900 hover:bg-cream-100',
+  outline: 'border-2 border-navy-900 bg-transparent text-navy-900 hover:bg-navy-900 hover:text-white',
+} as const
+
 interface WhatsAppButtonProps {
   children?: ReactNode
   className?: string
-  variant?: 'solid' | 'outline'
+  variant?: keyof typeof VARIANTES
 }
 
 export function WhatsAppButton({
@@ -16,10 +23,7 @@ export function WhatsAppButton({
   className = '',
   variant = 'solid',
 }: WhatsAppButtonProps) {
-  const variantClasses =
-    variant === 'solid'
-      ? 'bg-accent-600 text-white hover:bg-accent-700'
-      : 'border-2 border-ink-900 bg-transparent text-ink-900 hover:bg-ink-900 hover:text-cream-50'
+  const variantClasses = VARIANTES[variant]
 
   return (
     <a
@@ -45,7 +49,7 @@ export function AnchorButton({ href, children, className = '' }: AnchorButtonPro
   return (
     <a
       href={href}
-      className={`${baseClasses} border-2 border-ink-700 text-ink-900 hover:bg-ink-900 hover:text-cream-50 ${className}`}
+      className={`${baseClasses} ${VARIANTES.outline} ${className}`}
     >
       {children}
     </a>

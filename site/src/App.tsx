@@ -1,4 +1,5 @@
 import { LazyMotion, domAnimation } from 'framer-motion'
+import { Menu } from './components/Menu'
 import { Hero } from './components/Hero'
 import { Dores } from './components/Dores'
 import { ProteseFixa } from './components/ProteseFixa'
@@ -23,6 +24,7 @@ export function App() {
         Ir para o agendamento
       </a>
 
+      <Menu />
       <Hero />
 
       <main>
