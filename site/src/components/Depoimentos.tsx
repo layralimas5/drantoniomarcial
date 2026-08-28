@@ -34,6 +34,11 @@ export function Depoimentos() {
           O que os pacientes contam depois da avaliação
         </SectionTitle>
 
+        <p className="mt-5 max-w-3xl text-lg text-ink-800 md:text-xl">
+          Quase todo mundo chega com o mesmo receio e sai falando da mesma coisa: entender o
+          próprio caso tira um peso que estava lá havia anos.
+        </p>
+
         <div className="mt-10 grid gap-5 md:grid-cols-3">
           {depoimentos.map((depoimento) => (
             <figure

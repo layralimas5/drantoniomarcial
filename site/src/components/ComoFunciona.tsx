@@ -29,6 +29,11 @@ export function ComoFunciona() {
           Como funciona, do primeiro contato ao acompanhamento
         </SectionTitle>
 
+        <p className="mt-5 max-w-3xl text-lg text-ink-800 md:text-xl">
+          Ninguém sai da primeira consulta operando. A avaliação existe para você entender o seu
+          caso e decidir com informação na mão, no seu tempo.
+        </p>
+
         <ol className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {etapas.map((etapa, index) => (
             <li key={etapa.titulo} className="rounded-card border border-cream-200 bg-white p-6">

@@ -27,23 +27,41 @@ o JSON-LD do `index.html` é o único ponto que precisa ser atualizado à mão.
 
 ## Imagens
 
-Placeholders gerados por script. Quando as fotos reais chegarem:
+Ficam em `site/imagens-originais/` e viram WebP otimizado em `site/public/`
+com `npm run img`. Os nomes são fixos:
 
-1. Colocar em `site/imagens-originais/` com os nomes `dr-antonio`, `consultorio`,
-   `video-poster` e `og` (qualquer extensão)
-2. Rodar `npm run img`, que gera os WebP otimizados em `site/public/`
+| Arquivo | Onde aparece | Proporção |
+|---|---|---|
+| `hero-banner` | banner do topo | 2:1 horizontal |
+| `foto` | seção "Quem vai cuidar do seu caso" | 4:5 vertical |
+| `video-poster` | capa do vídeo | 16:9 |
+| `og` | miniatura ao compartilhar o link | 1,91:1 |
 
 O vídeo do Dr. Antonio vai em `site/public/dr-antonio-explica.mp4`, com legenda
 em `site/public/legendas.vtt`. Ele só é baixado depois do clique no play.
 
+## SEO e busca local
+
+- `index.html` traz dois blocos JSON-LD: `Dentist` (com endereço, geo, serviços,
+  horário e responsável técnico) e `FAQPage` com as nove perguntas da página
+- As perguntas vivem em `site/src/lib/faq.ts`. **Ao editar uma resposta lá,
+  atualize também o `FAQPage` do `index.html`**, senão o dado estruturado
+  diverge do que o visitante lê
+- Meta tags `geo.*` e `ICBM` apontam para Vila Velha; trocar pelas coordenadas
+  exatas do consultório quando o endereço for confirmado
+- A seção "Atendimento em Vila Velha e em toda a Grande Vitória" existe para
+  cobrir as buscas por cidade e bairro. A lista de bairros precisa ser
+  confirmada com a clínica
+
 ## Antes de publicar
 
-- [ ] Contratação dos R$ 450,00 formalizada por escrito (Cláusula 5ª do contrato)
+- [x] Contratação acordada com o cliente
 - [ ] **CRO-ES do Dr. Antonio**, obrigatório por exigência do CFO
 - [ ] WhatsApp comercial real (hoje: `5527000000000`, placeholder)
 - [ ] Endereço completo com número e CEP
 - [ ] Horário de atendimento real
-- [ ] Fotos reais do Dr. Antonio e do consultório
+- [x] Foto do Dr. Antonio (banner e retrato)
+- [ ] Fotos do consultório e dos equipamentos
 - [ ] Vídeo do Dr. Antonio (celular basta, com legenda)
 - [ ] Depoimentos reais autorizados, substituindo os de `Depoimentos.tsx`
 - [ ] Respostas do FAQ revisadas e aprovadas pelo Dr. Antonio

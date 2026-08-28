@@ -28,6 +28,11 @@
   --color-ink-500: #4d6b5e;
   --color-ink-400: #6b8577;
 
+  /* Azul escuro do bloco de dúvidas */
+  --color-navy-900: #0c2033;
+  --color-navy-800: #16334b;
+  --color-navy-line: #294863;
+
   /* Azul claro das seções de peso */
   --color-sky-100: #e3eef7;
   --color-sky-200: #c8dcec;

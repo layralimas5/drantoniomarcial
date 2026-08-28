@@ -5,7 +5,6 @@
 import sharp from 'sharp'
 
 const placeholders = [
-  { arquivo: 'public/consultorio.webp', width: 1200, height: 1467, texto: 'Foto do consultório' },
   { arquivo: 'public/video-poster.webp', width: 1280, height: 720, texto: 'Capa do vídeo' },
 ]
 

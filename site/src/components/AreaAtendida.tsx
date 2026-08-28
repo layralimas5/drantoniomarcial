@@ -1,0 +1,48 @@
+import { Section, SectionTitle } from './Section'
+import { clinic } from '../lib/site-config'
+
+/**
+ * Bloco de alcance local: dá contexto geográfico para quem pesquisa por
+ * cidade ou bairro e reforça a proximidade, que é o que decide caso local.
+ * PENDENTE: confirmar a lista de bairros com a clínica.
+ */
+const cidades = [
+  {
+    nome: 'Vila Velha',
+    detalhe:
+      'Riviera da Barra, Barra do Jucu, Interlagos, Morada da Barra, Ponta da Fruta, Praia dos Recifes, Itaparica, Praia da Costa e região.',
+  },
+  {
+    nome: 'Vitória',
+    detalhe: 'Pacientes que atravessam a Terceira Ponte para tratamento com hora marcada.',
+  },
+  { nome: 'Cariacica', detalhe: 'Acesso pela Rodovia do Sol e pela BR 262.' },
+  { nome: 'Guarapari', detalhe: 'Quem vem pela Rodovia do Sol chega direto ao consultório.' },
+]
+
+export function AreaAtendida() {
+  return (
+    <Section labelledBy="area-titulo" className="bg-cream-100">
+      <div className="container-page">
+        <SectionTitle id="area-titulo" className="max-w-3xl">
+          Atendimento em {clinic.address.city} e em toda a Grande Vitória
+        </SectionTitle>
+
+        <p className="mt-5 max-w-3xl text-lg text-ink-800 md:text-xl">
+          O consultório fica em {clinic.address.district}, em {clinic.address.city}, e recebe
+          pacientes das cidades vizinhas. Tratamento de protocolo e prótese fixa exige retornos, e
+          fazer isso perto de casa muda a rotina de quem está em tratamento.
+        </p>
+
+        <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {cidades.map((cidade) => (
+            <li key={cidade.nome} className="rounded-card border border-cream-200 bg-white p-6">
+              <h3 className="text-xl font-semibold text-ink-900">{cidade.nome}</h3>
+              <p className="mt-2 text-base leading-relaxed text-ink-700">{cidade.detalhe}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </Section>
+  )
+}

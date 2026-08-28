@@ -10,9 +10,10 @@ const ORIGEM = 'imagens-originais'
 const DESTINO = 'public'
 
 const alvos = {
-  /** Banner do hero: largura livre, o recorte é feito no CSS. */
-  'hero-banner': { width: 1778, height: 884 },
-  consultorio: { width: 1200, height: 1467 },
+  /** Banner do hero: horizontal, o recorte final é feito no CSS. */
+  'hero-banner': { width: 2400, height: 1193 },
+  /** Retrato do Dr. Antonio na seção de credenciais. */
+  foto: { width: 1200, height: 1499 },
   'video-poster': { width: 1280, height: 720 },
   og: { width: 1200, height: 630 },
 }
@@ -36,8 +37,9 @@ for (const arquivo of arquivos) {
   const saida = join(DESTINO, name === 'og' ? 'og.jpg' : `${name}.webp`)
 
   await sharp(join(ORIGEM, arquivo))
-    .resize(alvo.width, alvo.height, { fit: 'cover', position: 'attention' })
-    .toFormat(name === 'og' ? 'jpeg' : 'webp', { quality: 78 })
+    .resize(alvo.width, alvo.height, { fit: 'cover', position: 'attention', kernel: 'lanczos3' })
+    .sharpen({ sigma: 0.8, m1: 0.6, m2: 2 })
+    .toFormat(name === 'og' ? 'jpeg' : 'webp', { quality: 88 })
     .toFile(saida)
 
   console.log(`Gerado ${saida}`)

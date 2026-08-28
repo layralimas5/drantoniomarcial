@@ -36,12 +36,14 @@ export function ProteseFixa() {
             <p className="mt-6 text-lg leading-relaxed text-ink-800 md:text-xl">
               Implantes de titânio são fixados no osso e servem de base para uma prótese que fica
               presa ali. Ela não sai para dormir, não depende de cola e a higiene é feita com a
-              prótese na boca, com escova e material específico, orientado no acompanhamento.
+              prótese na boca, com escova e material específico, orientado no acompanhamento. É a
+              diferença entre um aparelho que você coloca e uma estrutura que passa a ser sua.
             </p>
 
             <p className="mt-4 text-lg leading-relaxed text-ink-800 md:text-xl">
               Se o seu caso permite esse tipo de tratamento é o que a avaliação presencial responde:
-              depende do osso, da gengiva e da sua saúde geral.
+              depende do osso, da gengiva e da sua saúde geral. É uma pergunta de exame, não de
+              orçamento por telefone.
             </p>
           </div>
 

@@ -13,10 +13,10 @@ export function SobreDoutor() {
     <Section labelledBy="doutor-titulo" className="bg-cream-50">
       <div className="container-page grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
         <img
-          src="/consultorio.webp"
+          src="/foto.webp"
           width={1200}
-          height={1467}
-          alt={`Consultório da ${clinic.legalName}, em ${clinic.address.district}`}
+          height={1499}
+          alt={`${dentist.name}, cirurgião bucomaxilofacial responsável pela ${clinic.name}`}
           loading="lazy"
           decoding="async"
           className="aspect-4/5 w-full rounded-card object-cover"

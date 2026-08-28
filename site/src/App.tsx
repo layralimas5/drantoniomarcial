@@ -7,6 +7,7 @@ import { ComoFunciona } from './components/ComoFunciona'
 import { Faq } from './components/Faq'
 import { SobreDoutor } from './components/SobreDoutor'
 import { Depoimentos } from './components/Depoimentos'
+import { AreaAtendida } from './components/AreaAtendida'
 import { Localizacao } from './components/Localizacao'
 import { CtaFinal } from './components/CtaFinal'
 import { Rodape } from './components/Rodape'
@@ -32,6 +33,7 @@ export function App() {
         <Faq />
         <SobreDoutor />
         <Depoimentos />
+        <AreaAtendida />
         <Localizacao />
         <CtaFinal />
       </main>

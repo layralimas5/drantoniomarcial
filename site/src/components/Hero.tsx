@@ -13,9 +13,9 @@ export function Hero() {
       <div className="relative lg:absolute lg:inset-y-0 lg:right-0 lg:w-[58%]">
         <img
           src="/hero-banner.webp"
-          width={1778}
-          height={884}
-          alt="Consultório odontológico preparado para cirurgia, em Vila Velha"
+          width={2400}
+          height={1193}
+          alt={`${dentist.name} no consultório da ${clinic.name}, em ${clinic.address.district}`}
           fetchPriority="high"
           decoding="async"
           className="aspect-[16/11] w-full object-cover object-[78%_center] sm:aspect-[2/1] lg:h-full lg:aspect-auto"
@@ -33,7 +33,7 @@ export function Hero() {
           className="max-w-2xl lg:max-w-[34rem]"
         >
           <p className="mb-6 inline-block rounded-full bg-cream-100 px-4 py-2 text-base font-medium text-ink-700 ring-1 ring-cream-200">
-            Prótese fixa sobre implantes · {clinic.address.city} (ES)
+            Protocolo e prótese fixa sobre implantes · {clinic.address.city} (ES)
           </p>
 
           <h1 className="font-display text-hero font-semibold leading-[1.08] text-ink-900">
@@ -41,9 +41,9 @@ export function Hero() {
           </h1>
 
           <p className="mt-7 text-lg leading-relaxed text-ink-800 md:text-xl">
-            Prótese fixa sobre implantes em {clinic.address.city}, com cirurgião especialista em
-            bucomaxilofacial. Avaliação presencial para entender o seu caso e explicar, com clareza,
-            o que pode ser feito.
+            Dentes fixos sobre implantes, feitos por cirurgião especialista em bucomaxilofacial,
+            em {clinic.address.city}. Na avaliação você descobre o que dá para fazer no seu caso,
+            em quanto tempo e como funciona o pagamento, sem compromisso de fechar nada ali.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
