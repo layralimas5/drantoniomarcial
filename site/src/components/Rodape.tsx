@@ -2,10 +2,10 @@ import { clinic, dentist, fullAddress } from '../lib/site-config'
 
 export function Rodape() {
   return (
-    <footer className="border-t border-night-line bg-night py-14 pb-28 text-cream-200 md:pb-14">
-      <div className="container-page grid gap-8 text-base text-cream-200 md:grid-cols-3">
+    <footer className="border-t border-sky-200 bg-sky-100 py-14 pb-28 text-ink-700 md:pb-14">
+      <div className="container-page grid gap-8 text-base text-ink-700 md:grid-cols-3">
         <div>
-          <p className="text-lg font-semibold text-cream-50">{clinic.legalName}</p>
+          <p className="text-lg font-semibold text-ink-900">{clinic.legalName}</p>
           <p className="mt-2">CNPJ {clinic.cnpj}</p>
           <p className="mt-2">
             Responsável técnico: {dentist.name}
@@ -15,7 +15,7 @@ export function Rodape() {
         </div>
 
         <div>
-          <p className="text-lg font-semibold text-cream-50">Contato</p>
+          <p className="text-lg font-semibold text-ink-900">Contato</p>
           <p className="mt-2">{fullAddress}</p>
           <p className="mt-2">{clinic.hours}</p>
           <p className="mt-2">
@@ -36,13 +36,13 @@ export function Rodape() {
         </div>
 
         <div>
-          <p className="text-lg font-semibold text-cream-50">Informações</p>
+          <p className="text-lg font-semibold text-ink-900">Informações</p>
           <p className="mt-2">
             <a href="/politica-de-privacidade.html" className="underline underline-offset-4">
               Política de privacidade
             </a>
           </p>
-          <p className="mt-4 text-cream-300">
+          <p className="mt-4 text-ink-500">
             Este site tem caráter informativo e não substitui a avaliação clínica presencial.
             Resultados variam conforme o caso de cada paciente.
           </p>

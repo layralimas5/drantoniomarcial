@@ -28,10 +28,10 @@
   --color-ink-500: #4d6b5e;
   --color-ink-400: #6b8577;
 
-  /* Preto das seções de peso */
-  --color-night: #000000;
-  --color-night-soft: #151515;
-  --color-night-line: #2b2b2b;
+  /* Azul claro das seções de peso */
+  --color-sky-100: #e3eef7;
+  --color-sky-200: #c8dcec;
+  --color-sky-300: #a9c6dc;
 
   /* Acento único, só em CTA */
   --color-accent-600: #9a4b14;

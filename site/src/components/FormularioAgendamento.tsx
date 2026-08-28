@@ -51,7 +51,7 @@ export function FormularioAgendamento() {
     return (
       <div
         role="status"
-        className="rounded-card border border-cream-200 bg-white p-8 text-center"
+        className="rounded-card border border-sky-200 bg-white p-8 text-center"
       >
         <h3 className="text-2xl font-semibold text-ink-900">Recebemos o seu contato</h3>
         <p className="mt-3 text-lg text-ink-800">
@@ -73,7 +73,7 @@ export function FormularioAgendamento() {
       netlify-honeypot="empresa"
       onSubmit={handleSubmit}
       noValidate={false}
-      className="rounded-card border border-cream-200 bg-white p-6 md:p-8"
+      className="rounded-card border border-sky-200 bg-white p-6 md:p-8"
     >
       <input type="hidden" name="form-name" value={FORM_NAME} />
       <p hidden>
