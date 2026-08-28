@@ -10,8 +10,9 @@ const ORIGEM = 'imagens-originais'
 const DESTINO = 'public'
 
 const alvos = {
-  'dr-antonio': { width: 960, height: 1200 },
-  consultorio: { width: 900, height: 1100 },
+  /** Banner do hero: largura livre, o recorte é feito no CSS. */
+  'hero-banner': { width: 1778, height: 884 },
+  consultorio: { width: 1200, height: 1467 },
   'video-poster': { width: 1280, height: 720 },
   og: { width: 1200, height: 630 },
 }

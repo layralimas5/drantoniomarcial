@@ -7,9 +7,31 @@ export function Hero() {
   const fade = reduceMotion ? {} : { initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 } }
 
   return (
-    <header className="relative overflow-hidden bg-cream-50 pt-12 pb-16 md:pt-20 md:pb-24 lg:min-h-[92svh] lg:content-center">
-      <div className="container-page grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
-        <m.div {...fade} transition={{ duration: 0.6, ease: 'easeOut' }}>
+    <header className="relative overflow-hidden bg-cream-50">
+      {/* No celular o banner abre a página; no desktop ele ocupa a metade direita
+          e o gradiente garante contraste do texto sobre a parte clara da foto. */}
+      <div className="relative lg:absolute lg:inset-y-0 lg:right-0 lg:w-[58%]">
+        <img
+          src="/hero-banner.webp"
+          width={1778}
+          height={884}
+          alt="Consultório odontológico preparado para cirurgia, em Vila Velha"
+          fetchPriority="high"
+          decoding="async"
+          className="aspect-[16/11] w-full object-cover object-[78%_center] sm:aspect-[2/1] lg:h-full lg:aspect-auto"
+        />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 hidden bg-gradient-to-r from-white via-white/75 to-transparent lg:block"
+        />
+      </div>
+
+      <div className="container-page relative py-12 md:py-16 lg:min-h-[88svh] lg:content-center lg:py-24">
+        <m.div
+          {...fade}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+          className="max-w-2xl lg:max-w-[34rem]"
+        >
           <p className="mb-6 inline-block rounded-full bg-cream-100 px-4 py-2 text-base font-medium text-ink-700 ring-1 ring-cream-200">
             Prótese fixa sobre implantes · {clinic.address.city} (ES)
           </p>
@@ -18,7 +40,7 @@ export function Hero() {
             Volte a comer, falar e sorrir sem se preocupar com a dentadura
           </h1>
 
-          <p className="mt-7 max-w-2xl text-lg leading-relaxed text-ink-800 md:text-xl lg:text-[1.3rem]">
+          <p className="mt-7 text-lg leading-relaxed text-ink-800 md:text-xl">
             Prótese fixa sobre implantes em {clinic.address.city}, com cirurgião especialista em
             bucomaxilofacial. Avaliação presencial para entender o seu caso e explicar, com clareza,
             o que pode ser feito.
@@ -36,22 +58,6 @@ export function Hero() {
             <br />
             {clinic.address.district}, {clinic.address.city}
           </p>
-        </m.div>
-
-        <m.div
-          {...fade}
-          transition={{ duration: 0.6, delay: 0.1, ease: 'easeOut' }}
-          className="relative"
-        >
-          <img
-            src="/dr-antonio.webp"
-            width={960}
-            height={1200}
-            alt={`${dentist.name}, cirurgião bucomaxilofacial, no consultório em ${clinic.address.city}`}
-            fetchPriority="high"
-            decoding="async"
-            className="aspect-4/5 w-full rounded-card object-cover shadow-[0_30px_70px_-32px_rgba(0,0,0,0.45)]"
-          />
         </m.div>
       </div>
     </header>

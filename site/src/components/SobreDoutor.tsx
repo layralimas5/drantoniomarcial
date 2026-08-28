@@ -14,8 +14,8 @@ export function SobreDoutor() {
       <div className="container-page grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
         <img
           src="/consultorio.webp"
-          width={900}
-          height={1100}
+          width={1200}
+          height={1467}
           alt={`Consultório da ${clinic.legalName}, em ${clinic.address.district}`}
           loading="lazy"
           decoding="async"
