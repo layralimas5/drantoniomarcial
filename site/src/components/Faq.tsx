@@ -96,7 +96,7 @@ export function Faq() {
           })}
         </div>
 
-        <div className="mt-10 rounded-card bg-white p-6 text-center md:p-8">
+        <div className="mt-10 rounded-card border border-cream-200 bg-white p-6 text-center md:p-8">
           <p className="text-lg text-ink-800 md:text-xl">
             Ficou alguma dúvida que não está aqui? Pergunte direto para a equipe do{' '}
             {dentist.shortName}.

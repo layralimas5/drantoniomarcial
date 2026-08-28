@@ -7,31 +7,31 @@ export function Hero() {
   const fade = reduceMotion ? {} : { initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 } }
 
   return (
-    <header className="relative overflow-hidden bg-cream-100 pt-10 pb-14 md:pt-16 md:pb-20">
-      <div className="container-page grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+    <header className="relative overflow-hidden bg-cream-50 pt-12 pb-16 md:pt-20 md:pb-24 lg:min-h-[92svh] lg:content-center">
+      <div className="container-page grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
         <m.div {...fade} transition={{ duration: 0.6, ease: 'easeOut' }}>
-          <p className="mb-5 inline-block rounded-full bg-cream-200 px-4 py-2 text-base font-medium text-ink-700">
+          <p className="mb-6 inline-block rounded-full bg-cream-100 px-4 py-2 text-base font-medium text-ink-700 ring-1 ring-cream-200">
             Prótese fixa sobre implantes · {clinic.address.city} (ES)
           </p>
 
-          <h1 className="font-display text-[2.15rem] font-semibold leading-[1.15] text-ink-900 sm:text-5xl lg:text-[3.4rem]">
+          <h1 className="font-display text-hero font-semibold leading-[1.08] text-ink-900">
             Volte a comer, falar e sorrir sem se preocupar com a dentadura
           </h1>
 
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-800 md:text-xl">
+          <p className="mt-7 max-w-2xl text-lg leading-relaxed text-ink-800 md:text-xl lg:text-[1.3rem]">
             Prótese fixa sobre implantes em {clinic.address.city}, com cirurgião especialista em
             bucomaxilofacial. Avaliação presencial para entender o seu caso e explicar, com clareza,
             o que pode ser feito.
           </p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <WhatsAppButton className="w-full sm:w-auto" />
             <AnchorButton href="#agendar" className="w-full sm:w-auto">
               Agendar minha avaliação
             </AnchorButton>
           </div>
 
-          <p className="mt-7 border-l-2 border-cream-300 pl-4 text-base text-ink-500">
+          <p className="mt-9 border-l-2 border-cream-300 pl-4 text-base text-ink-500">
             {dentist.name} · {dentist.cro}
             <br />
             {clinic.address.district}, {clinic.address.city}
@@ -50,7 +50,7 @@ export function Hero() {
             alt={`${dentist.name}, cirurgião bucomaxilofacial, no consultório em ${clinic.address.city}`}
             fetchPriority="high"
             decoding="async"
-            className="aspect-4/5 w-full rounded-card object-cover shadow-[0_24px_60px_-30px_rgba(18,36,29,0.5)]"
+            className="aspect-4/5 w-full rounded-card object-cover shadow-[0_30px_70px_-32px_rgba(0,0,0,0.45)]"
           />
         </m.div>
       </div>

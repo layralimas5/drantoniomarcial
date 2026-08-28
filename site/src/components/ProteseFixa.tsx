@@ -25,7 +25,7 @@ const diferencas = [
 
 export function ProteseFixa() {
   return (
-    <Section labelledBy="protese-titulo" className="bg-ink-900 text-cream-100">
+    <Section labelledBy="protese-titulo" className="bg-night text-cream-100">
       <div className="container-page">
         <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
           <div>
@@ -47,7 +47,7 @@ export function ProteseFixa() {
 
           <ul className="grid gap-4 sm:grid-cols-2">
             {diferencas.map((item) => (
-              <li key={item.titulo} className="rounded-card bg-ink-800 p-6">
+              <li key={item.titulo} className="rounded-card border border-night-line bg-night-soft p-6">
                 <h3 className="text-xl font-semibold text-cream-50">{item.titulo}</h3>
                 <p className="mt-2 text-base leading-relaxed text-cream-200 md:text-lg">{item.texto}</p>
               </li>

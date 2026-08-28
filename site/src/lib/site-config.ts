@@ -6,7 +6,7 @@
 
 export const clinic = {
   name: 'CORB Odontologia',
-  legalName: 'CORB — Centro Odontológico Riviera da Barra',
+  legalName: 'CORB, Centro Odontológico Riviera da Barra',
   cnpj: '22.981.292/0001-23',
   instagram: 'https://www.instagram.com/drantoniomarcial',
   instagramHandle: '@drantoniomarcial',
@@ -49,4 +49,4 @@ export const mapsEmbedUrl = `https://www.google.com/maps?q=${encodeURIComponent(
   `${clinic.address.street}, ${clinic.address.district}, ${clinic.address.city} - ${clinic.address.state}`,
 )}&output=embed`
 
-export const fullAddress = `${clinic.address.street} — ${clinic.address.district}, ${clinic.address.city} (${clinic.address.state})`
+export const fullAddress = `${clinic.address.street}, ${clinic.address.district}, ${clinic.address.city} (${clinic.address.state})`

@@ -1,4 +1,4 @@
-# CORB Odontologia — Landing Page de Protocolo
+# CORB Odontologia, landing page de protocolo
 
 Projeto de cliente. Landing page de conversão para captação de casos de
 protocolo dentário e prótese fixa, destino do tráfego pago (Google Search).
@@ -7,13 +7,13 @@ protocolo dentário e prótese fixa, destino do tráfego pago (Google Search).
 
 ## O cliente
 
-- **Razão social:** CORB — Centro Odont Riviera da Barra
+- **Razão social:** CORB, Centro Odont Riviera da Barra
 - **CNPJ:** 22.981.292/0001-23
 - **Responsável técnico:** Dr. Antonio Marcial do Carmo
 - **Especialidade:** cirurgia bucomaxilofacial, implantodontia, ortodontia, ATM/bruxismo, harmonização facial
 - **Local:** Riviera da Barra, Vila Velha (ES)
 - **Instagram:** @drantoniomarcial (10,4 mil seguidores)
-- **CRO-ES:** [CONFIRMAR — obrigatório na página por exigência do CFO]
+- **CRO-ES:** [CONFIRMAR: obrigatório na página por exigência do CFO]
 
 Perfil: profissional renomado na região, passando por queda de faturamento.
 Verba de mídia baixa.

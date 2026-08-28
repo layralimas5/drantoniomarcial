@@ -5,7 +5,7 @@ import { clinic } from '../lib/site-config'
 
 export function CtaFinal() {
   return (
-    <Section id="agendar" labelledBy="agendar-titulo" className="bg-ink-900 text-cream-100">
+    <Section id="agendar" labelledBy="agendar-titulo" className="bg-night text-cream-100">
       <div className="container-page grid gap-10 lg:grid-cols-[1fr_1.05fr] lg:items-center lg:gap-16">
         <div>
           <SectionTitle id="agendar-titulo" className="!text-cream-50">
@@ -18,7 +18,7 @@ export function CtaFinal() {
             qualquer decisão.
           </p>
 
-          <div className="mt-8 rounded-card bg-ink-800 p-6">
+          <div className="mt-8 rounded-card border border-night-line bg-night-soft p-6">
             <p className="text-lg font-semibold text-cream-50">Prefere falar agora?</p>
             <p className="mt-1 text-base text-cream-200">
               A equipe responde no WhatsApp dentro do horário de atendimento.

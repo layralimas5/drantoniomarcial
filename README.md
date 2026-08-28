@@ -31,7 +31,7 @@ Placeholders gerados por script. Quando as fotos reais chegarem:
 
 1. Colocar em `site/imagens-originais/` com os nomes `dr-antonio`, `consultorio`,
    `video-poster` e `og` (qualquer extensão)
-2. Rodar `npm run img` — gera os WebP otimizados em `site/public/`
+2. Rodar `npm run img`, que gera os WebP otimizados em `site/public/`
 
 O vídeo do Dr. Antonio vai em `site/public/dr-antonio-explica.mp4`, com legenda
 em `site/public/legendas.vtt`. Ele só é baixado depois do clique no play.
@@ -39,7 +39,7 @@ em `site/public/legendas.vtt`. Ele só é baixado depois do clique no play.
 ## Antes de publicar
 
 - [ ] Contratação dos R$ 450,00 formalizada por escrito (Cláusula 5ª do contrato)
-- [ ] **CRO-ES do Dr. Antonio** — obrigatório por exigência do CFO
+- [ ] **CRO-ES do Dr. Antonio**, obrigatório por exigência do CFO
 - [ ] WhatsApp comercial real (hoje: `5527000000000`, placeholder)
 - [ ] Endereço completo com número e CEP
 - [ ] Horário de atendimento real
@@ -62,5 +62,5 @@ depois, promessa de resultado, preço como chamariz, superlativo e sorteio.
 
 `site/src/lib/tracking.ts` dispara `gtag` e `fbq` no clique de WhatsApp e no
 envio do formulário. As tags globais ainda precisam ser coladas no `index.html`
-quando as contas estiverem criadas — sem elas os eventos são ignorados sem
+quando as contas estiverem criadas. Sem elas os eventos são ignorados sem
 quebrar a página.

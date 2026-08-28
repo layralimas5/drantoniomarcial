@@ -15,11 +15,11 @@
   --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
   --font-display: Georgia, 'Times New Roman', serif;
 
-  /* Base clara e quente */
-  --color-cream-50: #fdfaf6;
-  --color-cream-100: #f7f1e8;
-  --color-cream-200: #ece2d4;
-  --color-cream-300: #d9caB6;
+  /* Base clara: branco puro, com neutros frios só para separar seção e borda */
+  --color-cream-50: #ffffff;
+  --color-cream-100: #f6f6f5;
+  --color-cream-200: #e5e5e3;
+  --color-cream-300: #d3d3d0;
 
   /* Escuro de confiança */
   --color-ink-900: #12241d;
@@ -28,12 +28,18 @@
   --color-ink-500: #4d6b5e;
   --color-ink-400: #6b8577;
 
+  /* Preto das seções de peso */
+  --color-night: #000000;
+  --color-night-soft: #151515;
+  --color-night-line: #2b2b2b;
+
   /* Acento único, só em CTA */
   --color-accent-600: #9a4b14;
   --color-accent-700: #7e3c0f;
   --color-accent-100: #f6e6d8;
 
   --radius-card: 1.25rem;
+  --text-hero: clamp(2.35rem, 5.2vw, 3.75rem);
 }
 
 @layer base {

@@ -38,7 +38,7 @@ export function Depoimentos() {
           {depoimentos.map((depoimento) => (
             <figure
               key={depoimento.autor}
-              className="flex h-full flex-col justify-between rounded-card bg-white p-6"
+              className="flex h-full flex-col justify-between rounded-card border border-cream-200 bg-white p-6"
             >
               <blockquote className="text-lg leading-relaxed text-ink-800">
                 “{depoimento.texto}”

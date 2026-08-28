@@ -1,4 +1,4 @@
-# Briefing da landing page — CORB Odontologia
+# Briefing da landing page da CORB Odontologia
 
 Estrutura, copy e specs. A copy abaixo é a versão de trabalho, pronta para
 implementar. Textos entre colchetes precisam de confirmação com o cliente.
