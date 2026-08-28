@@ -36,10 +36,27 @@ export function ComoFunciona() {
 
         <ol className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {etapas.map((etapa, index) => (
-            <li key={etapa.titulo} className="rounded-card border border-cream-200 bg-white p-6">
+            <li
+              key={etapa.titulo}
+              className="pulsar-suave relative rounded-card border border-cream-200 bg-white p-6"
+            >
+              {index < etapas.length - 1 ? (
+                <>
+                  {/* Traço que liga uma etapa à seguinte, no vão entre os cards. */}
+                  <span
+                    aria-hidden="true"
+                    className="absolute top-12 -right-5 hidden h-px w-5 bg-cream-300 lg:block"
+                  />
+                  <span
+                    aria-hidden="true"
+                    className="absolute -bottom-5 left-12 h-5 w-px bg-cream-300 md:hidden"
+                  />
+                </>
+              ) : null}
+
               <span
                 aria-hidden="true"
-                className="flex h-12 w-12 items-center justify-center rounded-full bg-ink-900 text-xl font-semibold text-cream-50"
+                className="flex h-12 w-12 items-center justify-center rounded-full bg-navy-900 text-xl font-semibold text-white"
               >
                 {index + 1}
               </span>

@@ -9,17 +9,30 @@ export function Faq() {
 
   return (
     <Section id="duvidas" labelledBy="faq-titulo" className="bg-navy-900 text-cream-100">
-      <div className="container-page max-w-3xl">
-        <SectionTitle id="faq-titulo" className="!text-cream-50">
-          As dúvidas que travam a decisão, respondidas
-        </SectionTitle>
+      <div className="container-page">
+        <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
+          <div className="lg:sticky lg:top-28 lg:self-start">
+            <SectionTitle id="faq-titulo" className="!text-cream-50">
+              As dúvidas que travam a decisão, respondidas
+            </SectionTitle>
 
-        <p className="mt-4 text-lg text-cream-200 md:text-xl">
-          A maior parte das pessoas adia o tratamento por causa de uma dessas perguntas. Leia com
-          calma: é melhor você decidir informado do que continuar adiando.
-        </p>
+            <p className="mt-5 text-lg text-cream-200 md:text-xl">
+              A maior parte das pessoas adia o tratamento por causa de uma dessas perguntas. Leia
+              com calma: é melhor decidir informado do que continuar adiando.
+            </p>
 
-        <div className="mt-10 divide-y divide-navy-line border-y border-navy-line">
+            <div className="mt-8 rounded-card border border-navy-line bg-navy-800 p-6">
+              <p className="text-lg text-cream-100">
+                Sua dúvida não está aqui? Pergunte direto para a equipe do {dentist.shortName}, sem
+                compromisso de agendar nada.
+              </p>
+              <WhatsAppButton variant="light" className="mt-5 w-full sm:w-auto">
+                Tirar minha dúvida agora
+              </WhatsAppButton>
+            </div>
+          </div>
+
+          <div className="divide-y divide-navy-line border-y border-navy-line">
           {perguntasFrequentes.map((item, index) => {
             const isOpen = aberta === index
             const panelId = `faq-painel-${index}`
@@ -54,16 +67,7 @@ export function Faq() {
               </div>
             )
           })}
-        </div>
-
-        <div className="mt-10 rounded-card border border-navy-line bg-navy-800 p-6 text-center md:p-8">
-          <p className="text-lg text-cream-100 md:text-xl">
-            Sua dúvida não está aqui? Pergunte direto para a equipe do {dentist.shortName}, sem
-            compromisso de agendar nada.
-          </p>
-          <WhatsAppButton variant="light" className="mt-5 w-full sm:w-auto">
-            Tirar minha dúvida agora
-          </WhatsAppButton>
+          </div>
         </div>
       </div>
     </Section>

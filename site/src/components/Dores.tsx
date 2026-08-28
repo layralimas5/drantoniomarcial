@@ -1,3 +1,4 @@
+import { m, useReducedMotion } from 'framer-motion'
 import { Section, SectionTitle } from './Section'
 import { WhatsAppButton } from './CtaButton'
 
@@ -25,6 +26,8 @@ const situacoes = [
 ]
 
 export function Dores() {
+  const reduceMotion = useReducedMotion()
+
   return (
     <Section labelledBy="dores-titulo" className="bg-cream-50">
       <div className="container-page">
@@ -38,13 +41,22 @@ export function Dores() {
         </p>
 
         <ul className="mt-10 grid gap-4 sm:grid-cols-2">
-          {situacoes.map((situacao) => (
-            <li key={situacao.titulo} className="rounded-card border border-cream-200 bg-white p-6">
-              <div className="flex gap-4">
+          {situacoes.map((situacao, index) => (
+            <m.li
+              key={situacao.titulo}
+              initial={reduceMotion ? false : { opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.45, delay: index * 0.08, ease: 'easeOut' }}
+              className="group rounded-card border border-cream-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-navy-900 hover:shadow-[0_18px_40px_-24px_rgba(12,32,51,0.5)]"
+            >
+              <div className="flex items-start gap-4">
                 <span
                   aria-hidden="true"
-                  className="mt-2.5 h-2.5 w-2.5 shrink-0 rounded-full bg-navy-900"
-                />
+                  className="mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-navy-900 text-base font-semibold text-white transition-transform duration-300 group-hover:scale-110"
+                >
+                  {index + 1}
+                </span>
                 <div>
                   <h3 className="text-xl font-semibold text-ink-900">{situacao.titulo}</h3>
                   <p className="mt-2 text-base leading-relaxed text-ink-700 md:text-lg">
@@ -52,7 +64,7 @@ export function Dores() {
                   </p>
                 </div>
               </div>
-            </li>
+            </m.li>
           ))}
         </ul>
 

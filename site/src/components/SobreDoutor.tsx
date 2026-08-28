@@ -19,7 +19,7 @@ export function SobreDoutor() {
           alt={`${dentist.name}, cirurgião bucomaxilofacial responsável pela ${clinic.name}`}
           loading="lazy"
           decoding="async"
-          className="aspect-4/5 w-full rounded-card object-cover"
+          className="pulsar-suave aspect-4/5 w-full rounded-card object-cover"
         />
 
         <div>

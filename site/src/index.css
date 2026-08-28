@@ -95,6 +95,33 @@
   }
 }
 
+@keyframes pulso-suave {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.035);
+  }
+}
+
+/** Pulsar discreto no hover. O bloco de prefers-reduced-motion já o neutraliza. */
+@utility pulsar {
+  transition: transform 250ms ease-out;
+
+  &:hover {
+    animation: pulso-suave 1.6s ease-in-out infinite;
+  }
+}
+
+@utility pulsar-suave {
+  transition: transform 250ms ease-out;
+
+  &:hover {
+    animation: pulso-suave 2.2s ease-in-out infinite;
+  }
+}
+
 @utility container-page {
   width: 100%;
   margin-inline: auto;

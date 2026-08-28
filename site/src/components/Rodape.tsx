@@ -42,10 +42,6 @@ export function Rodape() {
               Política de privacidade
             </a>
           </p>
-          <p className="mt-4 text-cream-300">
-            Este site tem caráter informativo e não substitui a avaliação clínica presencial.
-            Resultados variam conforme o caso de cada paciente.
-          </p>
           <p className="mt-4">
             Desenvolvido por{' '}
             <a
