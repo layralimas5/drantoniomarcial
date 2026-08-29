@@ -62,6 +62,7 @@ export function FormularioAgendamento() {
       setTelefone('')
       setStatus('success')
     } catch {
+      setResumo(mensagemWhatsApp)
       setStatus('error')
     }
   }
@@ -170,9 +171,15 @@ export function FormularioAgendamento() {
       </div>
 
       {status === 'error' ? (
-        <p role="alert" className="mt-5 rounded-xl bg-red-50 p-4 text-base text-red-800">
-          Não conseguimos enviar agora. Tente novamente em instantes ou chame direto no WhatsApp.
-        </p>
+        <div role="alert" className="mt-5 rounded-xl bg-red-50 p-4">
+          <p className="text-base text-red-800">
+            Não conseguimos enviar o formulário agora. Nada se perdeu: o botão abaixo abre o
+            WhatsApp da clínica com os seus dados já escritos.
+          </p>
+          <WhatsAppButton mensagem={resumo} className="mt-4 w-full sm:w-auto">
+            Enviar meus dados no WhatsApp
+          </WhatsAppButton>
+        </div>
       ) : null}
 
       <button
