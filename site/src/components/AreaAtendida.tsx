@@ -28,7 +28,7 @@ export function AreaAtendida() {
           Atendimento em {clinic.address.city} e em toda a Grande Vitória
         </SectionTitle>
 
-        <p className="mt-5 max-w-3xl text-lg text-cream-200 md:text-xl">
+        <p className="mt-4 max-w-3xl text-base text-cream-200 md:mt-5 md:text-xl">
           O consultório fica em {clinic.address.district}, em {clinic.address.city}, e atende
           gente das cidades vizinhas. Esse tipo de tratamento pede várias voltas à clínica, e ser
           perto de casa faz diferença.
@@ -36,9 +36,9 @@ export function AreaAtendida() {
 
         <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {cidades.map((cidade) => (
-            <li key={cidade.nome} className="pulsar-suave rounded-card border border-navy-line bg-navy-800 p-5 md:p-6">
-              <h3 className="text-lg font-semibold text-cream-50 md:text-xl">{cidade.nome}</h3>
-              <p className="mt-1.5 text-base leading-relaxed text-cream-200">{cidade.detalhe}</p>
+            <li key={cidade.nome} className="pulsar-suave rounded-card border border-navy-line bg-navy-800 p-4 md:p-6">
+              <h3 className="text-base font-semibold text-cream-50 md:text-xl">{cidade.nome}</h3>
+              <p className="mt-1 text-[0.95rem] leading-relaxed text-cream-200 md:mt-1.5 md:text-base">{cidade.detalhe}</p>
             </li>
           ))}
         </ul>

@@ -14,7 +14,7 @@ export function VideoDoutor() {
       <div className="container-page max-w-3xl">
         <SectionTitle id="video-titulo">{dentist.shortName} explica como funciona</SectionTitle>
 
-        <p className="mt-4 text-lg text-ink-700 md:text-xl">
+        <p className="mt-4 text-base text-ink-700 md:text-xl">
           Menos de dois minutos: o que é o procedimento, como é a avaliação, quanto tempo leva e o
           que a pessoa sente.
         </p>

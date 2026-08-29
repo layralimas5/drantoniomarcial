@@ -25,7 +25,7 @@ export function SobreDoutor() {
         <div>
           <SectionTitle id="doutor-titulo">Quem vai cuidar do seu caso</SectionTitle>
 
-          <p className="mt-6 text-lg leading-relaxed text-ink-800 md:text-xl">
+          <p className="mt-5 text-base leading-relaxed text-ink-800 md:mt-6 md:text-xl">
             {dentist.name} é cirurgião-dentista especialista em cirurgia da boca e do rosto.
             Atende em {clinic.address.district}, em {clinic.address.city}, e acompanha
             pessoalmente cada caso, da primeira consulta ao último retorno.
@@ -33,7 +33,7 @@ export function SobreDoutor() {
 
           <ul className="mt-7 space-y-3 md:mt-8 md:space-y-4">
             {credenciais.map((credencial) => (
-              <li key={credencial} className="flex gap-3 text-base text-ink-800 md:text-lg">
+              <li key={credencial} className="flex gap-3 text-[0.95rem] text-ink-800 md:text-lg">
                 <svg
                   viewBox="0 0 20 20"
                   className="mt-1 h-5 w-5 shrink-0 fill-navy-900"

@@ -55,7 +55,7 @@ export function Depoimentos() {
             O que os pacientes contam depois da avaliação
           </SectionTitle>
 
-          <p className="mt-5 text-lg text-ink-800 md:text-xl">
+          <p className="mt-4 text-base text-ink-800 md:mt-5 md:text-xl">
             Quase todo mundo chega com o mesmo medo e sai falando a mesma coisa: entender o próprio
             caso tira um peso de anos.
           </p>
@@ -70,9 +70,9 @@ export function Depoimentos() {
               <li
                 key={`${repeticao}-${depoimento.autor}`}
                 aria-hidden={repeticao > 0}
-                className="w-[17rem] shrink-0 sm:w-[19rem] md:w-[23rem]"
+                className="w-[15.5rem] shrink-0 sm:w-[19rem] md:w-[23rem]"
               >
-                <figure className="pulsar-suave flex h-full flex-col rounded-card border border-cream-200 bg-white p-5 shadow-[0_18px_38px_-18px_rgba(12,32,51,0.28)] md:p-7">
+                <figure className="pulsar-suave flex h-full flex-col rounded-card border border-cream-200 bg-white p-4 shadow-[0_18px_38px_-18px_rgba(12,32,51,0.28)] md:p-7">
                   <span
                     aria-hidden="true"
                     className="font-display text-5xl leading-none text-gold-400 md:text-6xl"
@@ -80,14 +80,14 @@ export function Depoimentos() {
                     “
                   </span>
 
-                  <blockquote className="-mt-3 grow text-base leading-relaxed text-ink-800 md:text-lg">
+                  <blockquote className="-mt-3 grow text-[0.95rem] leading-relaxed text-ink-800 md:text-lg">
                     {depoimento.texto}
                   </blockquote>
 
-                  <figcaption className="mt-5 flex items-center gap-3 border-t border-cream-200 pt-4 md:mt-6 md:gap-4 md:pt-5">
+                  <figcaption className="mt-4 flex items-center gap-3 border-t border-cream-200 pt-3.5 md:mt-6 md:gap-4 md:pt-5">
                     <span
                       aria-hidden="true"
-                      className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-navy-900 text-base font-semibold text-white md:h-12 md:w-12 md:text-lg"
+                      className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-navy-900 text-sm font-semibold text-white md:h-12 md:w-12 md:text-lg"
                     >
                       {depoimento.autor.charAt(0)}
                     </span>

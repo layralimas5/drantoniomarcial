@@ -25,7 +25,7 @@ export function Galeria() {
           Como é o atendimento por dentro
         </SectionTitle>
 
-        <p className="mt-5 max-w-3xl text-lg text-ink-800 md:text-xl">
+        <p className="mt-4 max-w-3xl text-base text-ink-800 md:mt-5 md:text-xl">
           O consultório em {clinic.address.district} tem estrutura própria para exame, cirurgia e
           acompanhamento. Veja o lugar antes de marcar sua consulta.
         </p>
@@ -45,7 +45,7 @@ export function Galeria() {
                     className="aspect-4/3 w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
-                <figcaption className="p-4 text-base text-ink-700 md:p-5 md:text-lg">
+                <figcaption className="p-3.5 text-[0.95rem] text-ink-700 md:p-5 md:text-lg">
                   {foto.legenda}
                 </figcaption>
               </figure>

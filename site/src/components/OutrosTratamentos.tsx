@@ -43,7 +43,7 @@ export function OutrosTratamentos() {
           A clínica também atende o resto da sua boca
         </SectionTitle>
 
-        <p className="mt-5 max-w-3xl text-lg text-ink-800 md:text-xl">
+        <p className="mt-4 max-w-3xl text-base text-ink-800 md:mt-5 md:text-xl">
           O forte do {dentist.shortName} é implante, mas o atendimento não para aí. Se o seu
           caso começa por outro tratamento, é aqui mesmo que ele se resolve.
         </p>
@@ -52,21 +52,21 @@ export function OutrosTratamentos() {
           {tratamentos.map((tratamento) => (
             <li
               key={tratamento.titulo}
-              className={`pulsar-suave rounded-card border p-5 md:p-6 ${
+              className={`pulsar-suave rounded-card border p-4 md:p-6 ${
                 tratamento.principal
                   ? 'border-navy-900 bg-navy-900 text-cream-100'
                   : 'border-cream-200 bg-white hover:border-navy-900'
               }`}
             >
               <h3
-                className={`text-lg font-semibold md:text-xl ${
+                className={`text-base font-semibold md:text-xl ${
                   tratamento.principal ? 'text-cream-50' : 'text-ink-900'
                 }`}
               >
                 {tratamento.titulo}
               </h3>
               <p
-                className={`mt-1.5 text-base leading-relaxed md:text-lg ${
+                className={`mt-1 text-[0.95rem] leading-relaxed md:mt-1.5 md:text-lg ${
                   tratamento.principal ? 'text-cream-200' : 'text-ink-700'
                 }`}
               >

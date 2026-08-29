@@ -16,7 +16,7 @@ export function Faq() {
               As dúvidas que travam a decisão, respondidas
             </SectionTitle>
 
-            <p className="mt-5 text-lg leading-relaxed text-cream-200 sm:text-xl md:text-2xl">
+            <p className="mt-4 text-base leading-relaxed text-cream-200 sm:text-xl md:mt-5 md:text-2xl">
               Muita gente adia o tratamento por causa de uma dessas perguntas. Leia com calma: é
               melhor decidir sabendo do que continuar adiando.
             </p>
@@ -39,7 +39,7 @@ export function Faq() {
                     aria-expanded={isOpen}
                     aria-controls={panelId}
                     onClick={() => setAberta(isOpen ? null : index)}
-                    className="flex w-full items-start justify-between gap-4 py-4 text-left text-lg font-semibold text-cream-50 md:py-5 md:text-xl"
+                    className="flex w-full items-start justify-between gap-3 py-3.5 text-left text-base font-semibold text-cream-50 md:gap-4 md:py-5 md:text-xl"
                   >
                     {item.pergunta}
                     <span
@@ -54,15 +54,15 @@ export function Faq() {
                 </h3>
 
                 <div id={panelId} role="region" aria-labelledby={buttonId} hidden={!isOpen}>
-                  <p className="pb-5 text-base leading-relaxed text-cream-200 md:pb-6 md:text-lg">{item.resposta}</p>
+                  <p className="pb-4 text-[0.95rem] leading-relaxed text-cream-200 md:pb-6 md:text-lg">{item.resposta}</p>
                 </div>
               </div>
             )
           })}
             </div>
 
-            <div className="mt-8 flex flex-col items-center rounded-card border border-navy-line bg-navy-800 p-5 text-center md:p-6">
-              <p className="text-lg text-cream-100">
+            <div className="mt-8 flex flex-col items-center rounded-card border border-navy-line bg-navy-800 p-4 text-center md:p-6">
+              <p className="text-base text-cream-100 md:text-lg">
                 Sua dúvida não está aqui? Pergunte direto para a equipe do {dentist.shortName}, sem
                 compromisso de agendar nada.
               </p>

@@ -12,7 +12,7 @@ export function Localizacao() {
         <div>
           <SectionTitle id="local-titulo">Onde fica o consultório</SectionTitle>
 
-          <dl className="mt-8 space-y-6 text-lg text-ink-800">
+          <dl className="mt-7 space-y-5 text-base text-ink-800 md:mt-8 md:space-y-6 md:text-lg">
             <div>
               <dt className="font-semibold text-ink-900">Endereço</dt>
               <dd>{fullAddress}</dd>

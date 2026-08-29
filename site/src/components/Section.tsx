@@ -32,7 +32,7 @@ export function Section({
     <m.section
       id={id}
       aria-labelledby={labelledBy}
-      className={`py-12 md:py-24 ${className}`}
+      className={`py-10 md:py-24 ${className}`}
       initial={reduceMotion ? false : { opacity: 0, x, y }}
       whileInView={{ opacity: 1, x: 0, y: 0 }}
       viewport={{ once: true, margin: '-80px' }}
@@ -53,7 +53,7 @@ export function SectionTitle({ id, children, className = '' }: SectionTitleProps
   return (
     <h2
       id={id}
-      className={`text-2xl font-semibold leading-tight tracking-tight text-ink-900 sm:text-3xl md:text-4xl ${className}`}
+      className={`text-[1.375rem] font-semibold leading-tight tracking-tight text-ink-900 sm:text-3xl md:text-4xl ${className}`}
     >
       {children}
     </h2>
