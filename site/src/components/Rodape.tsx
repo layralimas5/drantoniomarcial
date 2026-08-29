@@ -1,4 +1,6 @@
-import { clinic, dentist, fullAddress } from '../lib/site-config'
+import { InstagramIcon, WhatsAppIcon } from './CtaButton'
+import { clinic, dentist, fullAddress, whatsappUrl } from '../lib/site-config'
+import { trackConversion } from '../lib/tracking'
 
 export function Rodape() {
   return (
@@ -12,6 +14,32 @@ export function Rodape() {
             {dentist.cro}
           </p>
           <p className="mt-2">CNPJ {clinic.cnpj}</p>
+
+          <ul className="mt-5 flex gap-3">
+            <li>
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackConversion('whatsapp_click')}
+                className="flex h-12 w-12 items-center justify-center rounded-full border border-navy-line bg-navy-800 text-cream-50 transition-colors hover:bg-navy-700"
+              >
+                <WhatsAppIcon className="h-6 w-6" />
+                <span className="sr-only">WhatsApp da clínica</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href={clinic.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-12 w-12 items-center justify-center rounded-full border border-navy-line bg-navy-800 text-cream-50 transition-colors hover:bg-navy-700"
+              >
+                <InstagramIcon className="h-6 w-6" />
+                <span className="sr-only">Instagram {clinic.instagramHandle}</span>
+              </a>
+            </li>
+          </ul>
         </div>
 
         <div>
@@ -19,23 +47,8 @@ export function Rodape() {
           <p className="mt-2">{fullAddress}</p>
           <p className="mt-2">{clinic.hours}</p>
           <p className="mt-2">
-            <a href={`tel:+${clinic.whatsappNumber}`} className="underline underline-offset-4">
-              {clinic.phoneDisplay}
-            </a>
-          </p>
-          <p className="mt-2">
             <a href={`mailto:${clinic.email}`} className="underline underline-offset-4">
               {clinic.email}
-            </a>
-          </p>
-          <p className="mt-2">
-            <a
-              href={clinic.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline underline-offset-4"
-            >
-              Instagram {clinic.instagramHandle}
             </a>
           </p>
         </div>

@@ -8,9 +8,9 @@ export function Hero() {
 
   return (
     <header id="topo" className="relative -mt-[3.75rem] overflow-hidden bg-cream-50 pt-[3.75rem] lg:-mt-[4.5rem] lg:pt-[4.5rem]">
-      {/* No celular o banner abre a página; no desktop ele ocupa a metade direita
-          e o gradiente garante contraste do texto sobre a parte clara da foto. */}
-      <div className="relative lg:absolute lg:inset-y-0 lg:right-0 lg:w-[54%]">
+      {/* No celular o banner abre a página. No desktop ele preenche o hero inteiro,
+          com um véu leve à esquerda apenas para o texto manter contraste. */}
+      <div className="relative lg:absolute lg:inset-0">
         <img
           src="/hero-banner.webp"
           width={2400}
@@ -18,15 +18,15 @@ export function Hero() {
           alt={`${dentist.name} no consultório da ${clinic.name}, em ${clinic.address.district}`}
           fetchPriority="high"
           decoding="async"
-          className="aspect-[16/10] w-full object-cover object-[78%_center] sm:aspect-[2/1] lg:h-full lg:aspect-auto"
+          className="aspect-[16/10] w-full object-cover object-[78%_center] sm:aspect-[2/1] lg:h-full lg:aspect-auto lg:object-[68%_center]"
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 hidden bg-gradient-to-r from-white via-white/75 to-transparent lg:block"
+          className="pointer-events-none absolute inset-0 hidden bg-gradient-to-r from-white/85 via-white/45 to-transparent lg:block"
         />
       </div>
 
-      <div className="container-page relative -mt-8 rounded-t-[2rem] bg-cream-50 pt-8 pb-12 md:py-16 lg:mt-0 lg:rounded-none lg:min-h-[88svh] lg:content-center lg:py-24">
+      <div className="container-page relative -mt-8 rounded-t-[2rem] bg-cream-50 pt-8 pb-12 md:py-16 lg:mt-0 lg:rounded-none lg:bg-transparent lg:min-h-[88svh] lg:content-center lg:py-24">
         <m.div
           {...fade}
           transition={{ duration: 0.6, ease: 'easeOut' }}
@@ -48,7 +48,7 @@ export function Hero() {
             </AnchorButton>
           </div>
 
-          <p className="mt-7 border-l-2 border-cream-300 pl-4 text-base text-ink-500 md:mt-9">
+          <p className="mt-7 border-l-2 border-cream-300 pl-4 text-base text-ink-700 md:mt-9">
             {dentist.name} · {dentist.cro}
             <br />
             {clinic.address.district}, {clinic.address.city}
