@@ -1,11 +1,12 @@
 # Configuração do deploy na Netlify.
 #
 # Este arquivo fica na RAIZ do repositório, que é onde a Netlify procura por
-# ele. O site em si mora em `site/`, então `base` aponta para lá e todos os
-# caminhos abaixo passam a ser relativos a essa pasta.
+# ele. O site em si mora em `site/`, então `base` aponta para lá e os demais
+# caminhos passam a ser relativos a essa pasta (`publish = "dist"` vira
+# `site/dist`).
 #
-# Com isso, não é preciso configurar nada no painel: basta conectar o
-# repositório e escolher a branch.
+# Não é preciso preencher nada no painel: basta conectar o repositório e
+# escolher a branch.
 
 [build]
   base = "site"
@@ -15,38 +16,11 @@
 [build.environment]
   # O Vite 7 exige Node 20.19 ou superior.
   NODE_VERSION = "22"
-  NPM_FLAGS = "--include=dev"
 
-# Deploy preview de pull request e branch: mesma build, sem indexação.
-[context.deploy-preview]
-  command = "npm run build"
-
-[context.branch-deploy]
-  command = "npm run build"
-
-# A landing é uma página só. Qualquer rota cai no index, e os arquivos que
+# A landing é uma página só: qualquer rota cai no index. Os arquivos que
 # existem de verdade (política de privacidade, imagens, fontes) continuam
 # sendo servidos direto, porque a Netlify tenta o arquivo antes do redirect.
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-
-# Cabeçalhos: os de segurança e de cache já vêm de `site/public/_headers`.
-# Aqui fica só o que é específico de ambiente.
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Robots-Tag = "index, follow"
-
-# Preview e branch não podem ser indexados pelo Google, senão concorrem
-# com o domínio oficial.
-[[context.deploy-preview.headers]]
-  for = "/*"
-  [context.deploy-preview.headers.values]
-    X-Robots-Tag = "noindex, nofollow"
-
-[[context.branch-deploy.headers]]
-  for = "/*"
-  [context.branch-deploy.headers.values]
-    X-Robots-Tag = "noindex, nofollow"
