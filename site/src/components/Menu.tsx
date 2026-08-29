@@ -35,9 +35,9 @@ export function Menu() {
     >
       <nav
         aria-label="Navegação da página"
-        className="container-page flex min-h-[4.5rem] items-center justify-between gap-6"
+        className="container-page flex min-h-[3.75rem] items-center justify-between gap-4 md:min-h-[4.5rem] md:gap-6"
       >
-        <a href="#topo" className="text-xl font-semibold tracking-tight text-navy-900">
+        <a href="#topo" className="text-base font-semibold tracking-tight text-navy-900 sm:text-lg md:text-xl">
           {clinic.name}
         </a>
 
@@ -59,9 +59,9 @@ export function Menu() {
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => trackConversion('whatsapp_click')}
-          className="inline-flex min-h-[3rem] items-center gap-2 rounded-full bg-navy-900 px-5 text-base font-semibold text-white transition-colors hover:bg-navy-800"
+          className="inline-flex min-h-[2.5rem] items-center gap-2 rounded-full bg-navy-900 px-4 text-sm font-semibold text-white transition-colors hover:bg-navy-800 md:min-h-[3rem] md:px-5 md:text-base"
         >
-          <WhatsAppIcon className="h-5 w-5" />
+          <WhatsAppIcon className="h-4 w-4 md:h-5 md:w-5" />
           <span className="hidden sm:inline">Falar no WhatsApp</span>
           <span className="sm:hidden">WhatsApp</span>
         </a>

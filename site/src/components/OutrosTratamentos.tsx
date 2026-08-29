@@ -52,21 +52,21 @@ export function OutrosTratamentos() {
           {tratamentos.map((tratamento) => (
             <li
               key={tratamento.titulo}
-              className={`rounded-card border p-6 transition-colors duration-300 ${
+              className={`rounded-card border p-5 transition-colors duration-300 md:p-6 ${
                 tratamento.principal
                   ? 'border-navy-900 bg-navy-900 text-cream-100'
                   : 'border-cream-200 bg-white hover:border-navy-900'
               }`}
             >
               <h3
-                className={`text-xl font-semibold ${
+                className={`text-lg font-semibold md:text-xl ${
                   tratamento.principal ? 'text-cream-50' : 'text-ink-900'
                 }`}
               >
                 {tratamento.titulo}
               </h3>
               <p
-                className={`mt-2 text-base leading-relaxed md:text-lg ${
+                className={`mt-1.5 text-base leading-relaxed md:text-lg ${
                   tratamento.principal ? 'text-cream-200' : 'text-ink-700'
                 }`}
               >

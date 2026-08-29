@@ -48,18 +48,18 @@ export function Dores() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.45, delay: index * 0.08, ease: 'easeOut' }}
-              className="group rounded-card border border-cream-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-navy-900 hover:shadow-[0_18px_40px_-24px_rgba(12,32,51,0.5)]"
+              className="group rounded-card border border-cream-200 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-navy-900 hover:shadow-[0_18px_40px_-24px_rgba(12,32,51,0.5)] md:p-6"
             >
               <div className="flex items-start gap-4">
                 <span
                   aria-hidden="true"
-                  className="mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-navy-900 text-base font-semibold text-white transition-transform duration-300 group-hover:scale-110"
+                  className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-navy-900 text-base font-semibold text-white transition-transform duration-300 group-hover:scale-110 md:mt-1 md:h-9 md:w-9"
                 >
                   {index + 1}
                 </span>
                 <div>
-                  <h3 className="text-xl font-semibold text-ink-900">{situacao.titulo}</h3>
-                  <p className="mt-2 text-base leading-relaxed text-ink-700 md:text-lg">
+                  <h3 className="text-lg font-semibold text-ink-900 md:text-xl">{situacao.titulo}</h3>
+                  <p className="mt-1.5 text-base leading-relaxed text-ink-700 md:text-lg">
                     {situacao.texto}
                   </p>
                 </div>
@@ -69,7 +69,7 @@ export function Dores() {
         </ul>
 
         <div className="mt-12 flex flex-col items-center text-center">
-          <p className="max-w-3xl text-xl font-medium text-ink-900 md:text-2xl">
+          <p className="max-w-3xl text-lg font-medium text-ink-900 sm:text-xl md:text-2xl">
             Nada disso é para sempre. Existe tratamento para a maior parte dos casos, e o primeiro
             passo não é a cirurgia. É entender o que dá para fazer no seu.
           </p>

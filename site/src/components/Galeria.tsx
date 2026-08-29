@@ -45,7 +45,7 @@ export function Galeria() {
                     className="aspect-4/3 w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
-                <figcaption className="p-5 text-base text-ink-700 md:text-lg">
+                <figcaption className="p-4 text-base text-ink-700 md:p-5 md:text-lg">
                   {foto.legenda}
                 </figcaption>
               </figure>

@@ -18,7 +18,7 @@ export function CtaFinal() {
             fazer, quanto tempo leva e como pode pagar. Sem compromisso de fechar nada na hora.
           </p>
 
-          <div className="mt-8 rounded-card border border-navy-line bg-navy-800 p-6">
+          <div className="mt-8 rounded-card border border-navy-line bg-navy-800 p-5 md:p-6">
             <p className="text-lg font-semibold text-cream-50">Prefere falar agora?</p>
             <p className="mt-1 text-base text-cream-200">
               A equipe responde no WhatsApp dentro do horário de atendimento.

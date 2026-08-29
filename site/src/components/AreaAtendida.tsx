@@ -36,9 +36,9 @@ export function AreaAtendida() {
 
         <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {cidades.map((cidade) => (
-            <li key={cidade.nome} className="rounded-card border border-cream-200 bg-white p-6">
-              <h3 className="text-xl font-semibold text-ink-900">{cidade.nome}</h3>
-              <p className="mt-2 text-base leading-relaxed text-ink-700">{cidade.detalhe}</p>
+            <li key={cidade.nome} className="rounded-card border border-cream-200 bg-white p-5 md:p-6">
+              <h3 className="text-lg font-semibold text-ink-900 md:text-xl">{cidade.nome}</h3>
+              <p className="mt-1.5 text-base leading-relaxed text-ink-700">{cidade.detalhe}</p>
             </li>
           ))}
         </ul>

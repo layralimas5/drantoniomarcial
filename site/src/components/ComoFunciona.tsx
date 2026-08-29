@@ -36,7 +36,7 @@ export function ComoFunciona() {
           {etapas.map((etapa, index) => (
             <li
               key={etapa.titulo}
-              className="pulsar-suave relative rounded-card border border-cream-200 bg-white p-6"
+              className="pulsar-suave relative rounded-card border border-cream-200 bg-white p-5 md:p-6"
             >
               {index < etapas.length - 1 ? (
                 <>
@@ -47,19 +47,19 @@ export function ComoFunciona() {
                   />
                   <span
                     aria-hidden="true"
-                    className="absolute -bottom-5 left-12 h-5 w-px bg-cream-300 md:hidden"
+                    className="absolute -bottom-5 left-10 h-5 w-px bg-cream-300 md:hidden"
                   />
                 </>
               ) : null}
 
               <span
                 aria-hidden="true"
-                className="flex h-12 w-12 items-center justify-center rounded-full bg-navy-900 text-xl font-semibold text-white"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-navy-900 text-lg font-semibold text-white md:h-12 md:w-12 md:text-xl"
               >
                 {index + 1}
               </span>
-              <h3 className="mt-5 text-xl font-semibold text-ink-900">{etapa.titulo}</h3>
-              <p className="mt-2 text-base leading-relaxed text-ink-700 md:text-lg">{etapa.texto}</p>
+              <h3 className="mt-4 text-lg font-semibold text-ink-900 md:mt-5 md:text-xl">{etapa.titulo}</h3>
+              <p className="mt-1.5 text-base leading-relaxed text-ink-700 md:text-lg">{etapa.texto}</p>
             </li>
           ))}
         </ol>

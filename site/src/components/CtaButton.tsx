@@ -3,7 +3,7 @@ import { whatsappUrl } from '../lib/site-config'
 import { trackConversion } from '../lib/tracking'
 
 const baseClasses =
-  'pulsar inline-flex min-h-[3.5rem] items-center justify-center gap-3 rounded-full px-7 py-3 text-center text-lg leading-snug font-semibold transition-colors duration-200'
+  'pulsar inline-flex min-h-[3rem] items-center justify-center gap-2.5 rounded-full px-6 py-2.5 text-center text-base leading-snug font-semibold transition-colors duration-200 sm:min-h-[3.5rem] sm:gap-3 sm:px-7 sm:py-3 sm:text-lg'
 
 /** `light` existe para os blocos de fundo azul escuro, onde o sólido sumiria. */
 const VARIANTES = {

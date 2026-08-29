@@ -63,7 +63,7 @@ export function Depoimentos() {
             </p>
           </div>
 
-          <p className="rounded-full border border-cream-300 bg-white px-5 py-3 text-base text-ink-700">
+          <p className="rounded-full border border-cream-300 bg-white px-4 py-2.5 text-base text-ink-700 md:px-5 md:py-3">
             Pacientes atendidos em {clinic.address.district} e região
           </p>
         </div>
@@ -77,24 +77,24 @@ export function Depoimentos() {
               <li
                 key={`${repeticao}-${depoimento.autor}`}
                 aria-hidden={repeticao > 0}
-                className="w-[19rem] shrink-0 md:w-[24rem]"
+                className="w-[17rem] shrink-0 sm:w-[19rem] md:w-[23rem]"
               >
-                <figure className="flex h-full flex-col rounded-card border border-cream-200 bg-white p-7 shadow-[0_20px_45px_-32px_rgba(12,32,51,0.45)]">
+                <figure className="flex h-full flex-col rounded-card border border-cream-200 bg-white p-5 shadow-[0_20px_45px_-32px_rgba(12,32,51,0.45)] md:p-7">
                   <span
                     aria-hidden="true"
-                    className="font-display text-6xl leading-none text-gold-400"
+                    className="font-display text-5xl leading-none text-gold-400 md:text-6xl"
                   >
                     “
                   </span>
 
-                  <blockquote className="-mt-4 grow text-lg leading-relaxed text-ink-800">
+                  <blockquote className="-mt-3 grow text-base leading-relaxed text-ink-800 md:text-lg">
                     {depoimento.texto}
                   </blockquote>
 
-                  <figcaption className="mt-6 flex items-center gap-4 border-t border-cream-200 pt-5">
+                  <figcaption className="mt-5 flex items-center gap-3 border-t border-cream-200 pt-4 md:mt-6 md:gap-4 md:pt-5">
                     <span
                       aria-hidden="true"
-                      className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-navy-900 text-lg font-semibold text-white"
+                      className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-navy-900 text-base font-semibold text-white md:h-12 md:w-12 md:text-lg"
                     >
                       {depoimento.autor.charAt(0)}
                     </span>

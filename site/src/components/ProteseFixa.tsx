@@ -32,10 +32,10 @@ export function ProteseFixa() {
             {diferencas.map((item) => (
               <li
                 key={item.titulo}
-                className="pulsar-suave rounded-card border border-navy-line bg-navy-800 p-6"
+                className="pulsar-suave rounded-card border border-navy-line bg-navy-800 p-5 md:p-6"
               >
-                <h3 className="text-xl font-semibold text-cream-50">{item.titulo}</h3>
-                <p className="mt-2 text-base leading-relaxed text-cream-200 md:text-lg">
+                <h3 className="text-lg font-semibold text-cream-50 md:text-xl">{item.titulo}</h3>
+                <p className="mt-1.5 text-base leading-relaxed text-cream-200 md:text-lg">
                   {item.texto}
                 </p>
               </li>

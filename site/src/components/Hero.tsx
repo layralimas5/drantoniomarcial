@@ -7,7 +7,7 @@ export function Hero() {
   const fade = reduceMotion ? {} : { initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 } }
 
   return (
-    <header id="topo" className="relative -mt-[4.5rem] overflow-hidden bg-cream-50 pt-[4.5rem]">
+    <header id="topo" className="relative -mt-[3.75rem] overflow-hidden bg-cream-50 pt-[3.75rem] lg:-mt-[4.5rem] lg:pt-[4.5rem]">
       {/* No celular o banner abre a página; no desktop ele ocupa a metade direita
           e o gradiente garante contraste do texto sobre a parte clara da foto. */}
       <div className="relative lg:absolute lg:inset-y-0 lg:right-0 lg:w-[54%]">
@@ -18,7 +18,7 @@ export function Hero() {
           alt={`${dentist.name} no consultório da ${clinic.name}, em ${clinic.address.district}`}
           fetchPriority="high"
           decoding="async"
-          className="aspect-[16/11] w-full object-cover object-[78%_center] sm:aspect-[2/1] lg:h-full lg:aspect-auto"
+          className="aspect-[16/10] w-full object-cover object-[78%_center] sm:aspect-[2/1] lg:h-full lg:aspect-auto"
         />
         <div
           aria-hidden="true"
@@ -26,7 +26,7 @@ export function Hero() {
         />
       </div>
 
-      <div className="container-page relative py-12 md:py-16 lg:min-h-[88svh] lg:content-center lg:py-24">
+      <div className="container-page relative -mt-8 rounded-t-[2rem] bg-cream-50 pt-8 pb-12 md:py-16 lg:mt-0 lg:rounded-none lg:min-h-[88svh] lg:content-center lg:py-24">
         <m.div
           {...fade}
           transition={{ duration: 0.6, ease: 'easeOut' }}
@@ -36,19 +36,19 @@ export function Hero() {
             Volte a comer, falar e sorrir sem se preocupar com a dentadura
           </h1>
 
-          <p className="mt-7 max-w-xl text-lg leading-relaxed text-ink-800 md:text-[1.35rem]">
+          <p className="mt-5 max-w-xl text-lg leading-relaxed text-ink-800 md:mt-7 md:text-[1.35rem]">
             Dentes fixos, que não saem para dormir, aqui em {clinic.address.city}. Na consulta
             você descobre o que dá para fazer no seu caso, quanto tempo leva e como pode pagar.
           </p>
 
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap md:mt-9">
             <WhatsAppButton className="w-full sm:w-auto" />
             <AnchorButton href="#agendar" className="w-full sm:w-auto">
               Agendar minha avaliação
             </AnchorButton>
           </div>
 
-          <p className="mt-9 border-l-2 border-cream-300 pl-4 text-base text-ink-500">
+          <p className="mt-7 border-l-2 border-cream-300 pl-4 text-base text-ink-500 md:mt-9">
             {dentist.name} · {dentist.cro}
             <br />
             {clinic.address.district}, {clinic.address.city}
