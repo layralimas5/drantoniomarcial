@@ -118,7 +118,47 @@
   transition: transform 250ms ease-out;
 
   &:hover {
-    animation: pulso-suave 2.2s ease-in-out infinite;
+    animation: pulso-suave 1.1s ease-in-out infinite;
+  }
+}
+
+@keyframes marquee-esquerda {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/** Faixa de depoimentos em movimento continuo para a esquerda. */
+@utility marquee {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 4rem, black calc(100% - 4rem), transparent);
+}
+
+@utility marquee-faixa {
+  display: flex;
+  width: max-content;
+  gap: 1.25rem;
+  padding-inline: 1.25rem;
+  animation: marquee-esquerda 60s linear infinite;
+}
+
+@media (hover: hover) {
+  .marquee:hover .marquee-faixa {
+    animation-play-state: paused;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    overflow-x: auto;
+    mask-image: none;
+  }
+
+  .marquee-faixa {
+    animation: none !important;
   }
 }
 

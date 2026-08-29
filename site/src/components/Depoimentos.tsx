@@ -24,7 +24,16 @@ const depoimentos = [
     autor: 'Terezinha S.',
     detalhe: 'Vitória',
   },
+  {
+    texto:
+      'Chegei achando que não tinha osso e que ia ouvir um não. Saí sabendo exatamente qual era a minha situação, com prazo e valor na mão.',
+    autor: 'Sebastião A.',
+    detalhe: 'Vila Velha',
+  },
 ]
+
+/** Quantas vezes a lista se repete dentro da faixa. A animação desloca metade da faixa. */
+const REPETICOES = 4
 
 export function Depoimentos() {
   return (
@@ -38,23 +47,31 @@ export function Depoimentos() {
           Quase todo mundo chega com o mesmo receio e sai falando da mesma coisa: entender o
           próprio caso tira um peso que estava lá havia anos.
         </p>
+      </div>
 
-        <div className="mt-10 grid gap-5 md:grid-cols-3">
-          {depoimentos.map((depoimento) => (
-            <figure
-              key={depoimento.autor}
-              className="flex h-full flex-col justify-between rounded-card border border-cream-200 bg-white p-6"
-            >
-              <blockquote className="text-lg leading-relaxed text-ink-800">
-                “{depoimento.texto}”
-              </blockquote>
-              <figcaption className="mt-6 text-base font-semibold text-ink-900">
-                {depoimento.autor}
-                <span className="block font-normal text-ink-500">{depoimento.detalhe}</span>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
+      {/* A faixa sangra até a borda da tela para o movimento não parecer preso num quadro. */}
+      <div className="marquee mt-10">
+        <ul className="marquee-faixa">
+          {Array.from({ length: REPETICOES }).flatMap((_, repeticao) =>
+            depoimentos.map((depoimento) => (
+              <li
+                key={`${repeticao}-${depoimento.autor}`}
+                aria-hidden={repeticao > 0}
+                className="w-[19rem] shrink-0 md:w-[24rem]"
+              >
+                <figure className="flex h-full flex-col justify-between rounded-card border border-cream-200 bg-white p-6">
+                  <blockquote className="text-lg leading-relaxed text-ink-800">
+                    “{depoimento.texto}”
+                  </blockquote>
+                  <figcaption className="mt-6 text-base font-semibold text-ink-900">
+                    {depoimento.autor}
+                    <span className="block font-normal text-ink-500">{depoimento.detalhe}</span>
+                  </figcaption>
+                </figure>
+              </li>
+            )),
+          )}
+        </ul>
       </div>
     </Section>
   )
