@@ -15,6 +15,8 @@ const alvos = {
   /** Retrato do Dr. Antonio na seção de credenciais. */
   foto: { width: 1200, height: 1499 },
   'video-poster': { width: 1280, height: 720 },
+  /** Fotos da galeria: qualquer arquivo com o prefixo `galeria-`. */
+  galeria: { width: 1200, height: 900 },
   og: { width: 1200, height: 630 },
 }
 
@@ -27,7 +29,7 @@ if (arquivos.length === 0) {
 
 for (const arquivo of arquivos) {
   const { name } = parse(arquivo)
-  const alvo = alvos[name]
+  const alvo = name.startsWith('galeria-') ? alvos.galeria : alvos[name]
 
   if (!alvo) {
     console.warn(`Ignorado (nome fora da lista): ${arquivo}`)

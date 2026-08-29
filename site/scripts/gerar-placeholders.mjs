@@ -4,7 +4,22 @@
  */
 import sharp from 'sharp'
 
+const galeria = [
+  'galeria-implante',
+  'galeria-cirurgia',
+  'galeria-protese',
+  'galeria-ortodontia',
+  'galeria-atendimento',
+  'galeria-estrutura',
+]
+
 const placeholders = [
+  ...galeria.map((arquivo) => ({
+    arquivo: `public/${arquivo}.webp`,
+    width: 1200,
+    height: 900,
+    texto: arquivo.replace('galeria-', 'Foto: '),
+  })),
   { arquivo: 'public/video-poster.webp', width: 1280, height: 720, texto: 'Capa do vídeo' },
 ]
 

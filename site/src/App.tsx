@@ -4,6 +4,7 @@ import { Hero } from './components/Hero'
 import { Dores } from './components/Dores'
 import { ProteseFixa } from './components/ProteseFixa'
 import { VideoDoutor } from './components/VideoDoutor'
+import { Galeria } from './components/Galeria'
 import { ComoFunciona } from './components/ComoFunciona'
 import { Faq } from './components/Faq'
 import { SobreDoutor } from './components/SobreDoutor'
@@ -33,6 +34,7 @@ export function App() {
         <ProteseFixa />
         <VideoDoutor />
         <ComoFunciona />
+        <Galeria />
         <Faq />
         <SobreDoutor />
         <Depoimentos />

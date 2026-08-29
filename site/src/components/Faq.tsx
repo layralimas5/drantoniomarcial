@@ -12,11 +12,11 @@ export function Faq() {
       <div className="container-page">
         <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
           <div className="lg:sticky lg:top-[calc(50vh-9rem)] lg:self-start lg:text-center">
-            <SectionTitle id="faq-titulo" className="!text-cream-50">
+            <SectionTitle id="faq-titulo" className="!text-cream-50 !text-4xl md:!text-5xl lg:!text-[3.25rem]">
               As dúvidas que travam a decisão, respondidas
             </SectionTitle>
 
-            <p className="mt-5 text-lg text-cream-200 md:text-xl">
+            <p className="mt-6 text-xl leading-relaxed text-cream-200 md:text-2xl">
               Muita gente adia o tratamento por causa de uma dessas perguntas. Leia com calma: é
               melhor decidir sabendo do que continuar adiando.
             </p>

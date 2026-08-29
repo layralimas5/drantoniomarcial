@@ -38,6 +38,9 @@
   --color-sky-200: #c8dcec;
   --color-sky-300: #a9c6dc;
 
+  /* Amarelo de destaque, usado só em detalhe gráfico */
+  --color-gold-400: #f2b43c;
+
   /* Acento único, só em CTA */
   --color-accent-600: #9a4b14;
   --color-accent-700: #7e3c0f;

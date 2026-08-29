@@ -82,7 +82,7 @@ export function Depoimentos() {
                 <figure className="flex h-full flex-col rounded-card border border-cream-200 bg-white p-7 shadow-[0_20px_45px_-32px_rgba(12,32,51,0.45)]">
                   <span
                     aria-hidden="true"
-                    className="font-display text-6xl leading-none text-navy-900/15"
+                    className="font-display text-6xl leading-none text-gold-400"
                   >
                     “
                   </span>

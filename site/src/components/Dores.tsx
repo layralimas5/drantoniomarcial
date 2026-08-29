@@ -68,12 +68,12 @@ export function Dores() {
           ))}
         </ul>
 
-        <div className="mt-10 max-w-3xl">
-          <p className="text-xl font-medium text-ink-900">
-            Nada disso é para sempre. Existe tratamento para a maior parte dos casos, e o
-            primeiro passo não é a cirurgia. É entender o que dá para fazer no seu.
+        <div className="mt-12 flex flex-col items-center text-center">
+          <p className="max-w-3xl text-xl font-medium text-ink-900 md:text-2xl">
+            Nada disso é para sempre. Existe tratamento para a maior parte dos casos, e o primeiro
+            passo não é a cirurgia. É entender o que dá para fazer no seu.
           </p>
-          <WhatsAppButton className="mt-6 w-full sm:w-auto">
+          <WhatsAppButton className="mt-7 w-full sm:w-auto">
             Quero saber se o meu caso tem solução
           </WhatsAppButton>
         </div>

@@ -36,6 +36,13 @@ com `npm run img`. Os nomes são fixos:
 | `foto` | seção "Quem vai cuidar do seu caso" | 4:5 vertical |
 | `video-poster` | capa do vídeo | 16:9 |
 | `og` | miniatura ao compartilhar o link | 1,91:1 |
+| `galeria-*` | seção "Como é o atendimento por dentro" | 4:3 |
+
+A galeria espera seis arquivos: `galeria-implante`, `galeria-cirurgia`,
+`galeria-protese`, `galeria-ortodontia`, `galeria-atendimento` e
+`galeria-estrutura`. Valem fotos de estrutura, equipamento, equipe e
+atendimento. **Nunca foto de resultado de tratamento nem antes e depois**,
+que é proibido pelo CFO.
 
 O vídeo do Dr. Antonio vai em `site/public/dr-antonio-explica.mp4`, com legenda
 em `site/public/legendas.vtt`. Ele só é baixado depois do clique no play.
@@ -61,7 +68,7 @@ em `site/public/legendas.vtt`. Ele só é baixado depois do clique no play.
 - [ ] Endereço completo com número e CEP
 - [ ] Horário de atendimento real
 - [x] Foto do Dr. Antonio (banner e retrato)
-- [ ] Fotos do consultório e dos equipamentos
+- [ ] Fotos do consultório e dos equipamentos (seis, para a galeria)
 - [ ] Vídeo do Dr. Antonio (celular basta, com legenda)
 - [ ] Depoimentos reais autorizados, substituindo os de `Depoimentos.tsx`
 - [ ] Respostas do FAQ revisadas e aprovadas pelo Dr. Antonio
