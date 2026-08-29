@@ -21,19 +21,11 @@ export function Faq() {
               com calma: é melhor decidir informado do que continuar adiando.
             </p>
 
-            <div className="mt-8 rounded-card border border-navy-line bg-navy-800 p-6">
-              <p className="text-lg text-cream-100">
-                Sua dúvida não está aqui? Pergunte direto para a equipe do {dentist.shortName}, sem
-                compromisso de agendar nada.
-              </p>
-              <WhatsAppButton variant="light" className="mt-5 w-full sm:w-auto">
-                Tirar minha dúvida agora
-              </WhatsAppButton>
-            </div>
           </div>
 
-          <div className="divide-y divide-navy-line border-y border-navy-line">
-          {perguntasFrequentes.map((item, index) => {
+          <div>
+            <div className="divide-y divide-navy-line border-y border-navy-line">
+              {perguntasFrequentes.map((item, index) => {
             const isOpen = aberta === index
             const panelId = `faq-painel-${index}`
             const buttonId = `faq-botao-${index}`
@@ -67,6 +59,17 @@ export function Faq() {
               </div>
             )
           })}
+            </div>
+
+            <div className="mt-8 rounded-card border border-navy-line bg-navy-800 p-6">
+              <p className="text-lg text-cream-100">
+                Sua dúvida não está aqui? Pergunte direto para a equipe do {dentist.shortName}, sem
+                compromisso de agendar nada.
+              </p>
+              <WhatsAppButton variant="light" className="mt-5 w-full sm:w-auto">
+                Tirar minha dúvida agora
+              </WhatsAppButton>
+            </div>
           </div>
         </div>
       </div>

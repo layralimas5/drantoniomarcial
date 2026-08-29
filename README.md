@@ -57,7 +57,7 @@ em `site/public/legendas.vtt`. Ele só é baixado depois do clique no play.
 
 - [x] Contratação acordada com o cliente
 - [ ] **CRO-ES do Dr. Antonio**, obrigatório por exigência do CFO
-- [ ] WhatsApp comercial real (hoje: `5527000000000`, placeholder)
+- [x] WhatsApp comercial: (27) 99966-4449
 - [ ] Endereço completo com número e CEP
 - [ ] Horário de atendimento real
 - [x] Foto do Dr. Antonio (banner e retrato)

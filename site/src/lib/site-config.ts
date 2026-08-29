@@ -10,10 +10,9 @@ export const clinic = {
   cnpj: '22.981.292/0001-23',
   instagram: 'https://www.instagram.com/drantoniomarcial',
   instagramHandle: '@drantoniomarcial',
-  /** PENDENTE: número real do WhatsApp comercial (formato E.164, só dígitos). */
-  whatsappNumber: '5527000000000',
-  /** PENDENTE: telefone de exibição. */
-  phoneDisplay: '(27) 0000-0000',
+  /** WhatsApp comercial da clínica, em E.164 (só dígitos). */
+  whatsappNumber: '5527999664449',
+  phoneDisplay: '(27) 99966-4449',
   address: {
     /** PENDENTE: endereço completo com número. */
     street: 'Rua a confirmar, 000',
