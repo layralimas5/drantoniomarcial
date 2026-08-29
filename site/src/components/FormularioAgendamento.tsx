@@ -15,9 +15,26 @@ function formatarTelefone(valor: string): string {
   return `(${digitos.slice(0, 2)}) ${digitos.slice(2, 7)}-${digitos.slice(7)}`
 }
 
+/** Resumo do que a pessoa preencheu, para ela mandar no WhatsApp da clínica. */
+function montarMensagem(dados: FormData): string {
+  const nome = String(dados.get('nome') ?? '').trim()
+  const telefone = String(dados.get('telefone') ?? '').trim()
+  const mensagem = String(dados.get('mensagem') ?? '').trim()
+
+  const linhas = [
+    'Olá! Vim pelo site e quero agendar uma avaliação.',
+    nome ? `Nome: ${nome}` : '',
+    telefone ? `WhatsApp: ${telefone}` : '',
+    mensagem ? `O que me incomoda: ${mensagem}` : '',
+  ]
+
+  return linhas.filter(Boolean).join('\n')
+}
+
 export function FormularioAgendamento() {
   const [telefone, setTelefone] = useState('')
   const [status, setStatus] = useState<Status>('idle')
+  const [resumo, setResumo] = useState('')
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>): Promise<void> {
     event.preventDefault()
@@ -26,6 +43,7 @@ export function FormularioAgendamento() {
     const form = event.currentTarget
     const dados = new FormData(form)
     dados.set('form-name', FORM_NAME)
+    const mensagemWhatsApp = montarMensagem(dados)
 
     try {
       const resposta = await fetch('/', {
@@ -39,6 +57,7 @@ export function FormularioAgendamento() {
       }
 
       trackConversion('form_submit')
+      setResumo(mensagemWhatsApp)
       form.reset()
       setTelefone('')
       setStatus('success')
@@ -55,10 +74,13 @@ export function FormularioAgendamento() {
       >
         <h3 className="text-2xl font-semibold text-ink-900">Recebemos o seu contato</h3>
         <p className="mt-3 text-lg text-ink-800">
-          A equipe vai retornar no horário de atendimento para combinar o dia da sua avaliação. Se
-          preferir adiantar, chame no WhatsApp agora.
+          A equipe vai retornar no horário de atendimento para combinar o dia da sua avaliação.
+          Quer adiantar? O botão abaixo abre o WhatsApp da clínica com os seus dados já escritos: é
+          só apertar enviar.
         </p>
-        <WhatsAppButton className="mt-6 w-full sm:w-auto">Falar agora no WhatsApp</WhatsAppButton>
+        <WhatsAppButton mensagem={resumo} className="mt-6 w-full sm:w-auto">
+          Enviar meus dados no WhatsApp
+        </WhatsAppButton>
       </div>
     )
   }

@@ -44,7 +44,12 @@ export const dentist = {
 export const whatsappMessage =
   'Olá! Vim pelo site e quero agendar uma avaliação.'
 
-export const whatsappUrl = `https://wa.me/${clinic.whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`
+/** Link do WhatsApp da clínica com uma mensagem já escrita. */
+export function whatsappUrlCom(mensagem: string): string {
+  return `https://wa.me/${clinic.whatsappNumber}?text=${encodeURIComponent(mensagem)}`
+}
+
+export const whatsappUrl = whatsappUrlCom(whatsappMessage)
 
 export const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
   `${clinic.address.street}, ${clinic.address.district}, ${clinic.address.city} - ${clinic.address.state}`,

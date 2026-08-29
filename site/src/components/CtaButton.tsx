@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { whatsappUrl } from '../lib/site-config'
+import { whatsappUrl, whatsappUrlCom } from '../lib/site-config'
 import { trackConversion } from '../lib/tracking'
 
 const baseClasses =
@@ -16,18 +16,21 @@ interface WhatsAppButtonProps {
   children?: ReactNode
   className?: string
   variant?: keyof typeof VARIANTES
+  /** Texto que já vai escrito na conversa. Sem isso, vale a mensagem padrão. */
+  mensagem?: string
 }
 
 export function WhatsAppButton({
   children = 'Falar com a equipe no WhatsApp',
   className = '',
   variant = 'solid',
+  mensagem,
 }: WhatsAppButtonProps) {
   const variantClasses = VARIANTES[variant]
 
   return (
     <a
-      href={whatsappUrl}
+      href={mensagem ? whatsappUrlCom(mensagem) : whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
       onClick={() => trackConversion('whatsapp_click')}
