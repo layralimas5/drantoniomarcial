@@ -119,7 +119,7 @@ Sem isso a campanha roda no escuro:
 
 - [x] Contratação acordada com o cliente
 - [ ] Número do CRO-ES do Dr. Antonio Marcial
-- [ ] Endereço completo (WhatsApp já confirmado: 27 99966-4449)
+- [x] Endereço, WhatsApp (27 99966-4449) e e-mail (ciaodoctor@hotmail.com)
 - [ ] Horário de atendimento
 - [ ] Ticket real de protocolo e de implante unitário
 - [ ] Formas de pagamento e parcelamento aceitos

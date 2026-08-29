@@ -13,13 +13,13 @@ export const clinic = {
   /** WhatsApp comercial da clínica, em E.164 (só dígitos). */
   whatsappNumber: '5527999664449',
   phoneDisplay: '(27) 99966-4449',
+  email: 'ciaodoctor@hotmail.com',
   address: {
-    /** PENDENTE: endereço completo com número. */
-    street: 'Rua a confirmar, 000',
+    street: 'Av. Álvares de Azevedo, 914, loja 03',
     district: 'Riviera da Barra',
     city: 'Vila Velha',
     state: 'ES',
-    zip: '29129-000',
+    zip: '29126-070',
     reference: 'Riviera da Barra, Vila Velha',
   },
   /** PENDENTE: horário real de atendimento. */
@@ -48,4 +48,4 @@ export const mapsEmbedUrl = `https://www.google.com/maps?q=${encodeURIComponent(
   `${clinic.address.street}, ${clinic.address.district}, ${clinic.address.city} - ${clinic.address.state}`,
 )}&output=embed`
 
-export const fullAddress = `${clinic.address.street}, ${clinic.address.district}, ${clinic.address.city} (${clinic.address.state})`
+export const fullAddress = `${clinic.address.street}, ${clinic.address.district}, ${clinic.address.city} (${clinic.address.state}), CEP ${clinic.address.zip}`

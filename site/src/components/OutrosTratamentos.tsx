@@ -52,7 +52,7 @@ export function OutrosTratamentos() {
           {tratamentos.map((tratamento) => (
             <li
               key={tratamento.titulo}
-              className={`rounded-card border p-5 transition-colors duration-300 md:p-6 ${
+              className={`pulsar-suave rounded-card border p-5 md:p-6 ${
                 tratamento.principal
                   ? 'border-navy-900 bg-navy-900 text-cream-100'
                   : 'border-cream-200 bg-white hover:border-navy-900'
@@ -76,9 +76,11 @@ export function OutrosTratamentos() {
           ))}
         </ul>
 
-        <WhatsAppButton className="mt-10 w-full sm:w-auto">
-          Perguntar sobre outro tratamento
-        </WhatsAppButton>
+        <div className="mt-10 flex justify-center">
+          <WhatsAppButton className="w-full sm:w-auto">
+            Perguntar sobre outro tratamento
+          </WhatsAppButton>
+        </div>
       </div>
     </Section>
   )

@@ -65,8 +65,9 @@ em `site/public/legendas.vtt`. Ele só é baixado depois do clique no play.
 - [x] Contratação acordada com o cliente
 - [ ] **CRO-ES do Dr. Antonio**, obrigatório por exigência do CFO
 - [x] WhatsApp comercial: (27) 99966-4449
-- [ ] Endereço completo com número e CEP
+- [x] Endereço: Av. Álvares de Azevedo, 914, loja 03, CEP 29126-070
 - [ ] Horário de atendimento real
+- [ ] Coordenadas exatas do consultório (hoje o JSON-LD usa o centro de Vila Velha)
 - [x] Foto do Dr. Antonio (banner e retrato)
 - [ ] Fotos do consultório e dos equipamentos (seis, para a galeria)
 - [ ] Vídeo do Dr. Antonio (celular basta, com legenda)

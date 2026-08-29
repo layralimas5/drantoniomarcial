@@ -24,6 +24,11 @@ export function Rodape() {
             </a>
           </p>
           <p className="mt-2">
+            <a href={`mailto:${clinic.email}`} className="underline underline-offset-4">
+              {clinic.email}
+            </a>
+          </p>
+          <p className="mt-2">
             <a
               href={clinic.instagram}
               target="_blank"

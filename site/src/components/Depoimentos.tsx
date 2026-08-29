@@ -79,7 +79,7 @@ export function Depoimentos() {
                 aria-hidden={repeticao > 0}
                 className="w-[17rem] shrink-0 sm:w-[19rem] md:w-[23rem]"
               >
-                <figure className="flex h-full flex-col rounded-card border border-cream-200 bg-white p-5 shadow-[0_20px_45px_-32px_rgba(12,32,51,0.45)] md:p-7">
+                <figure className="pulsar-suave flex h-full flex-col rounded-card border border-cream-200 bg-white p-5 shadow-[0_18px_38px_-18px_rgba(12,32,51,0.28)] md:p-7">
                   <span
                     aria-hidden="true"
                     className="font-display text-5xl leading-none text-gold-400 md:text-6xl"

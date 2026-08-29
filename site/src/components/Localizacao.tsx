@@ -30,6 +30,14 @@ export function Localizacao() {
               </dd>
             </div>
             <div>
+              <dt className="font-semibold text-ink-900">E-mail</dt>
+              <dd>
+                <a className="underline underline-offset-4" href={`mailto:${clinic.email}`}>
+                  {clinic.email}
+                </a>
+              </dd>
+            </div>
+            <div>
               <dt className="font-semibold text-ink-900">Atendemos pacientes de</dt>
               <dd>{clinic.areasServed.join(', ')}</dd>
             </div>
