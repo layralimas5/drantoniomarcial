@@ -15,23 +15,23 @@ const tratamentos = [
   },
   {
     titulo: 'Ortodontia',
-    texto: 'Aparelho fixo e acompanhamento do alinhamento, para adulto e adolescente.',
+    texto: 'Aparelho para alinhar os dentes, de adolescente e de adulto.',
   },
   {
     titulo: 'Próteses',
-    texto: 'Coroas, próteses parciais e reabilitação de dentes já tratados.',
+    texto: 'Coroa, ponte e prótese parcial para quem já perdeu algum dente.',
   },
   {
     titulo: 'Clínico geral',
-    texto: 'Limpeza, restauração, extração e o acompanhamento de rotina da sua boca.',
+    texto: 'Limpeza, restauração, extração e o cuidado de rotina da sua boca.',
   },
   {
     titulo: 'ATM e bruxismo',
-    texto: 'Avaliação de dor na articulação, estalo ao abrir a boca e desgaste do dente.',
+    texto: 'Dor perto do ouvido, estalo ao abrir a boca e dente gasto de ranger.',
   },
   {
     titulo: 'Cirurgia bucomaxilofacial',
-    texto: 'Procedimentos cirúrgicos conduzidos por especialista na área.',
+    texto: 'Cirurgias da boca e do rosto, feitas por quem é especialista nisso.',
   },
 ]
 
@@ -44,8 +44,8 @@ export function OutrosTratamentos() {
         </SectionTitle>
 
         <p className="mt-5 max-w-3xl text-lg text-ink-800 md:text-xl">
-          O foco do {dentist.shortName} é implante e reabilitação, mas o atendimento não para aí.
-          Se o seu caso começa por outro tratamento, é aqui mesmo que ele é resolvido.
+          O forte do {dentist.shortName} é implante, mas o atendimento não para aí. Se o seu
+          caso começa por outro tratamento, é aqui mesmo que ele se resolve.
         </p>
 
         <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

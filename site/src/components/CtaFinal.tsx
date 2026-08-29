@@ -13,10 +13,9 @@ export function CtaFinal() {
           </SectionTitle>
 
           <p className="mt-6 text-lg leading-relaxed text-cream-200 md:text-xl">
-            Deixe seu nome e WhatsApp que a equipe entra em contato para marcar o dia. A avaliação
-            é presencial, em {clinic.address.district}, e nela você descobre a condição do seu osso,
-            o que pode ser feito, quanto tempo leva e as formas de pagamento. Sem compromisso de
-            fechar tratamento na hora.
+            Deixe seu nome e WhatsApp que a equipe liga para marcar o dia. A consulta é aqui em
+            {clinic.address.district}, e nela você fica sabendo como está o seu osso, o que dá para
+            fazer, quanto tempo leva e como pode pagar. Sem compromisso de fechar nada na hora.
           </p>
 
           <div className="mt-8 rounded-card border border-navy-line bg-navy-800 p-6">

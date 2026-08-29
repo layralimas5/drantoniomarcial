@@ -58,8 +58,8 @@ export function Depoimentos() {
             </SectionTitle>
 
             <p className="mt-5 text-lg text-ink-800 md:text-xl">
-              Quase todo mundo chega com o mesmo receio e sai falando da mesma coisa: entender o
-              próprio caso tira um peso que estava lá havia anos.
+              Quase todo mundo chega com o mesmo medo e sai falando a mesma coisa: entender o
+              próprio caso tira um peso de anos.
             </p>
           </div>
 

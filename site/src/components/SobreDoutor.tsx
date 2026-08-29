@@ -26,9 +26,9 @@ export function SobreDoutor() {
           <SectionTitle id="doutor-titulo">Quem vai cuidar do seu caso</SectionTitle>
 
           <p className="mt-6 text-lg leading-relaxed text-ink-800 md:text-xl">
-            {dentist.name} é cirurgião-dentista com especialização em cirurgia e traumatologia
-            bucomaxilofacial. Atende em {clinic.address.district}, em {clinic.address.city}, e
-            conduz pessoalmente a avaliação e o planejamento de cada caso de prótese fixa.
+            {dentist.name} é cirurgião-dentista especialista em cirurgia da boca e do rosto.
+            Atende em {clinic.address.district}, em {clinic.address.city}, e acompanha
+            pessoalmente cada caso, da primeira consulta ao último retorno.
           </p>
 
           <ul className="mt-8 space-y-4">

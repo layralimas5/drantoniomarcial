@@ -11,14 +11,14 @@ export function Faq() {
     <Section id="duvidas" labelledBy="faq-titulo" className="bg-navy-900 text-cream-100">
       <div className="container-page">
         <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
-          <div className="lg:sticky lg:top-28 lg:self-start">
+          <div className="lg:sticky lg:top-[calc(50vh-9rem)] lg:self-start lg:text-center">
             <SectionTitle id="faq-titulo" className="!text-cream-50">
               As dúvidas que travam a decisão, respondidas
             </SectionTitle>
 
             <p className="mt-5 text-lg text-cream-200 md:text-xl">
-              A maior parte das pessoas adia o tratamento por causa de uma dessas perguntas. Leia
-              com calma: é melhor decidir informado do que continuar adiando.
+              Muita gente adia o tratamento por causa de uma dessas perguntas. Leia com calma: é
+              melhor decidir sabendo do que continuar adiando.
             </p>
 
           </div>

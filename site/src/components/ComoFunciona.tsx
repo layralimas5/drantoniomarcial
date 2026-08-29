@@ -1,23 +1,21 @@
 import { Section, SectionTitle } from './Section'
-import { dentist } from '../lib/site-config'
 
 const etapas = [
   {
     titulo: 'Avaliação presencial',
-    texto: 'Exame clínico e exame de imagem para entender a condição do osso e da gengiva.',
+    texto: 'O Dr. Antonio examina sua boca e pede um exame de imagem para ver como está o osso.',
   },
   {
     titulo: 'Plano de tratamento',
-    texto: `${dentist.shortName} explica o que pode ser feito no seu caso, o tempo previsto e as opções.`,
+    texto: 'Ele explica o que dá para fazer, quanto tempo leva e quais são as opções de pagamento.',
   },
   {
     titulo: 'Cirurgia',
-    texto:
-      'Feita com anestesia, em ambiente preparado, por cirurgião especialista em bucomaxilofacial.',
+    texto: 'Feita com anestesia, na própria clínica, por cirurgião especialista.',
   },
   {
     titulo: 'Acompanhamento',
-    texto: 'Retornos para ajuste e acompanhamento da cicatrização.',
+    texto: 'Você volta algumas vezes para ajuste e para acompanhar a cicatrização.',
   },
 ]
 
@@ -30,8 +28,8 @@ export function ComoFunciona() {
         </SectionTitle>
 
         <p className="mt-5 max-w-3xl text-lg text-ink-800 md:text-xl">
-          Ninguém sai da primeira consulta operando. A avaliação existe para você entender o seu
-          caso e decidir com informação na mão, no seu tempo.
+          Ninguém sai da primeira consulta operando. A consulta serve para você entender o seu
+          caso e decidir com calma.
         </p>
 
         <ol className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">

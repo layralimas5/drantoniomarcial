@@ -14,7 +14,7 @@ const cidades = [
   },
   {
     nome: 'Vitória',
-    detalhe: 'Pacientes que atravessam a Terceira Ponte para tratamento com hora marcada.',
+    detalhe: 'Quem vem pela Terceira Ponte, com hora marcada.',
   },
   { nome: 'Cariacica', detalhe: 'Acesso pela Rodovia do Sol e pela BR 262.' },
   { nome: 'Guarapari', detalhe: 'Quem vem pela Rodovia do Sol chega direto ao consultório.' },
@@ -29,9 +29,9 @@ export function AreaAtendida() {
         </SectionTitle>
 
         <p className="mt-5 max-w-3xl text-lg text-ink-800 md:text-xl">
-          O consultório fica em {clinic.address.district}, em {clinic.address.city}, e recebe
-          pacientes das cidades vizinhas. Tratamento de protocolo e prótese fixa exige retornos, e
-          fazer isso perto de casa muda a rotina de quem está em tratamento.
+          O consultório fica em {clinic.address.district}, em {clinic.address.city}, e atende
+          gente das cidades vizinhas. Esse tipo de tratamento pede várias voltas à clínica, e ser
+          perto de casa faz diferença.
         </p>
 
         <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

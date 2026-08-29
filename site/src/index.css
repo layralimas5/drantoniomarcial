@@ -44,7 +44,7 @@
   --color-accent-100: #f6e6d8;
 
   --radius-card: 1.25rem;
-  --text-hero: clamp(2.35rem, 5.2vw, 3.75rem);
+  --text-hero: clamp(2.4rem, 4.5vw, 3.9rem);
 }
 
 @layer base {

@@ -5,13 +5,13 @@ export function Rodape() {
     <footer className="border-t border-navy-line bg-navy-900 py-14 pb-28 text-cream-200 md:pb-14">
       <div className="container-page grid gap-8 text-base text-cream-200 md:grid-cols-3">
         <div>
-          <p className="text-lg font-semibold text-cream-50">{clinic.legalName}</p>
-          <p className="mt-2">CNPJ {clinic.cnpj}</p>
+          <p className="text-lg font-semibold text-cream-50">Responsável técnico</p>
           <p className="mt-2">
-            Responsável técnico: {dentist.name}
+            {dentist.name}
             <br />
             {dentist.cro}
           </p>
+          <p className="mt-2">CNPJ {clinic.cnpj}</p>
         </div>
 
         <div>
@@ -42,18 +42,22 @@ export function Rodape() {
               Política de privacidade
             </a>
           </p>
-          <p className="mt-4">
-            Desenvolvido por{' '}
-            <a
-              href="https://limadigitalstudio.com.br"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline underline-offset-4"
-            >
-              Layra Lima
-            </a>
-          </p>
         </div>
+      </div>
+
+      <div className="container-page mt-12 flex flex-col gap-3 border-t border-navy-line pt-8 text-base text-cream-300 sm:flex-row sm:items-center sm:justify-between">
+        <p>{clinic.legalName}</p>
+        <p>
+          Desenvolvido por{' '}
+          <a
+            href="https://limadigitalstudio.com.br"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-4"
+          >
+            Layra Lima
+          </a>
+        </p>
       </div>
     </footer>
   )

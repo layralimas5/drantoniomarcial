@@ -1,10 +1,10 @@
 import { Section, SectionTitle } from './Section'
 
 const diferencas = [
-  { titulo: 'Mastigação', texto: 'A força da mordida volta para o osso, não para a gengiva.' },
-  { titulo: 'Fala', texto: 'Sem a placa que se move, a língua encosta onde precisa encostar.' },
-  { titulo: 'Conforto', texto: 'Não usa cola, não solta na conversa e não machuca ao longo do dia.' },
-  { titulo: 'Osso', texto: 'O implante trabalha dentro do osso e ajuda a manter o estímulo.' },
+  { titulo: 'Mastigação', texto: 'A força da mordida vai para o osso, e não para a gengiva.' },
+  { titulo: 'Fala', texto: 'Nada se mexe dentro da boca, então a fala fica mais natural.' },
+  { titulo: 'Conforto', texto: 'Sem cola, sem soltar no meio da conversa, sem machucar a gengiva.' },
+  { titulo: 'Osso', texto: 'O implante trabalha dentro do osso e ajuda a manter o osso firme.' },
 ]
 
 export function ProteseFixa() {
@@ -18,13 +18,13 @@ export function ProteseFixa() {
             </SectionTitle>
 
             <p className="mt-6 text-lg leading-relaxed text-cream-200 md:text-xl">
-              Implantes de titânio fixados no osso servem de base para uma prótese presa. Ela não
-              sai para dormir e não depende de cola.
+              Pequenos pinos de titânio são presos no osso. Em cima deles entram os dentes, que
+              ficam firmes: não saem para dormir e não usam cola.
             </p>
 
             <p className="mt-4 text-lg leading-relaxed text-cream-200 md:text-xl">
-              Se o seu caso permite esse tratamento é pergunta de exame, não de orçamento por
-              telefone.
+              Se dá para fazer no seu caso, só o exame responde. Por telefone ninguém tem como
+              dizer.
             </p>
           </div>
 

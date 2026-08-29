@@ -37,7 +37,7 @@ export function Dores() {
 
         <p className="mt-5 max-w-3xl text-lg text-ink-800 md:text-xl">
           Quem chega aqui quase nunca fala de dente. Fala de vergonha, de comida que deixou de
-          comer e de foto que deixou de tirar. Veja se alguma dessas situações é a sua.
+          comer e de foto que deixou de tirar. Veja se alguma dessas é a sua.
         </p>
 
         <ul className="mt-10 grid gap-4 sm:grid-cols-2">
@@ -70,8 +70,8 @@ export function Dores() {
 
         <div className="mt-10 max-w-3xl">
           <p className="text-xl font-medium text-ink-900">
-            Nenhuma dessas situações é definitiva. Existe tratamento para a maioria dos casos, e o
-            primeiro passo não é a cirurgia: é entender exatamente o que dá para fazer no seu.
+            Nada disso é para sempre. Existe tratamento para a maior parte dos casos, e o
+            primeiro passo não é a cirurgia. É entender o que dá para fazer no seu.
           </p>
           <WhatsAppButton className="mt-6 w-full sm:w-auto">
             Quero saber se o meu caso tem solução
