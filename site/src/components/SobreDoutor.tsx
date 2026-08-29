@@ -10,7 +10,7 @@ const credenciais = [
 
 export function SobreDoutor() {
   return (
-    <Section labelledBy="doutor-titulo" className="bg-cream-50">
+    <Section labelledBy="doutor-titulo" origem="esquerda" className="bg-cream-50">
       <div className="container-page grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
         <img
           src="/foto.webp"

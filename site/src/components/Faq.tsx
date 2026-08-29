@@ -8,7 +8,7 @@ export function Faq() {
   const [aberta, setAberta] = useState<number | null>(0)
 
   return (
-    <Section id="duvidas" labelledBy="faq-titulo" className="bg-navy-900 text-cream-100">
+    <Section id="duvidas" labelledBy="faq-titulo" origem="direita" className="bg-navy-900 text-cream-100">
       <div className="container-page">
         <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
           <div className="lg:sticky lg:top-[calc(50vh-9rem)] lg:self-start lg:text-center">

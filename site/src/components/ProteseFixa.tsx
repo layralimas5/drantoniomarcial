@@ -9,7 +9,7 @@ const diferencas = [
 
 export function ProteseFixa() {
   return (
-    <Section id="tratamento" labelledBy="protese-titulo" className="bg-navy-900 text-cream-100">
+    <Section id="tratamento" labelledBy="protese-titulo" origem="direita" className="bg-navy-900 text-cream-100">
       <div className="container-page">
         <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
           <div>

@@ -1,25 +1,42 @@
 import type { ReactNode } from 'react'
 import { m, useReducedMotion } from 'framer-motion'
 
+/** De onde a seção entra quando aparece na tela. */
+export type Origem = 'esquerda' | 'direita' | 'baixo'
+
+const DESLOCAMENTO: Record<Origem, { x: number; y: number }> = {
+  esquerda: { x: -56, y: 0 },
+  direita: { x: 56, y: 0 },
+  baixo: { x: 0, y: 28 },
+}
+
 interface SectionProps {
   id?: string
   children: ReactNode
   className?: string
   labelledBy?: string
+  origem?: Origem
 }
 
-export function Section({ id, children, className = '', labelledBy }: SectionProps) {
+export function Section({
+  id,
+  children,
+  className = '',
+  labelledBy,
+  origem = 'baixo',
+}: SectionProps) {
   const reduceMotion = useReducedMotion()
+  const { x, y } = DESLOCAMENTO[origem]
 
   return (
     <m.section
       id={id}
       aria-labelledby={labelledBy}
       className={`py-12 md:py-24 ${className}`}
-      initial={reduceMotion ? false : { opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={reduceMotion ? false : { opacity: 0, x, y }}
+      whileInView={{ opacity: 1, x: 0, y: 0 }}
       viewport={{ once: true, margin: '-80px' }}
-      transition={{ duration: 0.5, ease: 'easeOut' }}
+      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
     >
       {children}
     </m.section>

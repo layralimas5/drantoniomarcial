@@ -29,7 +29,7 @@ export function Dores() {
   const reduceMotion = useReducedMotion()
 
   return (
-    <Section labelledBy="dores-titulo" className="bg-cream-50">
+    <Section labelledBy="dores-titulo" origem="esquerda" className="bg-cream-50">
       <div className="container-page">
         <SectionTitle id="dores-titulo" className="max-w-3xl">
           Se você se identifica com alguma dessas situações, dá pra resolver
@@ -44,8 +44,8 @@ export function Dores() {
           {situacoes.map((situacao, index) => (
             <m.li
               key={situacao.titulo}
-              initial={reduceMotion ? false : { opacity: 0, y: 18 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={reduceMotion ? false : { opacity: 0, x: index % 2 === 0 ? -32 : 32 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.45, delay: index * 0.08, ease: 'easeOut' }}
               className="group rounded-card border border-cream-200 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-navy-900 hover:shadow-[0_18px_40px_-24px_rgba(12,32,51,0.5)] md:p-6"

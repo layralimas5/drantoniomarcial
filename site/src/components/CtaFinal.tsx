@@ -5,7 +5,7 @@ import { clinic } from '../lib/site-config'
 
 export function CtaFinal() {
   return (
-    <Section id="agendar" labelledBy="agendar-titulo" className="bg-navy-900 text-cream-100">
+    <Section id="agendar" labelledBy="agendar-titulo" origem="direita" className="bg-navy-900 text-cream-100">
       <div className="container-page grid gap-10 lg:grid-cols-[1fr_1.05fr] lg:items-center lg:gap-16">
         <div>
           <SectionTitle id="agendar-titulo" className="!text-cream-50">

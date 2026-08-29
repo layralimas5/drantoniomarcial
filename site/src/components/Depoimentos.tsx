@@ -48,7 +48,7 @@ const REPETICOES = 4
 
 export function Depoimentos() {
   return (
-    <Section labelledBy="depoimentos-titulo" className="bg-cream-100">
+    <Section labelledBy="depoimentos-titulo" origem="direita" className="bg-cream-100">
       <div className="container-page">
         <div className="max-w-2xl">
           <SectionTitle id="depoimentos-titulo">

@@ -53,12 +53,14 @@
 
 @layer base {
   html {
+    overflow-x: clip;
     scroll-behavior: smooth;
     scroll-padding-top: 5.5rem;
     -webkit-text-size-adjust: 100%;
   }
 
   body {
+    overflow-x: clip;
     background-color: var(--color-cream-50);
     color: var(--color-ink-900);
     font-family: var(--font-sans);

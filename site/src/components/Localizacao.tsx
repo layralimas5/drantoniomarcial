@@ -7,7 +7,7 @@ export function Localizacao() {
   const [mapaVisivel, setMapaVisivel] = useState(false)
 
   return (
-    <Section id="local" labelledBy="local-titulo" className="bg-cream-50">
+    <Section id="local" labelledBy="local-titulo" origem="esquerda" className="bg-cream-50">
       <div className="container-page grid gap-10 lg:grid-cols-2 lg:gap-16">
         <div>
           <SectionTitle id="local-titulo">Onde fica o consultório</SectionTitle>

@@ -37,7 +37,7 @@ const tratamentos = [
 
 export function OutrosTratamentos() {
   return (
-    <Section labelledBy="tratamentos-titulo" className="bg-cream-50">
+    <Section labelledBy="tratamentos-titulo" origem="esquerda" className="bg-cream-50">
       <div className="container-page">
         <SectionTitle id="tratamentos-titulo" className="max-w-3xl">
           A clínica também atende o resto da sua boca

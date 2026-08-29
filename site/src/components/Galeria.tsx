@@ -19,7 +19,7 @@ const fotos = [
 
 export function Galeria() {
   return (
-    <Section id="clinica" labelledBy="galeria-titulo" className="bg-cream-100">
+    <Section id="clinica" labelledBy="galeria-titulo" origem="esquerda" className="bg-cream-100">
       <div className="container-page">
         <SectionTitle id="galeria-titulo" className="max-w-3xl">
           Como é o atendimento por dentro

@@ -10,7 +10,7 @@ export function VideoDoutor() {
   const [playing, setPlaying] = useState(false)
 
   return (
-    <Section id="video" labelledBy="video-titulo" className="bg-cream-100">
+    <Section id="video" labelledBy="video-titulo" origem="esquerda" className="bg-cream-100">
       <div className="container-page max-w-3xl">
         <SectionTitle id="video-titulo">{dentist.shortName} explica como funciona</SectionTitle>
 

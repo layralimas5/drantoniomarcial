@@ -22,7 +22,7 @@ const cidades = [
 
 export function AreaAtendida() {
   return (
-    <Section labelledBy="area-titulo" className="bg-navy-900 text-cream-100">
+    <Section labelledBy="area-titulo" origem="direita" className="bg-navy-900 text-cream-100">
       <div className="container-page">
         <SectionTitle id="area-titulo" className="max-w-3xl !text-cream-50">
           Atendimento em {clinic.address.city} e em toda a Grande Vitória
