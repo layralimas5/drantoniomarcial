@@ -35,7 +35,7 @@ export function BotoesFixos() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackConversion('whatsapp_click')}
-            className="fixed right-5 bottom-5 z-40 hidden h-16 w-16 items-center justify-center rounded-full bg-navy-900 text-white shadow-lg ring-2 ring-white/30 transition-colors hover:bg-navy-800 md:flex"
+            className="pulsar-suave fixed right-5 bottom-5 z-40 hidden h-16 w-16 items-center justify-center rounded-full bg-navy-900 text-white shadow-lg ring-2 ring-white/30 transition-colors hover:bg-navy-800 md:flex"
           >
             <WhatsAppIcon className="h-8 w-8" />
             <span className="sr-only">Falar no WhatsApp</span>
@@ -52,14 +52,14 @@ export function BotoesFixos() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackConversion('whatsapp_click')}
-              className="flex min-h-[3.25rem] flex-1 items-center justify-center gap-2 rounded-full bg-navy-900 text-lg font-semibold text-white"
+              className="pulsar-suave flex min-h-[3.25rem] flex-1 items-center justify-center gap-2 rounded-full bg-navy-900 text-base font-semibold text-white"
             >
               <WhatsAppIcon className="h-6 w-6" />
               WhatsApp
             </a>
             <a
               href="#agendar"
-              className="flex min-h-[3.25rem] flex-1 items-center justify-center rounded-full border-2 border-navy-900 text-lg font-semibold text-navy-900"
+              className="pulsar-suave flex min-h-[3.25rem] flex-1 items-center justify-center rounded-full border-2 border-navy-900 text-base font-semibold text-navy-900"
             >
               Agendar
             </a>

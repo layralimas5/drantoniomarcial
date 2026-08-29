@@ -156,7 +156,7 @@ export function FormularioAgendamento() {
       <button
         type="submit"
         disabled={enviando}
-        className="mt-6 flex min-h-[3.5rem] w-full items-center justify-center rounded-full bg-navy-900 px-7 text-lg font-semibold text-white transition-colors hover:bg-navy-800 disabled:cursor-not-allowed disabled:opacity-70"
+        className="pulsar-suave mt-6 flex min-h-[3.5rem] w-full items-center justify-center rounded-full bg-navy-900 px-7 text-lg font-semibold text-white transition-colors hover:bg-navy-800 disabled:cursor-not-allowed disabled:opacity-70"
       >
         {enviando ? 'Enviando...' : 'Quero agendar minha avaliação'}
       </button>

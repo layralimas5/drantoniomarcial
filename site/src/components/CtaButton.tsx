@@ -49,7 +49,7 @@ export function AnchorButton({ href, children, className = '' }: AnchorButtonPro
   return (
     <a
       href={href}
-      className={`${baseClasses} ${VARIANTES.outline} ${className}`}
+      className={`${baseClasses} ${VARIANTES.solid} ${className}`}
     >
       {children}
     </a>
