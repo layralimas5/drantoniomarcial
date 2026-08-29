@@ -10,7 +10,7 @@ export function Hero() {
     <header id="topo" className="relative -mt-[3.75rem] overflow-hidden bg-cream-50 pt-[3.75rem] lg:-mt-[4.5rem] lg:h-[min(50vw,900px)] lg:pt-[4.5rem]">
       {/* No celular o banner abre a página. No desktop ele preenche o hero inteiro,
           com um véu leve à esquerda apenas para o texto manter contraste. */}
-      <div className="relative lg:absolute lg:inset-0 lg:mx-auto lg:max-w-[1800px]">
+      <div className="relative lg:absolute lg:inset-0">
         <img
           src="/hero-banner.webp"
           width={2400}

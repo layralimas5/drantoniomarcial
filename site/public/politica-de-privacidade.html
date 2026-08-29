@@ -4,76 +4,385 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex, follow" />
+    <meta name="theme-color" content="#0c2033" />
     <title>Política de privacidade | CORB Odontologia</title>
+    <meta
+      name="description"
+      content="Como a CORB Odontologia trata os dados informados no site, conforme a Lei Geral de Proteção de Dados."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-latin-variable.woff2" crossorigin />
     <style>
-      :root { color-scheme: light; }
-      body {
-        margin: 0 auto;
-        max-width: 44rem;
-        padding: 3rem 1.25rem 5rem;
-        background: #fdfaf6;
-        color: #12241d;
-        font: 400 1.125rem/1.7 system-ui, -apple-system, 'Segoe UI', sans-serif;
+      @font-face {
+        font-family: 'Inter Variable';
+        font-style: normal;
+        font-display: swap;
+        font-weight: 400 700;
+        src: url('/fonts/inter-latin-variable.woff2') format('woff2-variations');
       }
-      h1 { font-size: 2rem; line-height: 1.2; }
-      h2 { margin-top: 2.5rem; font-size: 1.35rem; }
-      a { color: #7e3c0f; }
-      footer { margin-top: 3rem; font-size: 1rem; color: #4d6b5e; }
+
+      :root {
+        color-scheme: light;
+        --branco: #ffffff;
+        --neutro: #f6f6f5;
+        --borda: #e5e5e3;
+        --tinta: #12241d;
+        --tinta-media: #2a4a3e;
+        --tinta-clara: #4d6b5e;
+        --azul: #0c2033;
+        --azul-claro: #16334b;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--branco);
+        color: var(--tinta);
+        font-family: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+        font-size: 1.125rem;
+        line-height: 1.7;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      a {
+        color: var(--azul);
+        text-underline-offset: 4px;
+      }
+
+      a:focus-visible,
+      summary:focus-visible {
+        outline: 3px solid var(--azul);
+        outline-offset: 3px;
+        border-radius: 4px;
+      }
+
+      .topo {
+        background: var(--azul);
+        color: var(--branco);
+        padding: clamp(2rem, 6vw, 3.5rem) 0;
+      }
+
+      .topo a {
+        color: #c8dcec;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 46rem;
+        margin-inline: auto;
+        padding-inline: clamp(1.25rem, 5vw, 2rem);
+      }
+
+      h1 {
+        margin: 0.75rem 0 0;
+        font-size: clamp(1.9rem, 6vw, 2.75rem);
+        line-height: 1.15;
+        letter-spacing: -0.02em;
+        text-wrap: balance;
+      }
+
+      .atualizacao {
+        margin-top: 0.75rem;
+        color: #c8dcec;
+        font-size: 1rem;
+      }
+
+      main {
+        padding: clamp(2rem, 7vw, 3.5rem) 0 clamp(3rem, 9vw, 5rem);
+      }
+
+      h2 {
+        margin: 2.75rem 0 0.75rem;
+        font-size: clamp(1.25rem, 4vw, 1.5rem);
+        line-height: 1.25;
+        letter-spacing: -0.01em;
+      }
+
+      h2:first-of-type {
+        margin-top: 0;
+      }
+
+      p,
+      li {
+        text-wrap: pretty;
+      }
+
+      ul {
+        padding-left: 1.25rem;
+      }
+
+      li + li {
+        margin-top: 0.5rem;
+      }
+
+      .destaque {
+        margin: 2rem 0;
+        padding: clamp(1.25rem, 4vw, 1.75rem);
+        border: 1px solid var(--borda);
+        border-radius: 1.25rem;
+        background: var(--neutro);
+      }
+
+      .destaque p:first-child {
+        margin-top: 0;
+      }
+
+      .destaque p:last-child {
+        margin-bottom: 0;
+      }
+
+      .contato {
+        display: grid;
+        gap: 0.35rem;
+        margin: 0;
+      }
+
+      .contato dt {
+        font-weight: 600;
+      }
+
+      .contato dd {
+        margin: 0 0 0.75rem;
+      }
+
+      .tabela {
+        width: 100%;
+        margin-top: 1rem;
+        border-collapse: collapse;
+        font-size: 1.0625rem;
+      }
+
+      .tabela th,
+      .tabela td {
+        padding: 0.85rem 0.75rem;
+        border-bottom: 1px solid var(--borda);
+        text-align: left;
+        vertical-align: top;
+      }
+
+      .tabela th {
+        font-weight: 600;
+      }
+
+      .rolagem {
+        overflow-x: auto;
+      }
+
+      .voltar {
+        display: inline-flex;
+        align-items: center;
+        min-height: 3rem;
+        margin-top: 3rem;
+        padding-inline: 1.5rem;
+        border-radius: 999px;
+        background: var(--azul);
+        color: var(--branco);
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .voltar:hover {
+        background: var(--azul-claro);
+      }
+
+      @media (max-width: 40rem) {
+        .tabela,
+        .tabela tbody,
+        .tabela tr,
+        .tabela td {
+          display: block;
+          width: 100%;
+        }
+
+        .tabela thead {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          overflow: hidden;
+          clip-path: inset(50%);
+        }
+
+        .tabela tr {
+          padding: 1rem 0;
+          border-bottom: 1px solid var(--borda);
+        }
+
+        .tabela td {
+          padding: 0.15rem 0;
+          border: 0;
+        }
+
+        .tabela td::before {
+          display: block;
+          color: var(--tinta-clara);
+          font-size: 0.95rem;
+          content: attr(data-rotulo);
+        }
+      }
     </style>
   </head>
   <body>
-    <h1>Política de privacidade</h1>
+    <header class="topo">
+      <div class="container">
+        <a href="/">Voltar para o site</a>
+        <h1>Política de privacidade</h1>
+        <p class="atualizacao">Última atualização: 28 de agosto de 2026</p>
+      </div>
+    </header>
 
-    <p>
-      Esta política explica como a CORB, Centro Odontológico Riviera da Barra, CNPJ
-      22.981.292/0001-23, trata os dados pessoais informados neste site, conforme a Lei
-      13.709/2018 (LGPD).
-    </p>
+    <main class="container">
+      <p>
+        Esta página explica, em linguagem simples, quais dados a CORB Odontologia recebe pelo site,
+        para que eles são usados e o que você pode pedir a qualquer momento. O tratamento segue a
+        Lei 13.709/2018, a Lei Geral de Proteção de Dados (LGPD).
+      </p>
 
-    <h2>Quais dados coletamos</h2>
-    <p>
-      Coletamos apenas o que você informa no formulário de agendamento: nome, telefone com
-      WhatsApp e, opcionalmente, uma descrição do que te incomoda. Também coletamos dados técnicos
-      de navegação por meio de ferramentas de medição (Google e Meta), como páginas visitadas e
-      origem do acesso.
-    </p>
+      <h2>Quem é responsável pelos seus dados</h2>
+      <p>
+        O controlador dos dados é a CORB, Centro Odontológico Riviera da Barra, inscrita no CNPJ
+        22.981.292/0001-23, com responsável técnico Dr. Antonio Marcial do Carmo.
+      </p>
 
-    <h2>Para que usamos</h2>
-    <p>
-      Usamos seus dados exclusivamente para entrar em contato, agendar a avaliação presencial e
-      responder às suas dúvidas. Dados de navegação são usados para medir o desempenho dos anúncios
-      e melhorar o site.
-    </p>
+      <div class="destaque">
+        <dl class="contato">
+          <dt>Endereço</dt>
+          <dd>Av. Álvares de Azevedo, 914, loja 03, Riviera da Barra, Vila Velha (ES), CEP 29126-070</dd>
+          <dt>E-mail</dt>
+          <dd><a href="mailto:ciaodoctor@hotmail.com">ciaodoctor@hotmail.com</a></dd>
+          <dt>WhatsApp</dt>
+          <dd><a href="https://wa.me/5527999664449">(27) 99966-4449</a></dd>
+        </dl>
+        <p>
+          Use qualquer um desses canais para pedir acesso, correção ou exclusão dos seus dados. A
+          resposta é dada dentro do prazo previsto em lei.
+        </p>
+      </div>
 
-    <h2>Com quem compartilhamos</h2>
-    <p>
-      Não vendemos nem cedemos seus dados. O compartilhamento se limita aos serviços necessários à
-      operação do site e das campanhas: hospedagem e formulários (Netlify), medição de audiência
-      (Google e Meta) e comunicação (WhatsApp).
-    </p>
+      <h2>Quais dados são coletados</h2>
+      <ul>
+        <li>
+          <strong>Dados que você digita no formulário:</strong> nome, telefone com WhatsApp e, se
+          quiser escrever, uma descrição do que está te incomodando.
+        </li>
+        <li>
+          <strong>Dados de contato direto:</strong> o que você enviar ao chamar a clínica pelo
+          WhatsApp ou por e-mail a partir do site.
+        </li>
+        <li>
+          <strong>Dados de navegação:</strong> páginas visitadas, tempo de visita, origem do acesso
+          e tipo de dispositivo, coletados por ferramentas de medição do Google e da Meta.
+        </li>
+      </ul>
+      <p>
+        O site não pede CPF, dados de cartão nem informações de saúde. Se você escrever algo sobre
+        sua saúde no campo aberto do formulário, esse dado é tratado com a mesma confidencialidade
+        do prontuário e usado só para o atendimento.
+      </p>
 
-    <h2>Por quanto tempo guardamos</h2>
-    <p>
-      Os dados do formulário ficam armazenados enquanto durar o atendimento e pelo prazo necessário
-      ao cumprimento de obrigações legais. Depois disso, são eliminados.
-    </p>
+      <h2>Para que os dados são usados</h2>
+      <div class="rolagem">
+        <table class="tabela">
+          <thead>
+            <tr>
+              <th scope="col">Dado</th>
+              <th scope="col">Finalidade</th>
+              <th scope="col">Base legal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-rotulo="Dado">Nome e telefone</td>
+              <td data-rotulo="Finalidade">Entrar em contato e agendar a avaliação presencial</td>
+              <td data-rotulo="Base legal">Consentimento e procedimentos preliminares de contrato</td>
+            </tr>
+            <tr>
+              <td data-rotulo="Dado">Mensagem do formulário</td>
+              <td data-rotulo="Finalidade">Entender o motivo do contato antes da consulta</td>
+              <td data-rotulo="Base legal">Consentimento</td>
+            </tr>
+            <tr>
+              <td data-rotulo="Dado">Dados de navegação</td>
+              <td data-rotulo="Finalidade">Medir o desempenho dos anúncios e melhorar o site</td>
+              <td data-rotulo="Base legal">Legítimo interesse</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Seus dados não são vendidos, alugados nem usados para enviar propaganda de terceiros.
+      </p>
 
-    <h2>Seus direitos</h2>
-    <p>
-      Você pode solicitar a qualquer momento a confirmação, o acesso, a correção ou a exclusão dos
-      seus dados, além de revogar o consentimento. Basta pedir pelo mesmo WhatsApp de atendimento
-      da clínica.
-    </p>
+      <h2>Com quem os dados são compartilhados</h2>
+      <p>
+        O compartilhamento se limita aos serviços necessários para o site funcionar e para a
+        clínica falar com você:
+      </p>
+      <ul>
+        <li><strong>Netlify:</strong> hospedagem do site e recebimento das mensagens do formulário.</li>
+        <li><strong>WhatsApp (Meta):</strong> conversa iniciada por você a partir dos botões do site.</li>
+        <li><strong>Google e Meta:</strong> medição de audiência e desempenho dos anúncios.</li>
+      </ul>
+      <p>
+        Esses serviços podem processar dados fora do Brasil. Nesses casos, a transferência segue as
+        regras da LGPD para transferência internacional.
+      </p>
 
-    <h2>Cookies</h2>
-    <p>
-      Este site usa cookies de medição e de remarketing. Você pode bloqueá-los nas configurações do
-      seu navegador, sem prejuízo do uso das informações da página.
-    </p>
+      <h2>Por quanto tempo ficam guardados</h2>
+      <p>
+        As mensagens do formulário ficam armazenadas enquanto durar o atendimento e pelo prazo
+        necessário ao cumprimento de obrigações legais. Se você virar paciente, o prontuário segue
+        as regras próprias do Conselho Federal de Odontologia. Passado o prazo, os dados são
+        eliminados ou anonimizados.
+      </p>
 
-    <footer>
-      <p>Responsável técnico: Dr. Antonio Marcial do Carmo.</p>
-      <p><a href="/">Voltar para a página inicial</a></p>
-    </footer>
+      <h2>Como os dados são protegidos</h2>
+      <p>
+        O site usa conexão criptografada (HTTPS), o acesso às mensagens recebidas é restrito à
+        equipe da clínica e os dados de contato não ficam publicados em nenhuma página.
+      </p>
+
+      <h2>Seus direitos</h2>
+      <p>A LGPD garante que você pode, a qualquer momento:</p>
+      <ul>
+        <li>Confirmar se a clínica trata dados seus e pedir acesso a eles</li>
+        <li>Corrigir dados incompletos ou desatualizados</li>
+        <li>Pedir a exclusão dos dados tratados com base no seu consentimento</li>
+        <li>Revogar o consentimento, sem custo</li>
+        <li>Pedir informação sobre com quem os dados foram compartilhados</li>
+        <li>Se opor a um tratamento que considere irregular</li>
+      </ul>
+      <p>
+        Para exercer qualquer um desses direitos, escreva para
+        <a href="mailto:ciaodoctor@hotmail.com">ciaodoctor@hotmail.com</a> ou chame a clínica no
+        WhatsApp. Pode ser pedida uma confirmação de identidade antes de atender ao pedido, para
+        proteger você mesmo.
+      </p>
+
+      <h2>Cookies e medição</h2>
+      <p>
+        O site usa cookies de medição e de remarketing, que ajudam a entender quantas pessoas
+        chegaram por cada anúncio. Você pode bloquear ou apagar esses cookies nas configurações do
+        seu navegador. O conteúdo da página continua acessível sem eles.
+      </p>
+
+      <h2>Menores de idade</h2>
+      <p>
+        O site não é direcionado a menores de 18 anos. Quando o tratamento envolve adolescente, o
+        contato e a autorização são feitos pelo responsável legal.
+      </p>
+
+      <h2>Mudanças nesta política</h2>
+      <p>
+        Se esta política mudar, a data de atualização no topo da página é alterada. Vale sempre a
+        versão publicada aqui.
+      </p>
+
+      <a class="voltar" href="/">Voltar para a página inicial</a>
+    </main>
   </body>
 </html>
