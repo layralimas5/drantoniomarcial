@@ -1,5 +1,4 @@
 import { Section, SectionTitle } from './Section'
-import { clinic } from '../lib/site-config'
 
 /**
  * Depoimentos falam de experiência e de rotina, nunca de resultado estético.
@@ -51,20 +50,14 @@ export function Depoimentos() {
   return (
     <Section labelledBy="depoimentos-titulo" className="bg-cream-100">
       <div className="container-page">
-        <div className="flex flex-wrap items-end justify-between gap-6">
-          <div className="max-w-2xl">
-            <SectionTitle id="depoimentos-titulo">
-              O que os pacientes contam depois da avaliação
-            </SectionTitle>
+        <div className="max-w-2xl">
+          <SectionTitle id="depoimentos-titulo">
+            O que os pacientes contam depois da avaliação
+          </SectionTitle>
 
-            <p className="mt-5 text-lg text-ink-800 md:text-xl">
-              Quase todo mundo chega com o mesmo medo e sai falando a mesma coisa: entender o
-              próprio caso tira um peso de anos.
-            </p>
-          </div>
-
-          <p className="rounded-full border border-cream-300 bg-white px-4 py-2.5 text-base text-ink-700 md:px-5 md:py-3">
-            Pacientes atendidos em {clinic.address.district} e região
+          <p className="mt-5 text-lg text-ink-800 md:text-xl">
+            Quase todo mundo chega com o mesmo medo e sai falando a mesma coisa: entender o próprio
+            caso tira um peso de anos.
           </p>
         </div>
       </div>
