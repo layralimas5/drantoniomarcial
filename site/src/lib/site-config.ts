@@ -24,6 +24,12 @@ export const clinic = {
   },
   /** PENDENTE: horário real de atendimento. */
   hours: 'Segunda a sexta, das 8h às 18h',
+  /** Mesmo horário em linhas, para o painel da seção do doutor. */
+  hoursByDay: [
+    { dia: 'Segunda a sexta', horario: '08h às 18h' },
+    { dia: 'Sábado', horario: 'Fechado' },
+    { dia: 'Domingo', horario: 'Fechado' },
+  ],
   areasServed: ['Vila Velha', 'Vitória', 'Cariacica', 'Guarapari'],
 } as const
 

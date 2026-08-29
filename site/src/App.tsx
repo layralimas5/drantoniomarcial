@@ -3,14 +3,11 @@ import { Menu } from './components/Menu'
 import { Hero } from './components/Hero'
 import { Dores } from './components/Dores'
 import { ProteseFixa } from './components/ProteseFixa'
-import { VideoDoutor } from './components/VideoDoutor'
-import { Galeria } from './components/Galeria'
+import { Servicos } from './components/Servicos'
 import { ComoFunciona } from './components/ComoFunciona'
 import { Faq } from './components/Faq'
+import { ConvenioPagamento } from './components/ConvenioPagamento'
 import { SobreDoutor } from './components/SobreDoutor'
-import { Depoimentos } from './components/Depoimentos'
-import { OutrosTratamentos } from './components/OutrosTratamentos'
-import { AreaAtendida } from './components/AreaAtendida'
 import { Localizacao } from './components/Localizacao'
 import { CtaFinal } from './components/CtaFinal'
 import { Rodape } from './components/Rodape'
@@ -32,14 +29,11 @@ export function App() {
       <main>
         <Dores />
         <ProteseFixa />
-        <VideoDoutor />
         <ComoFunciona />
-        <Galeria />
-        <Faq />
         <SobreDoutor />
-        <Depoimentos />
-        <OutrosTratamentos />
-        <AreaAtendida />
+        <Servicos />
+        <Faq />
+        <ConvenioPagamento />
         <Localizacao />
         <CtaFinal />
       </main>

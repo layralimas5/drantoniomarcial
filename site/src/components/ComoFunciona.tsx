@@ -1,4 +1,5 @@
 import { Section, SectionTitle } from './Section'
+import { AnchorButton } from './CtaButton'
 
 const etapas = [
   {
@@ -24,19 +25,22 @@ export function ComoFunciona() {
     <Section id="passos" labelledBy="passos-titulo" origem="direita" className="bg-cream-50">
       <div className="container-page">
         <SectionTitle id="passos-titulo" className="max-w-2xl">
-          Como funciona, do primeiro contato ao acompanhamento
+          Como funciona,{' '}
+          <span className="font-display font-normal italic text-navy-700">
+            da primeira consulta ao último retorno
+          </span>
         </SectionTitle>
 
-        <p className="mt-4 max-w-3xl text-base text-ink-800 md:mt-5 md:text-xl">
-          Ninguém sai da primeira consulta operando. A consulta serve para você entender o seu
-          caso e decidir com calma.
+        <p className="mt-4 max-w-3xl text-[0.95rem] text-ink-800 md:mt-5 md:text-xl">
+          Ninguém sai da primeira consulta operando. Ela serve para você entender o seu caso e
+          decidir com calma, em casa.
         </p>
 
         <ol className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {etapas.map((etapa, index) => (
             <li
               key={etapa.titulo}
-              className="pulsar-suave relative rounded-card border border-cream-200 bg-white p-4 md:p-6"
+              className="pulsar-suave relative rounded-card border border-cream-200 bg-white p-3.5 md:p-6"
             >
               {index < etapas.length - 1 ? (
                 <>
@@ -54,15 +58,21 @@ export function ComoFunciona() {
 
               <span
                 aria-hidden="true"
-                className="flex h-9 w-9 items-center justify-center rounded-full bg-navy-900 text-base font-semibold text-white md:h-12 md:w-12 md:text-xl"
+                className="flex h-8 w-8 items-center justify-center rounded-full bg-navy-900 text-[0.95rem] font-semibold text-white md:h-12 md:w-12 md:text-xl"
               >
                 {index + 1}
               </span>
-              <h3 className="mt-3 text-base font-semibold text-ink-900 md:mt-5 md:text-xl">{etapa.titulo}</h3>
-              <p className="mt-1 text-[0.95rem] leading-relaxed text-ink-700 md:mt-1.5 md:text-lg">{etapa.texto}</p>
+              <h3 className="mt-3 text-[0.95rem] font-semibold text-ink-900 md:mt-5 md:text-xl">{etapa.titulo}</h3>
+              <p className="mt-1 text-[0.85rem] leading-relaxed text-ink-700 md:mt-1.5 md:text-lg">{etapa.texto}</p>
             </li>
           ))}
         </ol>
+
+        <div className="mt-10 flex justify-center md:mt-12">
+          <AnchorButton href="#agendar" className="w-full sm:w-auto">
+            Agendar minha avaliação
+          </AnchorButton>
+        </div>
       </div>
     </Section>
   )

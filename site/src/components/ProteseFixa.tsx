@@ -17,12 +17,13 @@ export function ProteseFixa() {
               Dentes fixos, presos no osso, que não saem para dormir
             </SectionTitle>
 
-            <p className="mt-5 text-base leading-relaxed text-cream-200 md:mt-6 md:text-xl">
-              Pequenos pinos de titânio são presos no osso. Em cima deles entram os dentes, que
-              ficam firmes: não saem para dormir e não usam cola.
+            <p className="mt-5 text-[0.95rem] leading-relaxed text-cream-200 md:mt-6 md:text-xl">
+              A saída para quase todas essas situações tem o mesmo princípio: pequenos pinos de
+              titânio são presos no osso e, em cima deles, entram os dentes. Eles ficam firmes, não
+              saem para dormir e não usam cola.
             </p>
 
-            <p className="mt-3 text-base leading-relaxed text-cream-200 md:mt-4 md:text-xl">
+            <p className="mt-3 text-[0.95rem] leading-relaxed text-cream-200 md:mt-4 md:text-xl">
               Se dá para fazer no seu caso, só o exame responde. Por telefone ninguém tem como
               dizer.
             </p>
@@ -32,10 +33,10 @@ export function ProteseFixa() {
             {diferencas.map((item) => (
               <li
                 key={item.titulo}
-                className="pulsar-suave rounded-card border border-navy-line bg-navy-800 p-4 md:p-6"
+                className="pulsar-suave rounded-card border border-navy-line bg-navy-800 p-3.5 md:p-6"
               >
-                <h3 className="text-base font-semibold text-cream-50 md:text-xl">{item.titulo}</h3>
-                <p className="mt-1 text-[0.95rem] leading-relaxed text-cream-200 md:mt-1.5 md:text-lg">
+                <h3 className="text-[0.95rem] font-semibold text-cream-50 md:text-xl">{item.titulo}</h3>
+                <p className="mt-1 text-[0.85rem] leading-relaxed text-cream-200 md:mt-1.5 md:text-lg">
                   {item.texto}
                 </p>
               </li>

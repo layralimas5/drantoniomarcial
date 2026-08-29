@@ -1,5 +1,7 @@
 /**
- * Perguntas do bloco de objeções.
+ * Perguntas do bloco de objeções: só o que trava a decisão.
+ * Dúvida operacional (convênio, pagamento, o que levar) fica no bloco de
+ * agendamento, junto do formulário, que é onde ela realmente atrapalha.
  *
  * Linguagem simples e de possibilidade, sem promessa de resultado, conforme o
  * Código de Ética Odontológica. Toda alteração aqui precisa ser refletida no
@@ -40,20 +42,5 @@ export const perguntasFrequentes: readonly PerguntaFrequente[] = [
     pergunta: 'A prótese fixa dura quanto tempo? Precisa de manutenção?',
     resposta:
       'Precisa de escovação todo dia e de retorno de tempos em tempos, como tudo que fica na boca. Com esse cuidado, a tendência é durar muitos anos. Prazo garantido ninguém pode dar, e quem dá está prometendo o que não cumpre.',
-  },
-  {
-    pergunta: 'Quais são as formas de pagamento?',
-    resposta:
-      'As condições são apresentadas na consulta, depois do plano de tratamento, porque o valor muda conforme a quantidade de pinos e o tipo de prótese. Existe parcelamento, e a equipe explica tudo antes de você decidir.',
-  },
-  {
-    pergunta: 'A clínica atende convênio odontológico?',
-    resposta:
-      'Chame a equipe no WhatsApp e diga qual é o seu convênio. A gente confirma o que dá para fazer antes de você sair de casa.',
-  },
-  {
-    pergunta: 'Preciso levar algum exame na primeira consulta?',
-    resposta:
-      'Não precisa. Se você já tiver exame de imagem recente, leve, porque ajuda. Se não tiver, a própria consulta já inclui o exame necessário.',
   },
 ] as const
