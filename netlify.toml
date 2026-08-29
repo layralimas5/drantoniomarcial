@@ -1,15 +1,10 @@
 # Configuração do deploy na Netlify.
 #
-# Este arquivo fica na RAIZ do repositório, que é onde a Netlify procura por
-# ele. O site em si mora em `site/`, então `base` aponta para lá e os demais
-# caminhos passam a ser relativos a essa pasta (`publish = "dist"` vira
-# `site/dist`).
-#
-# Não é preciso preencher nada no painel: basta conectar o repositório e
-# escolher a branch.
+# O projeto inteiro vive na raiz do repositório, que é também onde a Netlify
+# procura por este arquivo. Não é preciso preencher nada no painel: basta
+# conectar o repositório e escolher a branch.
 
 [build]
-  base = "site"
   command = "npm run build"
   publish = "dist"
 

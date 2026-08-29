@@ -21,13 +21,13 @@ Sem backend: formulário no Netlify Forms, contato principal via WhatsApp.
 
 ## Onde mexer
 
-Todos os dados do cliente estão em **`site/src/lib/site-config.ts`**.
+Todos os dados do cliente estão em **`src/lib/site-config.ts`**.
 Trocar lá o WhatsApp, o CRO, o endereço e o horário atualiza a página inteira,
 o JSON-LD do `index.html` é o único ponto que precisa ser atualizado à mão.
 
 ## Imagens
 
-Ficam em `site/imagens-originais/` e viram WebP otimizado em `site/public/`
+Ficam em `imagens-originais/` e viram WebP otimizado em `public/`
 com `npm run img`. Os nomes são fixos:
 
 | Arquivo | Onde aparece | Proporção |
@@ -44,14 +44,14 @@ A galeria espera seis arquivos: `galeria-implante`, `galeria-cirurgia`,
 atendimento. **Nunca foto de resultado de tratamento nem antes e depois**,
 que é proibido pelo CFO.
 
-O vídeo do Dr. Antonio vai em `site/public/dr-antonio-explica.mp4`, com legenda
-em `site/public/legendas.vtt`. Ele só é baixado depois do clique no play.
+O vídeo do Dr. Antonio vai em `public/dr-antonio-explica.mp4`, com legenda
+em `public/legendas.vtt`. Ele só é baixado depois do clique no play.
 
 ## SEO e busca local
 
 - `index.html` traz dois blocos JSON-LD: `Dentist` (com endereço, geo, serviços,
   horário e responsável técnico) e `FAQPage` com as nove perguntas da página
-- As perguntas vivem em `site/src/lib/faq.ts`. **Ao editar uma resposta lá,
+- As perguntas vivem em `src/lib/faq.ts`. **Ao editar uma resposta lá,
   atualize também o `FAQPage` do `index.html`**, senão o dado estruturado
   diverge do que o visitante lê
 - Meta tags `geo.*` e `ICBM` apontam para Vila Velha; trocar pelas coordenadas
@@ -86,7 +86,7 @@ depois, promessa de resultado, preço como chamariz, superlativo e sorteio.
 
 ## Rastreamento
 
-`site/src/lib/tracking.ts` dispara `gtag` e `fbq` no clique de WhatsApp e no
+`src/lib/tracking.ts` dispara `gtag` e `fbq` no clique de WhatsApp e no
 envio do formulário. As tags globais ainda precisam ser coladas no `index.html`
 quando as contas estiverem criadas. Sem elas os eventos são ignorados sem
 quebrar a página.
