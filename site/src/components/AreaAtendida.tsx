@@ -22,13 +22,13 @@ const cidades = [
 
 export function AreaAtendida() {
   return (
-    <Section labelledBy="area-titulo" className="bg-cream-100">
+    <Section labelledBy="area-titulo" className="bg-navy-900 text-cream-100">
       <div className="container-page">
-        <SectionTitle id="area-titulo" className="max-w-3xl">
+        <SectionTitle id="area-titulo" className="max-w-3xl !text-cream-50">
           Atendimento em {clinic.address.city} e em toda a Grande Vitória
         </SectionTitle>
 
-        <p className="mt-5 max-w-3xl text-lg text-ink-800 md:text-xl">
+        <p className="mt-5 max-w-3xl text-lg text-cream-200 md:text-xl">
           O consultório fica em {clinic.address.district}, em {clinic.address.city}, e atende
           gente das cidades vizinhas. Esse tipo de tratamento pede várias voltas à clínica, e ser
           perto de casa faz diferença.
@@ -36,9 +36,9 @@ export function AreaAtendida() {
 
         <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {cidades.map((cidade) => (
-            <li key={cidade.nome} className="rounded-card border border-cream-200 bg-white p-5 md:p-6">
-              <h3 className="text-lg font-semibold text-ink-900 md:text-xl">{cidade.nome}</h3>
-              <p className="mt-1.5 text-base leading-relaxed text-ink-700">{cidade.detalhe}</p>
+            <li key={cidade.nome} className="pulsar-suave rounded-card border border-navy-line bg-navy-800 p-5 md:p-6">
+              <h3 className="text-lg font-semibold text-cream-50 md:text-xl">{cidade.nome}</h3>
+              <p className="mt-1.5 text-base leading-relaxed text-cream-200">{cidade.detalhe}</p>
             </li>
           ))}
         </ul>
