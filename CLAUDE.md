@@ -13,7 +13,7 @@ protocolo dentário e prótese fixa, destino do tráfego pago (Google Search).
 - **Especialidade:** cirurgia bucomaxilofacial, implantodontia, ortodontia, ATM/bruxismo, harmonização facial
 - **Local:** Riviera da Barra, Vila Velha (ES)
 - **Instagram:** @drantoniomarcial (10,4 mil seguidores)
-- **CRO-ES:** [CONFIRMAR: obrigatório na página por exigência do CFO]
+- **CRO-ES:** 2837
 
 Perfil: profissional renomado na região, passando por queda de faturamento.
 Verba de mídia baixa.
@@ -118,7 +118,7 @@ Sem isso a campanha roda no escuro:
 ## Pendências antes de finalizar
 
 - [x] Contratação acordada com o cliente
-- [ ] Número do CRO-ES do Dr. Antonio Marcial
+- [x] Número do CRO-ES do Dr. Antonio Marcial: CRO-ES 2837
 - [x] Endereço, WhatsApp (27 99966-4449) e e-mail (ciaodoctor@hotmail.com)
 - [ ] Horário de atendimento
 - [ ] Ticket real de protocolo e de implante unitário

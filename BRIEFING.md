@@ -44,7 +44,7 @@ Objetivo: em 3 segundos a pessoa entende que é pra ela e que tem solução.
 **CTA primário:** Falar com a equipe no WhatsApp
 **CTA secundário:** Agendar minha avaliação
 
-Selo discreto abaixo: Dr. Antonio Marcial do Carmo · CRO-ES [número] ·
+Selo discreto abaixo: Dr. Antonio Marcial do Carmo · CRO-ES 2837 ·
 Riviera da Barra, Vila Velha
 
 **Imagem:** foto real do Dr. Antonio no consultório, olhando pra câmera.
@@ -144,7 +144,7 @@ não de garantia. Toda resposta termina puxando para a avaliação.
 Objetivo: credencial. Curto e concreto.
 
 - Formação e especialização em cirurgia e traumatologia bucomaxilofacial
-- CRO-ES [número]
+- CRO-ES 2837
 - Tempo de atuação [confirmar]
 - Estrutura do consultório: equipamentos, exame de imagem, centro cirúrgico
 
@@ -200,7 +200,7 @@ Abaixo, alternativa em destaque: **Prefere falar agora? Chame no WhatsApp**
 ### 11. Rodapé
 
 - Razão social CORB, Centro Odont Riviera da Barra, e CNPJ 22.981.292/0001-23
-- Responsável técnico: Dr. Antonio Marcial do Carmo, CRO-ES [número]
+- Responsável técnico: Dr. Antonio Marcial do Carmo, CRO-ES 2837
 - Endereço, telefone, horário
 - Link para o Instagram @drantoniomarcial
 - Política de privacidade

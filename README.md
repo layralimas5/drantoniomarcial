@@ -63,7 +63,7 @@ em `public/legendas.vtt`. Ele só é baixado depois do clique no play.
 ## Antes de publicar
 
 - [x] Contratação acordada com o cliente
-- [ ] **CRO-ES do Dr. Antonio**, obrigatório por exigência do CFO
+- [x] **CRO-ES do Dr. Antonio**: CRO-ES 2837
 - [x] WhatsApp comercial: (27) 99966-4449
 - [x] Endereço: Av. Álvares de Azevedo, 914, loja 03, CEP 29126-070
 - [ ] Horário de atendimento real
