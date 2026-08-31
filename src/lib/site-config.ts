@@ -36,10 +36,17 @@ export const clinic = {
 export const dentist = {
   name: 'Dr. Antonio Marcial do Carmo',
   shortName: 'Dr. Antonio Marcial',
-  /** PENDENTE: obrigatório na página por exigência do CFO. */
-  cro: 'CRO-ES 0000',
-  specialty: 'Cirurgia e traumatologia bucomaxilofacial',
+  cro: 'CRO-ES 2837',
+  /** Especialidades registradas, na ordem usada em toda a página. */
+  specialties: [
+    'Cirurgia e Traumatologia Bucomaxilofacial',
+    'Implantodontia',
+    'Ortodontia',
+  ],
 } as const
+
+/** Especialidades numa linha só, para assinaturas e rodapé. */
+export const specialtiesLine = dentist.specialties.join(' • ')
 
 export const whatsappMessage =
   'Olá! Vim pelo site e quero agendar uma avaliação.'

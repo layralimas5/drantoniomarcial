@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { Section, SectionTitle } from './Section'
 import { WhatsAppButton } from './CtaButton'
 import { perguntasFrequentes } from '../lib/faq'
-import { dentist } from '../lib/site-config'
 
 export function Faq() {
   const [aberta, setAberta] = useState<number | null>(0)
@@ -13,12 +12,12 @@ export function Faq() {
         <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
           <div className="lg:sticky lg:top-[calc(50vh-9rem)] lg:self-start lg:text-center">
             <SectionTitle id="faq-titulo" className="!text-cream-50 !text-2xl sm:!text-4xl md:!text-5xl lg:!text-[3.25rem]">
-              As dúvidas que travam a decisão, respondidas
+              Ainda tem dúvidas sobre implantes dentários?
             </SectionTitle>
 
             <p className="mt-4 text-[0.95rem] leading-relaxed text-cream-200 sm:text-xl md:mt-5 md:text-2xl">
-              Muita gente adia o tratamento por causa de uma dessas perguntas. Leia com calma: é
-              melhor decidir sabendo do que continuar adiando.
+              Reunimos as perguntas que mais aparecem na avaliação. Leia com calma antes de
+              decidir o próximo passo.
             </p>
 
           </div>
@@ -63,11 +62,11 @@ export function Faq() {
 
             <div className="mt-8 flex flex-col items-center rounded-card border border-navy-line bg-navy-800 p-3.5 text-center md:p-6">
               <p className="text-[0.9rem] text-cream-100 md:text-lg">
-                Sua dúvida não está aqui? Pergunte direto para a equipe do {dentist.shortName}, sem
-                compromisso de agendar nada.
+                Cada paciente possui uma condição diferente. Converse com nossa equipe e agende
+                uma avaliação para entender as possibilidades para o seu caso.
               </p>
               <WhatsAppButton variant="light" className="mt-5 w-full sm:w-auto">
-                Tirar minha dúvida agora
+                Tirar minhas dúvidas pelo WhatsApp
               </WhatsAppButton>
             </div>
           </div>

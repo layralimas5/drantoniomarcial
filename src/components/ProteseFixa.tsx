@@ -1,10 +1,24 @@
 import { Section, SectionTitle } from './Section'
 
 const diferencas = [
-  { titulo: 'Mastigação', texto: 'A força da mordida vai para o osso, e não para a gengiva.' },
-  { titulo: 'Fala', texto: 'Nada se mexe dentro da boca, então a fala fica mais natural.' },
-  { titulo: 'Conforto', texto: 'Sem cola, sem soltar no meio da conversa, sem machucar a gengiva.' },
-  { titulo: 'Osso', texto: 'O implante trabalha dentro do osso e ajuda a manter o osso firme.' },
+  {
+    titulo: 'Mastigação',
+    texto: 'Busca devolver maior estabilidade e eficiência ao mastigar.',
+  },
+  {
+    titulo: 'Segurança',
+    texto: 'A prótese apoiada sobre implantes oferece estabilidade durante a fala e a mastigação.',
+  },
+  {
+    titulo: 'Conforto',
+    texto:
+      'Uma alternativa para pacientes que apresentam desconforto ou insegurança com próteses removíveis.',
+  },
+  {
+    titulo: 'Sorriso',
+    texto:
+      'O planejamento considera função e estética para buscar um resultado harmônico e natural.',
+  },
 ]
 
 export function ProteseFixa() {
@@ -14,18 +28,18 @@ export function ProteseFixa() {
         <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
           <div>
             <SectionTitle id="protese-titulo" className="!text-cream-50">
-              Dentes fixos, presos no osso, que não saem para dormir
+              Implantes dentários: uma base para devolver dentes fixos
             </SectionTitle>
 
             <p className="mt-5 text-[0.95rem] leading-relaxed text-cream-200 md:mt-6 md:text-xl">
-              A saída para quase todas essas situações tem o mesmo princípio: pequenos pinos de
-              titânio são presos no osso e, em cima deles, entram os dentes. Eles ficam firmes, não
-              saem para dormir e não usam cola.
+              Os implantes são estruturas de titânio instaladas no osso para substituir as raízes
+              dos dentes perdidos. Sobre eles podem ser instalados desde um único dente até
+              próteses fixas para reabilitar toda a arcada.
             </p>
 
             <p className="mt-3 text-[0.95rem] leading-relaxed text-cream-200 md:mt-4 md:text-xl">
-              Se dá para fazer no seu caso, só o exame responde. Por telefone ninguém tem como
-              dizer.
+              Cada caso é diferente. A indicação depende da avaliação clínica e dos exames de
+              imagem.
             </p>
           </div>
 

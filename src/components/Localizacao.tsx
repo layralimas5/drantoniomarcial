@@ -10,12 +10,13 @@ export function Localizacao() {
     <Section id="local" labelledBy="local-titulo" origem="esquerda" className="bg-cream-50">
       <div className="container-page grid gap-10 lg:grid-cols-2 lg:gap-16">
         <div>
-          <SectionTitle id="local-titulo">Onde fica o consultório</SectionTitle>
+          <SectionTitle id="local-titulo">
+            {clinic.name} em {clinic.address.district}, {clinic.address.city}
+          </SectionTitle>
 
           <p className="mt-4 max-w-xl text-base text-ink-800 md:mt-5 md:text-lg">
-            O consultório fica em {clinic.address.district}, em {clinic.address.city}, e atende
-            também quem vem das cidades vizinhas com hora marcada. Esse tipo de tratamento pede
-            várias voltas à clínica, e ser perto de casa faz diferença.
+            Atendimento com hora marcada para pacientes de {clinic.areasServed.join(', ')} e
+            região.
           </p>
 
           <dl className="mt-7 space-y-5 text-base text-ink-800 md:mt-8 md:space-y-6 md:text-lg">
@@ -51,7 +52,7 @@ export function Localizacao() {
             rel="noopener noreferrer"
             className="pulsar-suave mt-8 inline-flex min-h-[3.5rem] items-center rounded-full bg-navy-900 px-7 text-lg font-semibold text-white transition-colors hover:bg-navy-800"
           >
-            Ver rota no Google Maps
+            Como chegar
           </a>
         </div>
 

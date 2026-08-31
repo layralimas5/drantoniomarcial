@@ -1,20 +1,23 @@
 import { m, useReducedMotion } from 'framer-motion'
-import { WhatsAppButton } from './CtaButton'
-import { clinic, dentist } from '../lib/site-config'
+import { AnchorButton, WhatsAppButton } from './CtaButton'
+import { clinic, dentist, specialtiesLine } from '../lib/site-config'
 
 /** Cartões que ficam sobre a parte de baixo do banner. */
 const fatos = [
   {
-    titulo: 'Cirurgião especialista',
-    texto: `Cirurgia da boca e do rosto é a especialidade dele, com registro ${dentist.cro}.`,
+    titulo: 'Implantes dentários',
+    texto:
+      'Soluções para substituir um ou mais dentes perdidos, buscando recuperar função, conforto e segurança para sorrir.',
   },
   {
-    titulo: 'Exame e cirurgia no local',
-    texto: 'Você não é mandado para outro lugar no meio do tratamento.',
+    titulo: 'Protocolo, prótese fixa sobre implantes',
+    texto:
+      'Para quem perdeu vários ou todos os dentes e busca uma alternativa fixa à dentadura removível.',
   },
   {
-    titulo: 'Sempre o mesmo profissional',
-    texto: `Quem examina, opera e faz o retorno é o ${dentist.shortName}.`,
+    titulo: 'Condições facilitadas de pagamento',
+    texto:
+      'Planejamento individualizado e diferentes possibilidades de pagamento para realizar seu tratamento. Consulte as condições.',
   },
 ]
 
@@ -52,32 +55,33 @@ export function Hero() {
           className="max-w-2xl lg:max-w-[40rem]"
         >
           <h1 className="font-display text-hero leading-[1.02] font-bold tracking-[-0.02em] text-ink-900">
-            Volte a comer, falar e sorrir{' '}
+            Volte a sorrir e mastigar com segurança{' '}
             <span className="font-normal italic text-navy-700">
-              sem se preocupar com a dentadura
+              através dos implantes dentários
             </span>
           </h1>
 
           <p className="mt-4 max-w-xl text-[0.95rem] leading-relaxed text-ink-800 md:mt-7 md:text-[1.35rem]">
-            Dentes fixos, presos no osso, com {dentist.shortName}, cirurgião especialista em{' '}
-            {clinic.address.city}. Na consulta você descobre o que dá para fazer no seu caso,
-            quanto tempo leva e como pode pagar.
+            Implantes dentários e protocolos (prótese fixa sobre implantes) para quem perdeu um,
+            vários ou todos os dentes. Tratamento planejado e acompanhado por profissional
+            especialista.
           </p>
 
           <div className="mt-6 flex flex-col items-start gap-3 md:mt-9">
-            <WhatsAppButton className="w-full sm:w-auto" />
-            <a
-              href="#agendar"
-              className="text-[0.95rem] text-ink-700 underline underline-offset-4 hover:text-ink-900 md:text-base"
-            >
-              ou deixe seu contato que a gente liga
-            </a>
+            <AnchorButton href="#agendar" className="w-full sm:w-auto">
+              Quero avaliar meu caso
+            </AnchorButton>
+            <WhatsAppButton variant="outline" className="w-full sm:w-auto">
+              Fale agora com nossa equipe pelo WhatsApp
+            </WhatsAppButton>
           </div>
 
           <p className="mt-6 border-l-2 border-cream-300 pl-3 text-[0.8rem] text-ink-700 md:mt-8 md:pl-4 md:text-base">
             {dentist.name} · {dentist.cro}
             <br />
-            {clinic.address.district}, {clinic.address.city}
+            {specialtiesLine}
+            <br />
+            {clinic.address.district}, {clinic.address.city}/{clinic.address.state}
           </p>
         </m.div>
 

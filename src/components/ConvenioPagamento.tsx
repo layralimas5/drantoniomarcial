@@ -3,10 +3,21 @@ import { WhatsAppButton } from './CtaButton'
 
 /**
  * Última objeção antes do agendamento: dinheiro e burocracia.
- * PENDENTE: confirmar com a clínica a lista de convênios e as condições
- * reais de parcelamento antes de publicar.
+ * PENDENTE: confirmar com a clínica a lista de convênios e a condição exata de
+ * parcelamento (entrada, número de parcelas, Pix) antes de publicar.
  */
 const blocos = [
+  {
+    titulo: 'Formas de pagamento',
+    texto:
+      'Após a avaliação e a definição do tratamento, você recebe todas as informações sobre etapas, investimento e possibilidades de pagamento.',
+    itens: [
+      'Diferentes formas de pagamento',
+      'Possibilidade de parcelamento',
+      'Planejamento apresentado antes do início do tratamento',
+      'Condições explicadas de forma clara pela equipe',
+    ],
+  },
   {
     titulo: 'Convênio odontológico',
     texto: 'Diga qual é o seu no WhatsApp que a equipe confirma o que dá para usar.',
@@ -16,14 +27,8 @@ const blocos = [
     ],
   },
   {
-    titulo: 'Formas de pagamento',
-    texto:
-      'As condições são apresentadas na consulta, junto do plano, porque o valor muda conforme a quantidade de pinos e o tipo de prótese.',
-    itens: ['Existe parcelamento', 'Você leva os valores por escrito', 'Nada é decidido na hora'],
-  },
-  {
     titulo: 'O que levar na consulta',
-    texto: 'Nada de complicado, só o que ajuda o Dr. Antonio a entender o seu caso.',
+    texto: 'Só o que ajuda o Dr. Antonio a entender o seu caso.',
     itens: [
       'A lista dos remédios que você toma',
       'Exame de imagem recente, se você já tiver',
@@ -37,12 +42,15 @@ export function ConvenioPagamento() {
     <Section labelledBy="pagamento-titulo" origem="esquerda" className="bg-navy-800 text-cream-100">
       <div className="container-page">
         <SectionTitle id="pagamento-titulo" className="max-w-3xl !text-cream-50">
-          Convênio, pagamento e{' '}
-          <span className="font-display font-normal italic text-sky-200">o que levar</span>
+          Um planejamento que também{' '}
+          <span className="font-display font-normal italic text-sky-200">
+            considera suas possibilidades
+          </span>
         </SectionTitle>
 
         <p className="mt-4 max-w-3xl text-[0.95rem] text-cream-200 md:mt-5 md:text-xl">
-          A parte chata, resolvida antes de você marcar. Se ficar qualquer dúvida, a equipe
+          As condições são apresentadas junto do plano de tratamento, porque o investimento muda
+          conforme a quantidade de implantes e o tipo de prótese. Qualquer dúvida, a equipe
           responde no WhatsApp sem compromisso.
         </p>
 
@@ -70,7 +78,7 @@ export function ConvenioPagamento() {
 
         <div className="mt-10 flex justify-center">
           <WhatsAppButton variant="light" className="w-full sm:w-auto">
-            Perguntar sobre convênio e pagamento
+            Consultar formas de pagamento
           </WhatsAppButton>
         </div>
       </div>

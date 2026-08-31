@@ -3,24 +3,24 @@ import { Section, SectionTitle } from './Section'
 
 const situacoes = [
   {
-    titulo: 'A dentadura solta na hora errada',
+    titulo: 'Perdeu um ou mais dentes',
     texto:
-      'No meio do almoço, na conversa, na hora de rir. Você já aprendeu a mastigar devagar e a segurar a boca sem ninguém perceber.',
+      'O espaço incomoda ao sorrir ou mastigar e você procura uma solução para substituir os dentes perdidos.',
   },
   {
-    titulo: 'Você desistiu de comer o que gosta',
+    titulo: 'Sua dentadura está solta ou machucando',
     texto:
-      'Carne, maçã, pão de casca dura, milho. A lista de alimentos que você evita só cresce, e já faz tempo que você nem lembra o gosto de alguns.',
+      'Você evita determinados alimentos ou fica inseguro para conversar e sorrir porque a prótese se movimenta.',
   },
   {
-    titulo: 'Você cobre a boca quando ri',
+    titulo: 'Perdeu vários ou todos os dentes',
     texto:
-      'Some das fotos, evita falar de perto, escolhe o lugar da mesa. É cansativo viver calculando isso o dia inteiro.',
+      'Você gostaria de voltar a ter dentes fixos e quer saber se o protocolo sobre implantes é indicado para o seu caso.',
   },
   {
-    titulo: 'Você acha que já passou da hora',
+    titulo: 'Disseram que você não tem osso suficiente',
     texto:
-      'Perdeu vários dentes, ouviu que não tem osso, achou caro uma vez e deixou pra lá. Faz anos que você adia por medo da resposta.',
+      'Mesmo casos com perda óssea precisam ser avaliados individualmente. O exame de imagem é que permite definir quais possibilidades existem.',
   },
 ]
 
@@ -31,13 +31,15 @@ export function Dores() {
     <Section labelledBy="dores-titulo" origem="esquerda" className="bg-cream-50">
       <div className="container-page">
         <SectionTitle id="dores-titulo" className="max-w-3xl">
-          Se você se identifica com alguma dessas situações,{' '}
-          <span className="font-display font-normal italic text-navy-700">dá pra resolver</span>
+          Você se identifica com{' '}
+          <span className="font-display font-normal italic text-navy-700">
+            alguma dessas situações?
+          </span>
         </SectionTitle>
 
         <p className="mt-4 max-w-3xl text-[0.95rem] text-ink-800 md:mt-5 md:text-xl">
-          Quem chega aqui quase nunca fala de dente. Fala de vergonha, de comida que deixou de
-          comer e de foto que deixou de tirar. Veja se alguma dessas é a sua.
+          A perda de dentes afeta muito mais do que o sorriso. Pode interferir na mastigação, na
+          fala, na autoestima e até nos momentos simples do dia a dia.
         </p>
 
         <ul className="mt-10 grid gap-4 sm:grid-cols-2">
@@ -70,8 +72,8 @@ export function Dores() {
 
         <div className="mt-9 flex flex-col items-center text-center md:mt-12">
           <p className="max-w-3xl text-[0.95rem] font-medium text-ink-900 sm:text-xl md:text-2xl">
-            Nada disso é para sempre. Existe tratamento para a maior parte dos casos, e o primeiro
-            passo não é a cirurgia. É entender o que dá para fazer no seu.
+            O primeiro passo não é a cirurgia. É entender o seu caso e descobrir qual tratamento
+            pode ser indicado para você.
           </p>
         </div>
       </div>

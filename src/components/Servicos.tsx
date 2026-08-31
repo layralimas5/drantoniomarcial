@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Section, SectionTitle } from './Section'
-import { dentist, whatsappUrl } from '../lib/site-config'
+import { clinic, whatsappUrl } from '../lib/site-config'
 import { trackConversion } from '../lib/tracking'
 
 interface Servico {
@@ -19,37 +19,36 @@ interface Servico {
 const servicos: Servico[] = [
   {
     arquivo: 'servico-implantes',
-    titulo: 'Implantes e protocolo',
+    titulo: 'Implantes Dentários',
+    texto: 'Implantes unitários ou múltiplos para reposição de dentes perdidos.',
+  },
+  {
+    arquivo: 'galeria-protese',
+    titulo: 'Protocolo sobre Implantes',
     texto:
-      'Implante unitário, vários implantes e prótese fixa sobre eles. É o tratamento de quem já perdeu a maior parte dos dentes e não quer mais depender de dentadura.',
+      'Prótese fixa sobre implantes para reabilitação de pacientes que perderam vários ou todos os dentes.',
   },
   {
     arquivo: 'servico-cirurgia',
-    titulo: 'Cirurgia bucomaxilofacial',
+    titulo: 'Cirurgia Bucomaxilofacial',
     texto:
-      'Cirurgias da boca e do rosto, feitas por quem é especialista nisso, dentro do próprio consultório.',
+      'Procedimentos cirúrgicos da região da boca e estruturas relacionadas, mediante avaliação especializada.',
   },
   {
     arquivo: 'servico-proteses',
-    titulo: 'Próteses',
-    texto:
-      'Coroa, ponte e prótese parcial para quem perdeu um dente ou alguns, e quer resolver antes que os vizinhos se mexam.',
+    titulo: 'Próteses Dentárias',
+    texto: 'Alternativas protéticas definidas de acordo com a necessidade de cada paciente.',
   },
   {
     arquivo: 'servico-ortodontia',
     titulo: 'Ortodontia',
-    texto: 'Aparelho para alinhar os dentes, de adolescente e de adulto, com acompanhamento de perto.',
+    texto: 'Tratamentos para correção do posicionamento e alinhamento dentário.',
   },
   {
     arquivo: 'servico-clinico-geral',
-    titulo: 'Clínico geral',
-    texto: 'Limpeza, restauração, extração e o cuidado de rotina que evita problema maior lá na frente.',
-  },
-  {
-    arquivo: 'servico-atm',
-    titulo: 'Dor na mandíbula e bruxismo',
+    titulo: 'Clínica Geral',
     texto:
-      'Dor perto do ouvido, estalo ao abrir a boca, dor de cabeça ao acordar e dente gasto de ranger à noite.',
+      'Prevenção, limpeza, restaurações e demais cuidados para manutenção da saúde bucal.',
   },
 ]
 
@@ -62,17 +61,17 @@ export function Servicos() {
     <Section id="servicos" labelledBy="servicos-titulo" origem="esquerda" className="bg-navy-800 text-cream-100">
       <div className="container-page">
         <p className="text-xs font-semibold tracking-[0.18em] text-sky-300 uppercase md:text-sm">
-          Se o seu caso for outro
+          Outros tratamentos
         </p>
 
         <SectionTitle id="servicos-titulo" className="mt-3 max-w-3xl !text-cream-50">
-          A clínica também cuida do{' '}
-          <span className="font-display font-normal italic text-sky-200">resto da sua boca</span>
+          Cuidado completo{' '}
+          <span className="font-display font-normal italic text-sky-200">para o seu sorriso</span>
         </SectionTitle>
 
         <p className="mt-4 max-w-3xl text-[0.95rem] text-cream-200 md:mt-5 md:text-xl">
-          O forte do {dentist.shortName} é implante e prótese fixa, mas o atendimento não para aí.
-          Se o seu problema começa por outro tratamento, é aqui mesmo que ele se resolve.
+          Além dos tratamentos com implantes, a {clinic.name} oferece diferentes áreas da
+          odontologia para cuidar da sua saúde bucal.
         </p>
 
         <div className="mt-10 grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-14">
@@ -133,7 +132,7 @@ export function Servicos() {
         </div>
 
         <p className="mt-8 text-[0.85rem] text-cream-200 md:text-base">
-          Não achou o seu?{' '}
+          Não encontrou o seu caso?{' '}
           <a
             href={whatsappUrl}
             target="_blank"
@@ -143,7 +142,7 @@ export function Servicos() {
           >
             Pergunte no WhatsApp
           </a>{' '}
-          antes de marcar qualquer coisa.
+          e a equipe orienta o próximo passo.
         </p>
       </div>
     </Section>

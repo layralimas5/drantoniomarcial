@@ -1,5 +1,5 @@
 import { InstagramIcon, WhatsAppIcon } from './CtaButton'
-import { clinic, dentist, fullAddress, whatsappUrl } from '../lib/site-config'
+import { clinic, dentist, fullAddress, specialtiesLine, whatsappUrl } from '../lib/site-config'
 import { trackConversion } from '../lib/tracking'
 
 export function Rodape() {
@@ -13,6 +13,8 @@ export function Rodape() {
             <br />
             {dentist.cro}
           </p>
+          <p className="mt-3 text-sm text-cream-300">Especialidades</p>
+          <p>{specialtiesLine}</p>
           <p className="mt-2">CNPJ {clinic.cnpj}</p>
 
           <ul className="mt-5 flex gap-3">
@@ -46,6 +48,11 @@ export function Rodape() {
           <p className="text-lg font-semibold text-cream-50">Contato</p>
           <p className="mt-2">{fullAddress}</p>
           <p className="mt-2">{clinic.hours}</p>
+          <p className="mt-2">
+            <a href={`tel:+${clinic.whatsappNumber}`} className="underline underline-offset-4">
+              WhatsApp {clinic.phoneDisplay}
+            </a>
+          </p>
           <p className="mt-2">
             <a href={`mailto:${clinic.email}`} className="underline underline-offset-4">
               {clinic.email}

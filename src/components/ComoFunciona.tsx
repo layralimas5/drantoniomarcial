@@ -3,20 +3,23 @@ import { AnchorButton } from './CtaButton'
 
 const etapas = [
   {
-    titulo: 'Avaliação presencial',
-    texto: 'O Dr. Antonio examina sua boca e pede um exame de imagem para ver como está o osso.',
+    titulo: 'Avaliação especializada',
+    texto: 'Exame clínico e análise da sua condição bucal para entender suas necessidades.',
   },
   {
-    titulo: 'Plano de tratamento',
-    texto: 'Ele explica o que dá para fazer, quanto tempo leva e quais são as opções de pagamento.',
+    titulo: 'Planejamento',
+    texto:
+      'Com auxílio dos exames de imagem, é definido o tratamento indicado, suas etapas, prazo estimado e condições de pagamento.',
   },
   {
-    titulo: 'Cirurgia',
-    texto: 'Feita com anestesia, na própria clínica, por cirurgião especialista.',
+    titulo: 'Tratamento',
+    texto:
+      'Quando há indicação de implantes, o procedimento é realizado com anestesia e planejamento individualizado.',
   },
   {
     titulo: 'Acompanhamento',
-    texto: 'Você volta algumas vezes para ajuste e para acompanhar a cicatrização.',
+    texto:
+      'Após o procedimento, são realizados retornos para acompanhar cicatrização, adaptação e evolução do tratamento.',
   },
 ]
 
@@ -25,15 +28,13 @@ export function ComoFunciona() {
     <Section id="passos" labelledBy="passos-titulo" origem="direita" className="bg-cream-50">
       <div className="container-page">
         <SectionTitle id="passos-titulo" className="max-w-2xl">
-          Como funciona,{' '}
-          <span className="font-display font-normal italic text-navy-700">
-            da primeira consulta ao último retorno
-          </span>
+          Da avaliação{' '}
+          <span className="font-display font-normal italic text-navy-700">ao novo sorriso</span>
         </SectionTitle>
 
         <p className="mt-4 max-w-3xl text-[0.95rem] text-ink-800 md:mt-5 md:text-xl">
-          Ninguém sai da primeira consulta operando. Ela serve para você entender o seu caso e
-          decidir com calma, em casa.
+          A primeira consulta serve para entender o seu caso e apresentar as possibilidades de
+          tratamento, para você decidir com calma.
         </p>
 
         <ol className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
@@ -70,7 +71,7 @@ export function ComoFunciona() {
 
         <div className="mt-10 flex justify-center md:mt-12">
           <AnchorButton href="#agendar" className="w-full sm:w-auto">
-            Agendar minha avaliação
+            Quero agendar minha avaliação
           </AnchorButton>
         </div>
       </div>

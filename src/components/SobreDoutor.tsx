@@ -2,10 +2,9 @@ import { Section, SectionTitle } from './Section'
 import { clinic, dentist } from '../lib/site-config'
 
 const credenciais = [
-  `Especialização em ${dentist.specialty.toLowerCase()}`,
+  ...dentist.specialties.map((especialidade) => `Especialista em ${especialidade}`),
   `Registro profissional ${dentist.cro}`,
-  'Faz ele mesmo a cirurgia e os retornos, sem repassar o seu caso',
-  'Atende principalmente quem usou dentadura por anos e achava que não tinha mais jeito',
+  'Acompanhamento desde a avaliação e o planejamento até as etapas cirúrgicas e os retornos',
 ]
 
 export function SobreDoutor() {
@@ -16,7 +15,7 @@ export function SobreDoutor() {
           src="/foto.webp"
           width={1200}
           height={1499}
-          alt={`${dentist.name}, cirurgião bucomaxilofacial responsável pela ${clinic.name}`}
+          alt={`${dentist.name}, responsável técnico da ${clinic.name}`}
           loading="lazy"
           decoding="async"
           className="pulsar-suave aspect-3/4 w-full rounded-card object-cover shadow-[0_30px_70px_-40px_rgba(12,32,51,0.55)]"
@@ -29,10 +28,14 @@ export function SobreDoutor() {
           </SectionTitle>
 
           <p className="mt-5 text-[0.95rem] leading-relaxed text-ink-800 md:mt-6 md:text-xl">
-            Quem conduz cada uma dessas etapas é sempre a mesma pessoa. {dentist.name} é
-            cirurgião-dentista especialista em cirurgia da boca e do rosto, atende em{' '}
-            {clinic.address.district}, em {clinic.address.city}, e acompanha pessoalmente cada
-            caso, da primeira consulta ao último retorno.
+            {dentist.name}, {dentist.cro}. Na {clinic.name}, o paciente conta com acompanhamento
+            desde a avaliação e o planejamento até as etapas cirúrgicas e os retornos do
+            tratamento, em {clinic.address.district}, {clinic.address.city}/{clinic.address.state}.
+          </p>
+
+          <p className="mt-3 text-[0.95rem] leading-relaxed text-ink-800 md:mt-4 md:text-xl">
+            Experiência e planejamento voltados especialmente para casos de implantes dentários,
+            reabilitações com próteses fixas sobre implantes e cirurgia bucomaxilofacial.
           </p>
 
           <ul className="mt-7 space-y-3 md:mt-8 md:space-y-4">
