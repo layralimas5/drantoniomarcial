@@ -71,10 +71,10 @@ export function FormularioAgendamento() {
     return (
       <div
         role="status"
-        className="rounded-card border border-sky-200 bg-white p-6 text-center md:p-8"
+        className="rounded-card border border-sky-200 bg-white p-5 text-center md:p-8"
       >
-        <h3 className="text-2xl font-semibold text-ink-900">Recebemos o seu contato</h3>
-        <p className="mt-3 text-lg text-ink-800">
+        <h3 className="text-[1.25rem] font-semibold text-ink-900 md:text-2xl">Recebemos o seu contato</h3>
+        <p className="max-md:leading-[1.5] mt-2.5 text-[0.95rem] text-ink-800 md:mt-3 md:text-lg">
           A equipe vai retornar no horário de atendimento para combinar o dia da sua avaliação.
           Quer adiantar? O botão abaixo abre o WhatsApp da clínica com os seus dados já escritos: é
           só apertar enviar.
@@ -96,7 +96,7 @@ export function FormularioAgendamento() {
       netlify-honeypot="empresa"
       onSubmit={handleSubmit}
       noValidate={false}
-      className="rounded-card border border-sky-200 bg-white p-5 md:p-8"
+      className="rounded-card border border-sky-200 bg-white p-4 md:p-8"
     >
       <input type="hidden" name="form-name" value={FORM_NAME} />
       <p hidden>
@@ -105,9 +105,9 @@ export function FormularioAgendamento() {
         </label>
       </p>
 
-      <div className="space-y-5">
+      <div className="space-y-4 md:space-y-5">
         <div>
-          <label htmlFor="nome" className="block text-base font-semibold text-ink-900 md:text-lg">
+          <label htmlFor="nome" className="block text-[0.925rem] font-semibold text-ink-900 md:text-lg">
             Seu nome
           </label>
           <input
@@ -116,13 +116,13 @@ export function FormularioAgendamento() {
             type="text"
             required
             autoComplete="name"
-            className="mt-2 min-h-[3.5rem] w-full rounded-xl border-2 border-cream-300 bg-cream-50 px-4 text-lg text-ink-900 placeholder:text-ink-400 focus:border-navy-900"
+            className="mt-1.5 min-h-[3rem] w-full rounded-xl border-2 border-cream-300 bg-cream-50 px-3.5 text-[1rem] text-ink-900 placeholder:text-ink-400 focus:border-navy-900 md:mt-2 md:min-h-[3.5rem] md:px-4 md:text-lg"
             placeholder="Como podemos te chamar"
           />
         </div>
 
         <div>
-          <label htmlFor="telefone" className="block text-base font-semibold text-ink-900 md:text-lg">
+          <label htmlFor="telefone" className="block text-[0.925rem] font-semibold text-ink-900 md:text-lg">
             Seu WhatsApp
           </label>
           <input
@@ -134,20 +134,20 @@ export function FormularioAgendamento() {
             autoComplete="tel"
             value={telefone}
             onChange={(event) => setTelefone(formatarTelefone(event.target.value))}
-            className="mt-2 min-h-[3.5rem] w-full rounded-xl border-2 border-cream-300 bg-cream-50 px-4 text-lg text-ink-900 placeholder:text-ink-400 focus:border-navy-900"
+            className="mt-1.5 min-h-[3rem] w-full rounded-xl border-2 border-cream-300 bg-cream-50 px-3.5 text-[1rem] text-ink-900 placeholder:text-ink-400 focus:border-navy-900 md:mt-2 md:min-h-[3.5rem] md:px-4 md:text-lg"
             placeholder="(27) 90000-0000"
           />
         </div>
 
         <div>
-          <label htmlFor="mensagem" className="block text-base font-semibold text-ink-900 md:text-lg">
+          <label htmlFor="mensagem" className="block text-[0.925rem] font-semibold text-ink-900 md:text-lg">
             O que te incomoda hoje? <span className="font-normal text-ink-500">(opcional)</span>
           </label>
           <textarea
             id="mensagem"
             name="mensagem"
             rows={3}
-            className="mt-2 w-full rounded-xl border-2 border-cream-300 bg-cream-50 px-4 py-3 text-lg text-ink-900 placeholder:text-ink-400 focus:border-navy-900"
+            className="mt-1.5 w-full rounded-xl border-2 border-cream-300 bg-cream-50 px-3.5 py-2.5 text-[1rem] text-ink-900 placeholder:text-ink-400 focus:border-navy-900 md:mt-2 md:px-4 md:py-3 md:text-lg"
             placeholder="Pode escrever com suas palavras"
           />
         </div>
@@ -158,9 +158,9 @@ export function FormularioAgendamento() {
             name="consentimento"
             type="checkbox"
             required
-            className="mt-1 h-6 w-6 shrink-0 accent-[#0c2033]"
+            className="mt-0.5 h-6 w-6 shrink-0 accent-[#0c2033] md:mt-1"
           />
-          <label htmlFor="consentimento" className="text-base leading-relaxed text-ink-700">
+          <label htmlFor="consentimento" className="leading-relaxed max-md:leading-[1.45] text-[0.95rem] text-ink-700 md:text-base">
             Autorizo o contato pelos dados informados e li a{' '}
             <a href="/politica-de-privacidade.html" className="underline underline-offset-4">
               política de privacidade
@@ -172,7 +172,7 @@ export function FormularioAgendamento() {
 
       {status === 'error' ? (
         <div role="alert" className="mt-5 rounded-xl bg-red-50 p-4">
-          <p className="text-base text-red-800">
+          <p className="max-md:leading-[1.45] text-[1rem] text-red-800 md:text-base">
             Não conseguimos enviar o formulário agora. Nada se perdeu: o botão abaixo abre o
             WhatsApp da clínica com os seus dados já escritos.
           </p>
@@ -185,7 +185,7 @@ export function FormularioAgendamento() {
       <button
         type="submit"
         disabled={enviando}
-        className="pulsar-suave mt-6 flex min-h-[3.5rem] w-full items-center justify-center rounded-full bg-navy-900 px-7 text-lg font-semibold text-white transition-colors hover:bg-navy-800 disabled:cursor-not-allowed disabled:opacity-70"
+        className="pulsar-suave mt-5 flex min-h-[3rem] w-full items-center justify-center rounded-full bg-navy-900 px-6 text-[0.975rem] font-semibold text-white transition-colors hover:bg-navy-800 disabled:cursor-not-allowed disabled:opacity-70 md:mt-6 md:min-h-[3.5rem] md:px-7 md:text-lg"
       >
         {enviando ? 'Enviando...' : 'Quero agendar minha avaliação'}
       </button>

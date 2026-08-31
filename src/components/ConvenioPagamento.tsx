@@ -48,24 +48,29 @@ export function ConvenioPagamento() {
           </span>
         </SectionTitle>
 
-        <p className="mt-4 max-w-3xl text-[0.95rem] text-cream-200 md:mt-5 md:text-xl">
+        <p className="max-md:leading-[1.5] mt-3 max-w-3xl text-[1.0625rem] text-cream-200 md:mt-5 md:text-xl">
           As condições são apresentadas junto do plano de tratamento, porque o investimento muda
           conforme a quantidade de implantes e o tipo de prótese. Qualquer dúvida, a equipe
           responde no WhatsApp sem compromisso.
         </p>
 
-        <ul className="mt-10 grid gap-4 md:grid-cols-3 md:gap-6">
+        {/* Trilho no celular: os três blocos empilhados custavam quase uma tela
+            e meia, e só o primeiro é resposta à objeção de preço. */}
+        <ul className="trilho-mobile mt-6 md:mt-10 md:grid md:grid-cols-3 md:gap-6">
           {blocos.map((bloco) => (
-            <li key={bloco.titulo} className="pulsar-suave rounded-card border border-navy-line bg-navy-900 p-4 md:p-7">
-              <h3 className="text-base font-semibold text-cream-50 md:text-xl">{bloco.titulo}</h3>
-              <p className="mt-2 text-[0.85rem] leading-relaxed text-cream-200 md:text-base">
+            <li
+              key={bloco.titulo}
+              className="pulsar-suave rounded-card border border-navy-line bg-navy-900 p-4 md:p-7"
+            >
+              <h3 className="text-[1.05rem] font-semibold text-cream-50 md:text-xl">{bloco.titulo}</h3>
+              <p className="mt-1.5 text-[1rem] leading-relaxed max-md:leading-[1.45] text-cream-200 md:mt-2 md:text-base">
                 {bloco.texto}
               </p>
 
-              <ul className="mt-5 space-y-2.5 border-t border-navy-line pt-5">
+              <ul className="mt-3.5 space-y-2 border-t border-navy-line pt-3.5 md:mt-5 md:space-y-2.5 md:pt-5">
                 {bloco.itens.map((item) => (
-                  <li key={item} className="flex gap-2.5 text-[0.85rem] text-cream-100 md:text-base">
-                    <svg viewBox="0 0 20 20" className="mt-1 h-4 w-4 shrink-0 fill-sky-300" aria-hidden="true">
+                  <li key={item} className="max-md:leading-[1.4] flex gap-2.5 text-[0.95rem] text-cream-100 md:text-base">
+                    <svg viewBox="0 0 20 20" className="mt-0.5 h-4 w-4 shrink-0 fill-sky-300 md:mt-1" aria-hidden="true">
                       <path d="M8.2 14.4 4 10.2l1.4-1.4 2.8 2.8L14.6 5l1.4 1.4z" />
                     </svg>
                     {item}
@@ -76,7 +81,7 @@ export function ConvenioPagamento() {
           ))}
         </ul>
 
-        <div className="mt-10 flex justify-center">
+        <div className="mt-7 flex justify-center md:mt-10">
           <WhatsAppButton variant="light" className="w-full sm:w-auto">
             Consultar formas de pagamento
           </WhatsAppButton>

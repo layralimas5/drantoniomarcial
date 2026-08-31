@@ -3,7 +3,7 @@ import { whatsappUrl, whatsappUrlCom } from '../lib/site-config'
 import { trackConversion } from '../lib/tracking'
 
 const baseClasses =
-  'pulsar inline-flex min-h-[3rem] items-center justify-center gap-2.5 rounded-full px-6 py-2.5 text-center text-base leading-snug font-semibold transition-colors duration-200 sm:min-h-[3.5rem] sm:gap-3 sm:px-7 sm:py-3 sm:text-lg'
+  'pulsar inline-flex min-h-[3rem] items-center justify-center gap-2 rounded-full px-5 py-2.5 text-center text-[0.975rem] leading-snug font-semibold transition-colors duration-200 sm:min-h-[3.5rem] sm:gap-3 sm:px-7 sm:py-3 sm:text-lg'
 
 /** `light` existe para os blocos de fundo azul escuro, onde o sólido sumiria. */
 const VARIANTES = {
@@ -36,7 +36,7 @@ export function WhatsAppButton({
       onClick={() => trackConversion('whatsapp_click')}
       className={`${baseClasses} ${variantClasses} ${className}`}
     >
-      <WhatsAppIcon />
+      <WhatsAppIcon className="h-5 w-5 shrink-0 sm:h-6 sm:w-6" />
       {children}
     </a>
   )

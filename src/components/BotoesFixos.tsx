@@ -45,21 +45,21 @@ export function BotoesFixos() {
             key="barra"
             {...animacao}
             transition={{ duration: 0.25 }}
-            className="fixed inset-x-0 bottom-0 z-40 flex gap-3 border-t border-cream-300 bg-cream-50/95 p-3 backdrop-blur md:hidden"
+            className="safe-bottom fixed inset-x-0 bottom-0 z-40 flex gap-2.5 border-t border-cream-300 bg-cream-50/95 px-4 pt-2.5 backdrop-blur md:hidden"
           >
             <a
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackConversion('whatsapp_click')}
-              className="pulsar-suave flex min-h-[3.25rem] flex-1 items-center justify-center gap-2 rounded-full bg-navy-900 text-base font-semibold text-white"
+              className="pulsar-suave flex min-h-[3rem] flex-1 items-center justify-center gap-2 rounded-full bg-navy-900 text-[0.975rem] font-semibold text-white"
             >
-              <WhatsAppIcon className="h-6 w-6" />
+              <WhatsAppIcon className="h-5 w-5" />
               WhatsApp
             </a>
             <a
               href="#agendar"
-              className="pulsar-suave flex min-h-[3.25rem] flex-1 items-center justify-center rounded-full border-2 border-navy-900 text-base font-semibold text-navy-900"
+              className="pulsar-suave flex min-h-[3rem] flex-1 items-center justify-center rounded-full border-2 border-navy-900 text-[0.975rem] font-semibold text-navy-900"
             >
               Agendar
             </a>
