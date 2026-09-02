@@ -30,8 +30,9 @@ export function Hero() {
       id="topo"
       className="relative -mt-[3.75rem] overflow-hidden bg-cream-50 pt-[3.75rem] lg:-mt-[4.5rem] lg:pt-[4.5rem]"
     >
-      {/* No celular o banner abre a página; no desktop ele ocupa a metade direita
-          e o gradiente garante contraste do texto sobre a parte clara da foto. */}
+      {/* No celular o banner abre a página; no desktop ele ocupa a metade direita.
+          O véu branco fica só na faixa que encosta no texto: o resto da foto
+          aparece sem nenhuma camada por cima. */}
       <div className="absolute inset-x-0 top-0 h-[36svh] sm:h-[62svh] md:h-[66svh] lg:inset-y-0 lg:right-0 lg:left-auto lg:h-auto lg:w-[54%]">
         <img
           src="/hero-banner.webp"
@@ -44,7 +45,7 @@ export function Hero() {
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 bg-gradient-to-t from-white via-white/88 to-transparent lg:bg-gradient-to-r lg:from-white lg:via-white/75 lg:to-transparent"
+          className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,#fff_0%,rgba(255,255,255,0.82)_14%,rgba(255,255,255,0.24)_34%,transparent_52%)] lg:bg-[linear-gradient(to_right,#fff_0%,rgba(255,255,255,0.9)_10%,rgba(255,255,255,0.32)_28%,transparent_46%)]"
         />
       </div>
 
