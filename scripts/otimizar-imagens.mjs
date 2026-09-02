@@ -14,6 +14,9 @@ const alvos = {
   'hero-banner': { width: 2400, height: 1193 },
   /** Retrato do Dr. Antonio na seção de credenciais. */
   foto: { width: 1200, height: 1499 },
+  /* Foto do Dr. Antonio em atendimento, usada na seção de credenciais. Já vem
+     no enquadramento certo, então é só convertida. */
+  apresentacao: { manterTamanho: true },
   'video-poster': { width: 1280, height: 720 },
   /** Fotos da galeria: qualquer arquivo com o prefixo `galeria-`. */
   galeria: { width: 1200, height: 900 },

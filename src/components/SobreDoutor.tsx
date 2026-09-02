@@ -20,13 +20,13 @@ export function SobreDoutor() {
         </SectionTitle>
 
         <img
-          src="/foto.webp"
-          width={1200}
-          height={1499}
-          alt={`${dentist.name}, responsável técnico da ${clinic.name}`}
+          src="/apresentacao.webp"
+          width={874}
+          height={1600}
+          alt={`${dentist.name}, responsável técnico da ${clinic.name}, durante um atendimento`}
           loading="lazy"
           decoding="async"
-          className="pulsar-suave aspect-4/3 w-full rounded-card object-cover object-[center_18%] shadow-[0_18px_40px_-30px_rgba(12,32,51,0.5)] sm:aspect-3/2 lg:aspect-3/4 lg:object-center lg:shadow-[0_30px_70px_-40px_rgba(12,32,51,0.55)]"
+          className="pulsar-suave aspect-4/3 w-full rounded-card object-cover object-[center_25%] shadow-[0_18px_40px_-30px_rgba(12,32,51,0.5)] sm:aspect-3/2 lg:aspect-3/4 lg:object-center lg:shadow-[0_30px_70px_-40px_rgba(12,32,51,0.55)]"
         />
 
         <div>
