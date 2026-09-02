@@ -19,6 +19,9 @@ const alvos = {
   galeria: { width: 1200, height: 900 },
   /** Fotos dos serviços: retrato, qualquer arquivo com o prefixo `servico-`. */
   servico: { width: 1050, height: 1400 },
+  /* Recortes de implante e protocolo: já vêm no enquadramento final do
+     material do cliente, então são só convertidos, sem redimensionar. */
+  caso: { manterTamanho: true },
   og: { width: 1200, height: 630 },
 }
 
@@ -35,6 +38,7 @@ for (const arquivo of arquivos) {
 
   if (name.startsWith('galeria-')) alvo = alvos.galeria
   if (name.startsWith('servico-')) alvo = alvos.servico
+  if (name.startsWith('caso-')) alvo = alvos.caso
 
   if (!alvo) {
     console.warn(`Ignorado (nome fora da lista): ${arquivo}`)
@@ -43,8 +47,13 @@ for (const arquivo of arquivos) {
 
   const saida = join(DESTINO, name === 'og' ? 'og.jpg' : `${name}.webp`)
 
-  await sharp(join(ORIGEM, arquivo))
-    .resize(alvo.width, alvo.height, { fit: 'cover', position: 'attention', kernel: 'lanczos3' })
+  const imagem = sharp(join(ORIGEM, arquivo))
+
+  if (!alvo.manterTamanho) {
+    imagem.resize(alvo.width, alvo.height, { fit: 'cover', position: 'attention', kernel: 'lanczos3' })
+  }
+
+  await imagem
     .sharpen({ sigma: 0.8, m1: 0.6, m2: 2 })
     .toFormat(name === 'og' ? 'jpeg' : 'webp', { quality: 88 })
     .toFile(saida)
