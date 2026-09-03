@@ -98,7 +98,7 @@ const servicos: Servico[] = [
   {
     id: 'cirurgia',
     arquivo: 'servico-cirurgia',
-    titulo: 'Cirurgia Bucomaxilofacial',
+    titulo: 'Cirurgia Buco Maxilofacial',
     texto:
       'Procedimentos cirúrgicos da região da boca e estruturas relacionadas, mediante avaliação especializada.',
   },

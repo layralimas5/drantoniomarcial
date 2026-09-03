@@ -48,11 +48,14 @@ export function Rodape() {
           <p className="text-[1rem] font-semibold text-cream-50 md:text-lg">Contato</p>
           <p className="mt-2">{fullAddress}</p>
           <p className="mt-2">{clinic.hours}</p>
-          <p className="mt-2">
-            <a href={`tel:+${clinic.whatsappNumber}`} className="underline underline-offset-4 max-md:inline-block max-md:py-3">
-              WhatsApp {clinic.phoneDisplay}
-            </a>
-          </p>
+          {clinic.phones.map((telefone) => (
+            <p key={telefone.tel} className="mt-2">
+              <a href={`tel:${telefone.tel}`} className="underline underline-offset-4 max-md:inline-block max-md:py-3">
+                {telefone.whatsapp ? 'WhatsApp ' : 'Telefone '}
+                {telefone.display}
+              </a>
+            </p>
+          ))}
           <p className="mt-2">
             <a href={`mailto:${clinic.email}`} className="underline underline-offset-4 max-md:inline-block max-md:py-3">
               {clinic.email}

@@ -1,11 +1,7 @@
 import { Section, SectionTitle } from './Section'
 import { clinic, dentist } from '../lib/site-config'
 
-const credenciais = [
-  ...dentist.specialties.map((especialidade) => `Especialista em ${especialidade}`),
-  `Registro profissional ${dentist.cro}`,
-  'Acompanhamento desde a avaliação e o planejamento até as etapas cirúrgicas e os retornos',
-]
+const { career, bucomaxilo, implantodontiaDesde, ortodontiaDesde } = dentist.experience
 
 export function SobreDoutor() {
   return (
@@ -38,33 +34,22 @@ export function SobreDoutor() {
           </SectionTitle>
 
           <p className="leading-relaxed max-md:leading-[1.5] text-[1.0625rem] text-ink-800 lg:mt-6 lg:text-xl">
-            {dentist.name}, {dentist.cro}. Na {clinic.name}, o paciente conta com acompanhamento
-            desde a avaliação e o planejamento até as etapas cirúrgicas e os retornos do
-            tratamento, em {clinic.address.district}, {clinic.address.city}/{clinic.address.state}.
+            {dentist.name}, {dentist.cro}. São {career} anos de profissão, {bucomaxilo} deles como
+            especialista em {dentist.mainSpecialty}, com atendimento na {clinic.name}, em{' '}
+            {clinic.address.district}, {clinic.address.city}/{clinic.address.state}.
           </p>
 
           <p className="leading-relaxed max-md:leading-[1.5] mt-2.5 text-[1.0625rem] text-ink-800 md:mt-4 lg:text-xl">
-            Experiência e planejamento voltados especialmente para casos de implantes dentários,
-            reabilitações com próteses fixas sobre implantes e cirurgia bucomaxilofacial.
+            Atua na área de implantodontia desde {implantodontiaDesde} e na de ortodontia desde{' '}
+            {ortodontiaDesde}. Ao longo da carreira acompanhou um grande número de casos clínicos e
+            cirúrgicos e trabalhou em diversos hospitais da Grande Vitória, nas áreas de
+            traumatologia e buco maxilofacial.
           </p>
 
-          <ul className="mt-5 space-y-2 md:mt-8 md:space-y-4">
-            {credenciais.map((credencial) => (
-              <li
-                key={credencial}
-                className="flex gap-2.5 text-[0.95rem] text-ink-800 max-md:leading-[1.4] md:gap-3 md:text-lg"
-              >
-                <svg
-                  viewBox="0 0 20 20"
-                  className="mt-0.5 h-4 w-4 shrink-0 fill-navy-900 md:mt-1 md:h-5 md:w-5"
-                  aria-hidden="true"
-                >
-                  <path d="M8.2 14.4 4 10.2l1.4-1.4 2.8 2.8L14.6 5l1.4 1.4z" />
-                </svg>
-                {credencial}
-              </li>
-            ))}
-          </ul>
+          <p className="leading-relaxed max-md:leading-[1.5] mt-2.5 text-[1.0625rem] text-ink-800 md:mt-4 lg:text-xl">
+            Na {clinic.name}, o paciente é acompanhado por ele desde a avaliação e o planejamento
+            até as etapas cirúrgicas e os retornos do tratamento.
+          </p>
 
           {/* PENDENTE: confirmar o horário real com a clínica. */}
           <div className="mt-6 rounded-card bg-navy-900 p-4 text-cream-100 md:mt-10 md:p-7">

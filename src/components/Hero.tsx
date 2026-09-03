@@ -1,6 +1,6 @@
 import { m, useReducedMotion } from 'framer-motion'
 import { AnchorButton, WhatsAppButton } from './CtaButton'
-import { clinic, dentist, specialtiesLine } from '../lib/site-config'
+import { clinic, dentist } from '../lib/site-config'
 
 /** Cartões que ficam sobre a parte de baixo do banner. */
 const fatos = [
@@ -81,9 +81,13 @@ export function Hero() {
           </div>
 
           <p className="max-md:leading-[1.45] mt-5 border-l-2 border-cream-300 pl-3 text-[0.95rem] text-ink-700 md:mt-8 md:pl-4 md:text-base">
-            {dentist.name} · {dentist.cro}
+            <span className="font-semibold text-ink-900">{dentist.name}</span>
             <br />
-            {specialtiesLine}
+            Especialista em {dentist.mainSpecialty}
+            <br />
+            {dentist.otherSpecialties.join(' e ')}
+            <br />
+            {dentist.cro}
             <br />
             {clinic.address.district}, {clinic.address.city}/{clinic.address.state}
           </p>

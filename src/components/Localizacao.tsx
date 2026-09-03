@@ -15,8 +15,8 @@ export function Localizacao() {
           </SectionTitle>
 
           <p className="max-md:leading-[1.5] mt-3 max-w-xl text-[1.0625rem] text-ink-800 md:mt-5 md:text-lg">
-            Atendimento com hora marcada para pacientes de {clinic.areasServed.join(', ')} e
-            região.
+            Atendimento com hora marcada para pacientes de toda a {clinic.region.name}, incluindo{' '}
+            {clinic.region.districts.join(', ')}, e também de {clinic.cities.join(', ')} e região.
           </p>
 
           <dl className="mt-5 space-y-3 text-[0.925rem] text-ink-800 md:mt-8 md:space-y-6 md:text-lg">
@@ -25,15 +25,18 @@ export function Localizacao() {
               <dd>{fullAddress}</dd>
             </div>
             <div>
-              <dt className="font-semibold text-ink-900">Telefone</dt>
-              <dd>
-                <a
-                  className="underline underline-offset-4 max-md:inline-block max-md:py-3"
-                  href={`tel:+${clinic.whatsappNumber}`}
-                >
-                  {clinic.phoneDisplay}
-                </a>
-              </dd>
+              <dt className="font-semibold text-ink-900">Telefones</dt>
+              {clinic.phones.map((telefone) => (
+                <dd key={telefone.tel}>
+                  <a
+                    className="underline underline-offset-4 max-md:inline-block max-md:py-3"
+                    href={`tel:${telefone.tel}`}
+                  >
+                    {telefone.display}
+                    {telefone.whatsapp ? ' (WhatsApp)' : null}
+                  </a>
+                </dd>
+              ))}
             </div>
             <div>
               <dt className="font-semibold text-ink-900">E-mail</dt>
@@ -48,7 +51,10 @@ export function Localizacao() {
             </div>
             <div>
               <dt className="font-semibold text-ink-900">Atendemos pacientes de</dt>
-              <dd>{clinic.areasServed.join(', ')}</dd>
+              <dd>
+                Toda a {clinic.region.name}, {clinic.region.districts.join(', ')},{' '}
+                {clinic.cities.join(', ')}
+              </dd>
             </div>
           </dl>
 

@@ -12,7 +12,11 @@ export const clinic = {
   instagramHandle: '@drantoniomarcial',
   /** WhatsApp comercial da clínica, em E.164 (só dígitos). */
   whatsappNumber: '5527999664449',
-  phoneDisplay: '(27) 99966-4449',
+  /** Todos os telefones da clínica, na ordem em que aparecem na página. */
+  phones: [
+    { display: '(27) 99966-4449', tel: '+5527999664449', whatsapp: true },
+    { display: '(27) 99738-1690', tel: '+5527997381690', whatsapp: false },
+  ],
   email: 'ciaodoctor@hotmail.com',
   address: {
     street: 'Av. Álvares de Azevedo, 914, loja 03',
@@ -30,7 +34,12 @@ export const clinic = {
     { dia: 'Sábado', horario: 'Fechado' },
     { dia: 'Domingo', horario: 'Fechado' },
   ],
-  areasServed: ['Vila Velha', 'Vitória', 'Cariacica', 'Guarapari'],
+  /** Bairros da Região 5, onde fica a clínica, e as cidades atendidas. */
+  region: {
+    name: 'Região 5 de Vila Velha',
+    districts: ['Barra do Jucu', 'Recanto da Sereia', 'Ponta da Fruta'],
+  },
+  cities: ['Vila Velha', 'Vitória', 'Guarapari'],
 } as const
 
 export const dentist = {
@@ -39,10 +48,25 @@ export const dentist = {
   cro: 'CRO-ES 2837',
   /** Especialidades registradas, na ordem usada em toda a página. */
   specialties: [
-    'Cirurgia e Traumatologia Bucomaxilofacial',
+    'Cirurgia e Traumatologia Buco Maxilofacial',
     'Implantodontia',
     'Ortodontia',
   ],
+  /** Especialidade principal, destacada no banner e na seção do doutor. */
+  mainSpecialty: 'Cirurgia e Traumatologia Buco Maxilofacial',
+  /** Demais áreas de atuação, sempre citadas depois da principal. */
+  otherSpecialties: ['Implantodontia', 'Ortodontia'],
+  /** Tempo de estrada, na forma usada nos textos da página. */
+  experience: {
+    /** Anos desde a formação. */
+    career: 32,
+    /** Anos como especialista em buco maxilofacial. */
+    bucomaxilo: 30,
+    /** Ano em que passou a atuar com implantodontia. */
+    implantodontiaDesde: 2002,
+    /** Ano em que passou a atuar com ortodontia. */
+    ortodontiaDesde: 2000,
+  },
 } as const
 
 /** Especialidades numa linha só, para assinaturas e rodapé. */
